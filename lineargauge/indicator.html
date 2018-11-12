@@ -1,0 +1,66 @@
+﻿<div ng-controller="LinearGauge">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+			<label id="lbl" style="color:#8c8c8c" align="center">Loan Amount = $ 5 Lakhs</label>
+                <div id="linearframe">
+                    <ej-lineargauge id="linearCore" e-height="180" e-width="900" e-drawLabels=DrawLabel e-drawMarkerPointers=DrawMarkerPointers e-drawIndicators=DrawIndicators e-orientation="horizontal" e-readOnly="false" e-labelColor="#8c8c8c" e-isresponsive="true" e-readonly="false" e-load="loadGaugeTheme" e-enableanimation="false">
+					    <e-scales>
+						  <e-scale e-direction="clockwise" e-type="roundedrectangle" e-backgroundColor="transparent"
+                          e-width="50" e-border-color="#8c8c8c" e-border-width="2" e-showIndicators="true"
+                          e-showBarPointers="false" e-length="810" e-minimum="10000" e-maximum="25000000" e-minorIntervalValue="178500" e-majorIntervalValue="1785000" e-position-x="52" e-position-y="50">
+						   <e-markerPointers>
+						     <e-markerPointer e-value="7000000" e-distanceFromScale="20" e-type="circle" e-length="125" e-width="100" e-placement= "center" e-backgroundColor="#FFFFFF" e-opacity="0.8" e-border-color="#8c8c8c">
+							 </e-markerPointer>
+						   </e-markerPointers>
+						   <e-labels>
+						      <e-label e-font-fontStyle="Normal" e-font-size="16px" e-font-fontFamily="Arial" e-distanceFromScale-x="0" e-distanceFromScale-y="30" e-placement="far" e-angle="90">
+							  </e-label>
+						   </e-labels>
+						   <e-ticks>
+						     <e-tick e-type="majorinterval" e-width="0.3" e-height="30" e-color="#8c8c8c" e-placement="far">
+							 </e-tick>
+							 <e-tick e-type="minorinterval" e-width="0.3" e-height="15" e-color="#8c8c8c" e-placement="far">
+							 </e-tick>
+						   </e-ticks>
+						   <e-indicators>
+						       <e-indicator e-font-size="15px" e-font-fontFamily="Arial" e-font-fontStyle="bold" e-type="text" e-textLocation-x="6" e-textLocation-y="53">
+							    <e-stateRanges>
+								  <e-stateRange e-endValue="25000000" e-startValue="10000" e-text="1 Mill" e-textColor="#8c8c8c">
+								  </e-stateRange>
+								</e-stateRanges>
+							   </e-indicator>
+							   <e-indicator  e-font-size="15px" e-font-fontFamily="Arial" e-font-fontStyle="Normal" e-type="rectangle" e-position-x="40" e-position-y="115" e-textLocation-x="52" e-textLocation-y="95" e-height="20" e-width="20">
+							     <e-stateRanges>
+								  <e-stateRange e-endValue="8000000"
+                            e-startValue="10000"
+                            e-text="9.8 % interest per Annum"
+                            e-textColor="#8c8c8c"
+                            e-backgroundColor="Green"
+                            e-borderColor="#8c8c8c">
+								  </e-stateRange>
+								   <e-stateRange e-endValue="15000000"
+                            e-startValue="8000000"
+                            e-text="10.5 % interest per Annum"
+                            e-textColor="#8c8c8c"
+                            e-backgroundColor="Yellow"
+                            e-borderColor="#8c8c8c">
+								  </e-stateRange>
+								   <e-stateRange e-endValue="25000000"
+                            e-startValue="15000000"
+                            e-text="12.2 % interest per Annum"
+                            e-textColor="#8c8c8c"
+                            e-backgroundColor="Red"
+                            e-borderColor="#8c8c8c">
+								  </e-stateRange>
+								</e-stateRanges>
+							   </e-indicator>
+						   </e-indicators>
+						  </e-scale>
+						</e-scales>
+                     </ej-lineargauge>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

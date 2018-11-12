@@ -1,0 +1,40 @@
+<div ng-controller="SliderCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="angularbind">
+                        <div class="txt">MinRange</div>
+                        <div id="control">
+                            <div id="minrangeSlider" ej-slider e-width="width" e-value="sliderValue" e-slidertype="minrange" e-height="height"></div>
+                        </div>
+                        <div class="txt">Range</div>
+                        <div id="control1">
+                            <div id="rangeslider" ej-slider e-width="width" e-values="slidervalues" e-slidertype="range" e-height="height"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .frame {
+        width: 500px;
+    }
+
+        .frame .e-slider-wrap {
+            margin: 15px 35px;
+        }
+
+    .angularbind > div {
+        padding: 5px;
+    }
+
+    .input {
+        height: 32px;
+        text-indent: 10px;
+    }
+</style>
+
+

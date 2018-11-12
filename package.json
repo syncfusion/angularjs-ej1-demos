@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-syncfusion-demo",
+  "version": "16.3.21",
+  "description": "The Sample browser for Essential JS1 for AngularJS.",
+  "keywords": [
+    "angularjs-samplebrowser"
+  ],
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "postinstall": "gulp copyfiles & gulp rename",
+    "start": "gulp default"
+  },
+  "dependencies": {    
+    "syncfusion-javascript": "*",    
+    "jquery": "3.1.1",
+    "jquery-validation-unobtrusive": "3.2.10"
+  },
+  "devDependencies": {
+    "codemirror": "^5.40.2",
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-download-stream": "0.0.19",
+    "gulp-rename": "^1.4.0"
+  }
+}
