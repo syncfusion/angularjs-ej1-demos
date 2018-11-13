@@ -6,14 +6,15 @@ This section guides you to run the Syncfusion EJ1 AngularJS samples into your lo
 
 * [Prerequisites](#prerequisites)
 * [Repository structure](#repository-structure)
+* [License](#license)
+* [Using the examples](#using-the-examples
 * [Installing](#installing)
 * [Running](#running)
 * [Controls catalog](#controls-catalog)
 * [Documentation](#documentation)
 * [Demos](#demos)
-* [Support](#support)
 * [Release Notes](#release-notes)
-* [License Information](#license-information)
+* [Support and Feedback](#support-and-feedback)
 
 ## Prerequisites
 
@@ -24,6 +25,23 @@ This section guides you to run the Syncfusion EJ1 AngularJS samples into your lo
 
 * Each folder contains demos of corresponding folder names.
 * `scripts` and `content` folder conatains demo's dependencies scripts and styles.
+
+## <a name="license"></a>License ##
+
+Syncfusion has no liability for any damage or consequence that may arise by the use or viewing of the samples. The samples are for demonstrative purposes and if you choose to use or access the samples you agree to not hold Syncfusion liable, in any form, for any damage that is related to use, accessing or otherwise viewing the samples. By accessing, viewing, or otherwise seeing the samples you acknowledge and agree Syncfusion’s samples will not allow you to seek injunctive relief in any form for any claim related to the sample. If you do not agree to this, do not view, access, utilize or otherwise do anything with Syncfusion’s samples.
+
+## <a name="using-the-samples"></a>Using the examples ##
+
+The easiest way to use these samples without using Git is to download the zip file containing the current version (using the following link or by clicking the "Download ZIP" button on the repo page). You can then unzip the entire archive and use the samples.
+
+   [Download the samples ZIP](../../archive/master.zip)
+
+   **Notes:** 
+   * Before you unzip the archive, right-click it, select **Properties**, and then select **Unblock**.
+   * Be sure to unzip the entire archive, and not just individual samples. The samples all depend on the SharedContent folder in the archive.  
+
+
+**Reminder:** If you unzip individual samples, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the samples.
 
 ## Installing
 
@@ -85,14 +103,13 @@ Take a look at the Syncfusion Essential JS 1 for AngularJS live demos.
 
 Download our JavaScript Platform installer from [here](https://www.syncfusion.com/downloads/javascript).
 
-## Support
-
-In case of any questions regarding the use of Syncfusion Essential JS 1 for AngularJS, please [contact us](http://www.syncfusion.com/support) by creating a support ticket.
 
 ## Release Notes
 
 Refer the Syncfusion Essential JS 1 for AngularJS Product Release Notes in [online Release Notes at Syncfusion](http://help.syncfusion.com/angularjs/release-notes).
 
-## License Information
+## <a name="support-and-feedback"></a>Support and Feedback ##
 
-For licensing information about Syncfusion Essential JS 1 for AngularJS, Download the Syncfusion License Agreements from [here](https://www.syncfusion.com/content/downloads/syncfusion_license.pdf).
+* For any other queries, reach our [Syncfusion support team](https://www.syncfusion.com/support/directtrac/incidents/newincident?utm_source=github&utm_medium=listing) or post the queries through the [community forums](https://www.syncfusion.com/forums?utm_source=github&utm_medium=listing).
+
+* To renew the subscription, click [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing) or contact our sales team at <salessupport@syncfusion.com>.
