@@ -1,0 +1,26 @@
+﻿<script src="./scripts/cultures/ej.culture.fr-FR.min.js"></script>
+<script src="./scripts/cultures/ej.culture.vi-VN.min.js"></script>
+<div class="content-container-fluid" ng-controller="DatePickerCtrl">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="frame">
+                <div class="control">
+                    <input id="datepick" e-width='100%' ej-datepicker e-value="value1" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-body">
+        <div id="property-window" class="box wide">
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Select Culture</span>
+                </div>
+                <div class="col-md-6">
+                    <input id="culture" ej-dropdownlist e-text="en-US" e-value="value" e-datasource="dataList" e-width="width" e-change="onChange" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="expenseAnalysisApp">
+<head>
+    <title>Essential JS1 | Showcase Sample | Expense Analysis </title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="The Expense Analysis application is helpful to categorize and analyze the expenses details against budget using Essential JS1 - Grid, Chart, and Drop-Down components. ">
+    <link href="../../content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../content/ejthemes/bootstrap-theme/ej.web.all.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../../content/images/favicon.ico" />
+    <link href="css/expense-css.css" rel="stylesheet" />
+    <script src="../../scripts/respond.js"></script>
+    <link href="../../content/ejthemes/responsive-css/ej.responsive.css" rel="stylesheet" />
+    <link href="../../content/ejthemes/responsive-css/ejgrid.responsive.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+	<script src="../../scripts/jquery-1.11.3.min.js" type="text/javascript" ></script> 
+	<![endif]-->
+    <!--[if IE 9]><!-->
+    <script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript"> </script>
+    <!--<![endif]-->
+    <script src="../../scripts/jquery.validate.min.js"></script>
+    <script src="../../scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="../../scripts/jsrender.min.js"></script>
+    <script src="../../scripts/ej.web.all.min.js"></script>
+    <script src="../../scripts/angular.min.js"></script>
+    <script src="../../scripts/ej.widget.angular.min.js"></script>
+	<script src="../../app/service.config.js"></script>
+</head>
+<body ng-controller="expenseAnalysisCtrl">
+    <div class="sample-title">
+    </div>
+    <div class="container">
+        <div class="sample-container">
+            <div id="control-container">
+                <div class="text-title">
+                        <h1 style=" color: transparent; user-select: none; ">Expense Analysis</h1>
+                </div>
+                <div class="row imagetile">
+                    <div class="col-md-5">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="left-image">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="horz-align: right;">
+                                        <div class="e-exptitle">
+                                            <label class="e-name">
+                                                David Carter</label><br />
+                                            <label class="e-phone">
+                                                Phone : +1 919.494.1974
+                                            </label>
+                                            <br />
+                                            <label class="e-mail">
+                                                email : davidc@syncfusion.com</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-7 e-values-td">
+                        <div class="initborder">
+                            <table class="e-values">
+                                <tr>
+                                    <td class="pos-amt-td sideborder">
+                                        <p class="pos-amt"></p>
+                                        <p class="pos-text">
+                                            Positive
+                                        </p>
+                                        <p class="pos-transc">
+                                        </p>
+                                    </td>
+                                    <td class="neg-amt-td sideborder">
+                                        <p class="neg-amt"></p>
+                                        <p class="neg-text">
+                                            Negative
+                                        </p>
+                                        <p class="neg-transc"></p>
+                                    </td>
+                                    <td class="bal-amt-td">
+                                        <p class="bal-amt"></p>
+                                        <p class="bal-text">
+                                            Balance
+                                        </p>
+                                        <p class="bal-empty" style="visibility: hidden">
+                                            Transaction
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="chartgridtable">
+                    <div id="control-panel" class="add-filter-panel">
+                        <div class="row">
+                            <div class="col-md-1" style="DISPLAY: inline">
+                                <label class="sample-t">
+                                    Transactions</label>
+                            </div>
+                            <div class="col-md-8" style="DISPLAY: inline"></div>
+                            <div class="col-md-3" style="DISPLAY: inline;">
+                                <table style="float: left;">
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <input type="text" id="selectMonth" ej-dropdownlist e-targetID="MonthList" e-width="150px" e-height="30px" e-select="changeMonth" e-create="initialMonthSelection"/>
+                                                <div id="MonthList">
+                                                    <ul>
+                                                        <li>All</li>
+                                                        <li>January</li>
+                                                        <li>February</li>
+                                                        <li>March</li>
+                                                        <li>April</li>
+                                                        <li>May</li>
+                                                        <li>June</li>
+                                                        <li>July</li>
+                                                        <li>August</li>
+                                                        <li>September</li>
+                                                        <li>October</li>
+                                                        <li>November</li>
+                                                        <li>December</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="add-image" ng-click="imgclick()"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expensegridborder">
+                        <div class="col-xs-13 grid-container">
+                            <div id="ExpenseGrid" ej-grid e-allowPaging="true" e-allowSorting="true" e-enableRowHover="false" e-allowKeyboardNavigation="true" e-isResponsive="true" e-enableResponsiveRow="false" 
+		     e-editSettings-allowEditing="false" e-editSettings-allowAdding="true"  e-editSettings-editMode="dialog" e-datasource="griddata">
+                             <div e-columns>
+                                <div e-column e-field="DateTime" e-headertext="Date" e-textalign="right" e-width="40" e-validationrules-required="true" e-format="{0:MMM dd yyyy}" e-editType="datepicker"></div>
+                                <div e-column e-field="CategoryName" e-headertext="CategoryName" e-validationrules-required="true" e-validationrules-minlength="3" e-width="100" e-visible="false"></div>
+                                <div e-column e-field="Description" e-headertext="Description" e-validationrules-required="true" e-validationrules-minlength="3" e-width="100"></div>
+                                <div e-column e-field="SubCategory" e-headertext="Category" e-validationrules-required="true" e-validationrules-minlength="3" e-width="70" e-priority="3"></div>
+                                <div e-column e-field="Amount" e-headertext="Amount" e-textalign="right" e-width="50" e-format="{0:C}" e-validationrules-required="true" e-priority="4" e-editType="numericedit" e-editParams-decimalPlaces="2" e-editParams-minValue="0"></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="col-xs-13 chart-inner">
+                            <div class="samplesec">
+                                <div>
+                                    <div class="samplename">
+                                        <span>Expense Analysis Chart </span>
+                                    </div>
+                                    <div class="samplebody">
+                                        <div class="samplecontent">
+                                            <div class="chart-back-button">
+                                                <button id="btnBack" ej-button e-size="mini" e-click="btnClick">Back</button>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div id="ExpenseChart" ej-chart e-animationComplete="completeAnimation" e-seriesRendering="seriesRender" e-background="transparent" e-enableSmartLabels="true" e-legend-visible="false" e-canResize="true" e-pointRegionClick="onclick"> 
+				                                      <e-series>              
+                                                           <e-series e-type="pie" e-name="ExpenseChart" e-labelPosition="outside" e-enableAnimation="true" e-xName="ExpenseCategory" e-yName="Amount" e-explode="true" e-border-width="1" e-marker-connectorLine-height="20" e-marker-dataLabel-visible="true" e-datasource="expensedatasource"></e-series>
+                                                      </e-series>
+                                                   </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="spend-div">
+                                                        <table cellspacing="10">
+                                                            <tr>
+                                                                <td class="most-spent">
+                                                                    <p class="most-spent-text">
+                                                                        Most Spent
+                                                                    </p>
+                                                                    <p class="most-spent-amt">
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="least-spent">
+                                                                    <p class="least-spent-text">
+                                                                        Least Spent
+                                                                    </p>
+                                                                    <p class="least-spent-amt">
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="avg-spent">
+                                                                    <p class="avg-spent-text">
+                                                                        Average Spent
+                                                                    </p>
+                                                                    <p class="avg-spent-amt">
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+	"use strict"; 
+	 angular.module('expenseAnalysisApp', ['ejangular'])
+     .controller('expenseAnalysisCtrl', function ($scope, $compile) {
+	     $scope.griddata=$scope.expensedatasource=[];
+		 $scope.UpdateGridChart=function(month) {
+            // Getting json data from web api
+           $scope.dataManger = ej.DataManager({
+                url: window.baseurl + "api/expense/get?month=" + month,
+                offline: true, crossDomain:true,
+                requiresFormat: false
+            });
+            $scope.dataManger.executeQuery(ej.Query()).done(function (e) {
+			    $scope.$apply(function(){
+	              $scope.griddata = e.result[1];
+				  $scope.expensedatasource=e.result[0];
+				});
+				$("#ExpenseChart").ejChart("option", {
+                    "model": {
+                        series: [{
+                            type: 'pie',
+                            name: "ExpenseChart",
+                            enableAnimation: true,
+                            labelPosition: 'outside',
+                            marker: { connectorLine: { height: 20 }, dataLabel: { visible: true, } },
+                            border: { width: 1 },
+                            explode: true,
+                            xName: "ExpenseCategory",
+                            yName: "Amount"
+                        }]
+                    }
+                });
+                $('.pos-amt').html("$" + $scope.formatNumber(parseInt(e.result[5])));
+                $('.neg-amt').html("$" + $scope.formatNumber(parseInt(e.result[6])));
+                $('.bal-amt').html("$" + $scope.formatNumber(parseInt(e.result[7])));
+                $('.most-spent-amt').html(e.result[2]);
+                $('.least-spent-amt').html(e.result[3]);
+                $('.avg-spent-amt').html(e.result[4]);
+                $('.pos-transc').html(e.result[8] + " Transactions");
+                $('.neg-transc').html(e.result[9] + " Transactions");
+                window.chartDS = e.result[0];
+                window.Home = e.result[10]
+                window.DailyLiving = e.result[11]
+                window.Entertainment = e.result[12]
+                window.Health = e.result[13]
+                window.Transportation = e.result[14]
+                window.Personal = e.result[15]
+                $(".add-filter-panel").ejWaitingPopup("hide");
+            });
+        }
+        $scope.initialMonthSelection=function(args){
+            $('#selectMonth').data("ejDropDownList").selectItemByText(ej.preferredCulture().calendars.standard.months.names[new Date().getMonth()]); 
+        }
+	     $scope.changeMonth=function(sender) {
+            $(".add-filter-panel").ejWaitingPopup();
+            $(".add-filter-panel").ejWaitingPopup("show");
+            $scope.UpdateGridChart(sender.selectedText); //updating content of grid and chart on change of month
+        }
+		$scope.imgclick=function () {
+            $scope.gridObj = $("#ExpenseGrid").ejGrid("instance");
+            $scope.gridObj.addRecord(); //adding new record in grid 
+			$("#ExpenseGrid_dialogEdit").ejDialog({isResponsive:true});		
+        };
+		$scope.formatNumber=function(number) {
+            return ej.format(number, "n0"); //formating numbers  for spent amounts
+        }
+		$scope.seriesRender=function(e) {
+            //Adding text to the series points to chart
+            $.each(e.data.series.points, function () {
+                this.text = this.x + "- $" + $scope.formatNumber(parseInt((this.YValues)));
+            });
+        }
+		$scope.btnClick=function(sender) {
+            $("#ExpenseChart").ejChart("option", { "pie": $scope.pieSeries() });
+            $("#btnBack").hide();
+        }
+		$scope.onclick=function(sender) {
+            {
+                $scope.isIe8 = ej.browserInfo().name == "msie" && parseInt(ej.browserInfo().version) == 8;
+                //Rendering drilldown dhart based on the points clicked
+                if (sender.model.AnimationComplete || $scope.isIe8) {
+                    $scope.index = sender.data.region.Region.PointIndex;
+                    $scope.name = sender.model.series[0].points[$scope.index].x;
+                    if (sender.model.series[0].name == "ExpenseChart")
+                        $("#ExpenseChart").ejChart("option", { "drilldown": $scope.pieSeries($scope.name) });
+                    if ($scope.isIe8)
+                        $("#btnBack").show();
+                }
+            }
+        }
+	    $scope.completeAnimation=function(sender) {
+            //show or hide back button based on the series name
+            if (sender.model.series[0].name != "ExpenseChart")
+                $("#btnBack").show();
+            else
+                $("#btnBack").hide();
+        }
+		$scope.genarateSeries=function(sName) {
+             $scope.seriesData = {
+                series: [{
+                    dataSource: window[sName],
+                    xName: "ExpenseCategory",
+                    yName: "Amount",
+                    type: 'pie',
+                    labelPosition: 'outside',
+                    pieCoefficient: 0.8,
+                    enableAnimation: true,
+                    explode: false,
+                    marker: {
+                        dataLabel: {
+                            visible: true,
+                            shape: 'none',
+                            connectorLine: { color: 'black', width: 0.5 },
+                            font: { fontFamily: 'Segoe UI', fontStyle: 'Normal ', fontWeight: 'Regular', size: '12px', color: '#707070', opacity: 1 }
+                        }
+                    }
+
+                }],
+                legend: { visible: false },
+            }
+            return $scope.seriesData;
+        }
+       $scope.pieSeries=function(seriesName) {
+            //Choosing the series points based on the series name to drilldown chart
+            switch (seriesName) {
+            case "Home":
+                return $scope.genarateSeries(seriesName);
+                break;
+            case "Entertainment":
+                window.Entertainment[1].Amount = 45;
+                return $scope.genarateSeries(seriesName);
+                break;
+            case "Daily Living":
+                return $scope.genarateSeries("DailyLiving");
+                break;
+            case "Health":
+                return $scope.genarateSeries(seriesName);
+                break;
+            case "Transportation":
+                return $scope.genarateSeries(seriesName);
+                break;
+            case "Personal":
+                return $scope.genarateSeries(seriesName);
+                break;
+            default:
+            {
+                return {
+                    series: [
+                        {
+                            name: "ExpenseChart",
+                            dataSource: window.chartDS,
+                            xName: "ExpenseCategory",
+                            yName: "Amount",
+                            type: 'pie',
+                            labelPosition: 'outside',
+                            pieCoefficient: 0.8,
+                            explode: true,
+                            explodeOffset: 25,
+                            enableAnimation: true,
+                            AnimationComplete: false,
+                            marker: {
+                                dataLabel: {
+                                    visible: true,
+                                    shape: 'none',
+                                    connectorLine: { color: null, width: 0.5 },
+                                    font: { fontFamily: 'Segoe UI', fontStyle: 'Normal ', fontWeight: 'Regular', size: '12px', color: '#707070', opacity: 1 }
+                                }
+                            }
+                        }
+                    ],
+                    legend: { visible: false },
+                    AnimationComplete: false
+                };
+            }
+            }
+        }
+	    $("#btnBack").hide();
+     });
+    </script>
+</body>
+</html>

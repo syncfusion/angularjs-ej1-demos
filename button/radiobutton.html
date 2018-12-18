@@ -1,0 +1,70 @@
+<div ng-controller="RadioButtonCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                    <div class="control">
+                        <div class="radioalign">
+                            <br />
+                            Category<br />
+                            <br />
+                            <table class="table-condensed f11 table-nowrap">
+                                <tr>
+                                    <td class="chkrad">
+                                        <input type="radio" ej-radiobutton e-name="small" e-checked="true" id="Radio1" /><label for="Radio1" class="clslab">Fresher</label>
+                                    </td>
+                                    <td class="chkrad" colspan="2">
+                                        <input type="radio" ej-radiobutton e-name="small" id="Radio3" /><label for="Radio3" class="clslab">Experienced</label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                            <br />
+                            Experienced<br />
+                            <br />
+                            <table class="table-condensed f11 table-nowrap">
+                                <tr>
+                                    <td class="chkrad">
+                                        <input type="radio" ej-radiobutton e-name="medium" e-checked="true" id="Radio2" /><label for="Radio2" class="clslab">1+ years</label>
+                                    </td>
+                                    <td class="chkrad">
+                                        <input type="radio" ej-radiobutton e-name="medium" id="Radio4" /><label for="Radio4" class="clslab">2.5+years</label>
+                                    </td>
+                                    <td class="chkrad">
+                                        <input type="radio" ej-radiobutton name="medium" id="Radio5" /><label for="Radio5" class="clslab">5+years</label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br />
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+     @media only screen and (min-width: 480px){
+		.control{
+			padding:0 30%;
+		}
+     }
+
+
+	.table-nowrap td {
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	} 
+
+    .chkrad {
+        width: 150px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    .clslab {
+        margin-left: 10px;
+    }
+</style>

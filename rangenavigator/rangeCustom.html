@@ -1,0 +1,133 @@
+﻿  <script type="text/x-jsrender" id="leftlight">
+          <div style="width:28px;height:20px;background-color: transparent;">
+		     <img id="Img1" src="content/images/rangenavigator/Left.png"  />
+		  </div>
+	</script>
+	<script type="text/x-jsrender" id="rightlight">
+          <div style="width:20px;height:20px;background-color: transparent;">
+		     <img id="Img1" src="content/images/rangenavigator/Right.png"  />
+		  </div>
+	</script>
+	<script type="text/x-jsrender" id="leftdark">
+          <div style="width:28px;height:20px;background-color: transparent;">
+		     <img id="Img1" src="content/images/rangenavigator/LeftDark.png"  />
+		  </div>
+	</script>
+	<script type="text/x-jsrender" id="rightdark">
+          <div style="width:20px;height:20px;background-color: transparent;">
+		     <img id="Img1" src="content/images/rangenavigator/RightDark.png"  />
+		  </div>
+	</script>
+	<script type="text/x-jsrender" id="rectlight">
+           <div style="width:8px;height:36px;background-color: #41d335;border: 2px ridge dimgray;"></div>
+	</script>
+	<script type="text/x-jsrender" id="rectdark">
+           <div style="width:8px;height:36px;background-color: #41d335;border: 2px ridge white;"></div>
+	</script>
+<div ng-controller="RangeCtrl1">  
+  <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+			<div id="scrollcontent1" style="width:92% !important;  position: relative; margin-left:auto; margin-right:auto;" ej-rangeNavigator e-enableDeferredUpdate="true" e-allowSnapping="true" e-padding="15" e-isResponsive="true" e-valueType="datetime" e-rangeChanged="onchartloaded"
+                    e-loaded="loaded" e-selectedRangeSettings-start="2010/7/1" e-selectedRangeSettings-end="2011/4/1"  e-tooltipSettings-labelFormat="MM/dd/yyyy"
+                    e-tooltipSettings-tooltipDisplayMode="ondemand" e-tooltipSettings-visible="true" 
+                    e-loaded="loadingtheme" e-seriesSettings-type="column" e-seriesSettings-enableAnimation="true" e-valueAxisSettings-rangePadding="none"
+                    e-valueAxisSettings-axisLine-visible="false"
+                    e-valueAxisSettings-font-size="0px"
+                    e-valueAxisSettings-majorTickLines-lineWidth="0" e-valueAxisSettings-majorTickLines-size="0" e-valueAxisSettings-majorTickLines-visible="true"
+                e-valueAxisSettings-range-min="0" e-valueAxisSettings-range-max="50" e-valueAxisSettings-range-interval="10"
+                e-valueAxisSettings-majorGridLines-visible="false"
+                e-valueAxisSettings-visible="false"
+				e-labelSettings-higherLevel-style-font-color="black" e-labelSettings-higherLevel-style-font-family="Segoe UI" e-labelSettings-higherLevel-style-font-style="Normal" e-labelSettings-higherLevel-style-font-size="13px" e-labelSettings-higherLevel-style-font-opacity="1" e-labelSettings-higherLevel-style-font-weight="regular" e-labelSettings-higherLevel-style-horizontalAlignment="left"
+                e-labelSettings-higherLevel-intervalType="years" 
+                e-labelSettings-higherLevel-gridLineStyle-color="black" e-labelSettings-higherLevel-gridLineStyle-width="1" e-labelSettings-higherLevel-gridLineStyle-dashArray="17 5 0"
+                e-labelSettings-higherLevel-labelPlacement="inside"
+				e-labelSettings-lowerLevel-style-font-color="black" e-labelSettings-lowerLevel-style-font-family="Segoe UI" e-labelSettings-lowerLevel-style-font-style="Normal" e-labelSettings-lowerLevel-style-font-size="12px" e-labelSettings-lowerLevel-style-font-opacity="1" e-labelSettings-lowerLevel-style-font-weight="regular" e-labelSettings-lowerLevel-style-horizontalAlignment="center" 
+                e-labelSettings-lowerLevel-intervalType="quarters"
+                e-labelSettings-lowerLevel-gridLineStyle-color="black" e-labelSettings-lowerLevel-gridLineStyle-width="1" e-labelSettings-lowerLevel-gridLineStyle-dashArray="0 13 5"
+                e-labelSettings-lowerLevel-labelPlacement="inside"
+                e-navigatorStyleSettings-unselectedRegionColor="white"
+                e-navigatorStyleSettings-thumbColor="white"
+                e-navigatorStyleSettings-background="transparent"
+				e-navigatorStyleSettings-leftThumbTemplate="rectlight"
+				e-navigatorStyleSettings-rightThumbTemplate="rectlight"
+                e-navigatorStyleSettings-border-color="black" e-navigatorStyleSettings-border-width="3"
+                e-navigatorStyleSettings-majorGridLineStyle-color="transparent"
+                e-navigatorStyleSettings-minorGridLineStyle-color="transparent">	
+                  <e-series>
+				     <e-series e-name="Product A"
+                                e-enableAnimation="false"
+                                e-type="area"
+                                e-dataSource="Data1" e-xName="XValue" e-yName="YValue"
+                                e-border-color="transparent" e-border-width="2"
+								e-opacity="1" e-fill="#45eded">
+					 </e-series>
+					 <e-series e-name="Product B"
+                                e-enableAnimation="false"
+                                e-type="area"
+                                e-dataSource="Data2" e-xName="XValue" e-yName="YValue"
+                                e-border-color="transparent" e-border-width="2"
+								e-opacity="1" e-fill="#41d335">
+					 </e-series>
+                  </e-series>				  
+                    </div><br/><br/>	          
+         </div>
+        </div>
+</div>
+</div>
+
+
+<div ng-controller="RangeCtrl2">  
+  <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+			<div id="scrollcontent2" style="width:92% !important;  position: relative; margin-left:auto; margin-right:auto;" ej-rangeNavigator e-enableDeferredUpdate="true" e-allowSnapping="true" e-padding="15" e-isResponsive="true" e-valueType="datetime" e-rangeChanged="onchartloaded"
+                    e-loaded="loaded" e-selectedRangeSettings-start="2011/1/1" e-selectedRangeSettings-end="2011/10/1"  e-tooltipSettings-labelFormat="MM/dd/yyyy"
+                    e-tooltipSettings-tooltipDisplayMode="ondemand" e-tooltipSettings-visible="true" 
+                    e-loaded="loadingtheme" e-seriesSettings-type="column" e-seriesSettings-enableAnimation="true" e-valueAxisSettings-rangePadding="none"
+                    e-valueAxisSettings-axisLine-visible="false"
+                    e-valueAxisSettings-font-size="0px"
+                    e-valueAxisSettings-majorTickLines-lineWidth="0" e-valueAxisSettings-majorTickLines-size="0" e-valueAxisSettings-majorTickLines-visible="true"
+                e-valueAxisSettings-range-min="0" e-valueAxisSettings-range-max="50" e-valueAxisSettings-range-interval="10"
+                e-valueAxisSettings-majorGridLines-visible="false"
+                e-valueAxisSettings-visible="false"
+				e-labelSettings-higherLevel-style-font-color="black" e-labelSettings-higherLevel-style-font-family="Segoe UI" e-labelSettings-higherLevel-style-font-style="Normal" e-labelSettings-higherLevel-style-font-size="13px" e-labelSettings-higherLevel-style-font-opacity="1" e-labelSettings-higherLevel-style-font-weight="regular" e-labelSettings-higherLevel-style-horizontalAlignment="left"
+                e-labelSettings-higherLevel-intervalType="years" 
+                e-labelSettings-higherLevel-gridLineStyle-color="black" e-labelSettings-higherLevel-gridLineStyle-width="1" e-labelSettings-higherLevel-gridLineStyle-dashArray="17 5 0"
+                e-labelSettings-higherLevel-labelPlacement="inside"
+				e-labelSettings-lowerLevel-style-font-color="black" e-labelSettings-lowerLevel-style-font-family="Segoe UI" e-labelSettings-lowerLevel-style-font-style="Normal" e-labelSettings-lowerLevel-style-font-size="12px" e-labelSettings-lowerLevel-style-font-opacity="1" e-labelSettings-lowerLevel-style-font-weight="regular" e-labelSettings-lowerLevel-style-horizontalAlignment="center" 
+                e-labelSettings-lowerLevel-intervalType="quarters"
+                e-labelSettings-lowerLevel-gridLineStyle-color="black" e-labelSettings-lowerLevel-gridLineStyle-width="1" e-labelSettings-lowerLevel-gridLineStyle-dashArray="0 13 5"
+                e-labelSettings-lowerLevel-labelPlacement="inside"
+                e-navigatorStyleSettings-unselectedRegionColor="white"
+				e-navigatorStyleSettings-thumbStroke="black"
+                e-navigatorStyleSettings-thumbColor="gray"
+                e-navigatorStyleSettings-background="transparent"
+				e-navigatorStyleSettings-leftThumbTemplate="leftlight"
+				e-navigatorStyleSettings-rightThumbTemplate="rightlight"
+                e-navigatorStyleSettings-border-color="black" e-navigatorStyleSettings-border-width="3"
+                e-navigatorStyleSettings-majorGridLineStyle-color="transparent"
+                e-navigatorStyleSettings-minorGridLineStyle-color="transparent">	
+                  <e-series>
+				     <e-series e-name="Product A"
+                                e-enableAnimation="false"
+                                e-type="splinearea"
+                                e-dataSource="Data3" e-xName="XValue" e-yName="YValue"
+                                e-border-color="transparent" e-border-width="2"
+								e-opacity="1" e-fill="#4EC9DD">
+					 </e-series>
+					 <e-series e-name="Product B"
+                                e-enableAnimation="false"
+                                e-type="splinearea"
+                                e-dataSource="Data4" e-xName="XValue" e-yName="YValue"
+                                e-border-color="transparent" e-border-width="2"
+								e-opacity="1" e-fill="#DD4A4A">
+					 </e-series>
+                  </e-series>				  
+                    </div><br/><br/>	          
+         </div>
+        </div>
+</div>
+</div>
+
+
