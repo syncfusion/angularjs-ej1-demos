@@ -7,7 +7,7 @@ This section guides you to run the Syncfusion EJ1 AngularJS samples into your lo
 * [Prerequisites](#prerequisites)
 * [Repository structure](#repository-structure)
 * [License](#license)
-* [Using the examples](#using-the-examples)
+* [Using the examples](#using-the-examples) 
 * [Installing](#installing)
 * [Running](#running)
 * [Controls catalog](#controls-catalog)
