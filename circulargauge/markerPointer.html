@@ -1,0 +1,104 @@
+<div ng-controller="CircularGaugeCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="frame">
+				   <div id="frameCircular">
+                    <ej-CircularGauge id="marker" e-backgroundColor="transparent" e-width="500" e-value="55"  e-radius="100"  e-drawCustomLabel=DrawCustomLabel e-isResponsive="true" e-load= "loadGaugeTheme" e-frame-frameType="halfcircle" e-frame-frameStartAngle="180" e-frame-frameEndAngle="360" e-enableAnimation="false">
+					  <e-scales>
+					    <e-scale e-startAngle="180" e-sweepAngle="180" e-majorIntervalValue="100" e-showRanges="true">
+						  <e-ticks>
+						    <e-tick e-height="0" e-width="0">
+							 </e-tick>
+						  </e-ticks>
+						  <e-ranges>
+						    <e-range e-size="40" e-startValue="0" e-endValue="50" e-backgroundColor="#1B4279" e-border-color="#1B4279">
+							</e-range>
+							<e-range e-size="40" e-startValue="50" e-endValue="100" e-backgroundColor="#91B8F3" e-border-color="#91B8F3">
+							</e-range>
+						  </e-ranges>
+						  <e-pointers>
+						    <e-pointer e-type="marker" e-markerType="diamond" e-width="40" e-length="20"
+                        e-distanceFromScale="10" e-backgroundColor="black"
+                        e-pointerValueText-showValue="true"
+                            e-pointerValueText-distance="-5" 
+                            e-pointerValueText-color="Red" 
+                            e-pointerValueText-opacity="1"
+                            e-pointerValueText-angle="0"
+                            e-pointerValueText-font-size="15px"
+                            e-pointerValueText-font-fontStyle="Normal"
+                            e-pointerValueText-font-fontFamily="Arial">
+							</e-pointer>
+						  </e-pointers>
+						  <e-customLabels>
+						     <e-customLabel e-value="" e-font-size="25px" e-font-fontFamily="Arial" e-font-fontStyle="Bold" e-position-x="250" e-position-y="200" e-color="#8c8c8c">
+							 </e-customLabel>
+						  </e-customLabels>
+						</e-scale>
+					  </e-scales>
+                   </ej-CircularGauge>
+				   </div>
+                </div>
+			</div>
+			<div class="panel-body">
+                <div id="property-window" class="box wide">
+				    <div class="row">
+                        <div class="col-md-3">
+                            Pointer Length
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <div id="pointerWidth"></div>
+                        </div>
+                        <div class="col-md-3">
+                            Pointer Width
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <div id="pointerLength"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            Distance From Scale
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <div id="distanceFromScale"></div>
+                        </div>
+
+                        <div class="col-md-3">
+                            Animation Speed
+                        </div>
+                        <div class="col-md-3">
+                            <div id="animationSpeed"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            Enable Animation
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="checkbox" id="chkEnableAnimation" class="e-chkbox" value="LabelAutoAngle" />
+                        </div>
+
+                        <div class="col-md-3">
+                            Pointer Value
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <div id="pointerValue"></div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Marker Type
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="markerType" />
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

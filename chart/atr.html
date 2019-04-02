@@ -1,0 +1,68 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-size-height="600px" e-primaryXAxis-valueType="DateTime"
+                  e-primaryXAxis-labelFormat="dd,MMM"
+                  e-primaryXAxis-title-text="Date"
+				  e-primaryYAxis-labelFormat="${value}"
+			     e-primaryYAxis-range-min="55" e-primaryYAxis-range-max="75" e-primaryYAxis-range-interval="5"				e-isResponsive="true" e-load="loadTheme" e-legend-visible="true" e-zooming-enable="true" e-trackToolTip="track" e-title-text="ATR Indicator" e-crosshair-visible="true" e-crosshair-type="trackball" e-axes="Axes">
+				 <e-series>
+				     <e-series e-name="indicator" 
+				e-type="hiloopenclose" 
+				e-drawMode="both"
+                e-dataSource="ChartData"
+                e-high="High"
+                e-low="Low"
+                e-close="Close"
+                e-open="Open"
+                e-volume="Volume"
+                e-xName="xDate"
+                e-tooltip-visible="false" 
+				e-tooltip-format="TooltipFormat">
+					 </e-series>
+				 </e-series>
+				 <e-indicators>
+				    <e-indicator type="atr"
+				e-seriesName="indicator" 
+				e-yAxisName="yaxis"
+				e-fill="blue"
+				e-width="2"
+				e-tooltip-visible="false" e-tooltip-format="" e-tooltip-fill="transparent" e-tooltip-border-color="transparent"
+                e-enableAnimation="true">
+					</e-indicator>
+				 </e-indicators>
+                </div>
+            </div>
+			 <div class="panel-body">
+                <div id="property-window" class="box wide">
+				 					<div class="row">
+						<div class="col-md-3">
+							Period:
+						</div>
+						<div class="col-md-3 aligntop">
+							 <input type="text" id="period" value="5" />
+						</div>
+					</div>
+					<div class="row">
+                        <div class="col-md-3">
+                            Signal Line Stroke:
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <select name="signalLine" autocomplete="off" id="signalLine">
+                                <option value="0">Blue</option>
+                                <option value="1">Yellow</option>
+                                <option value="2">Green</option>
+								<option value="3">Red</option>
+                            </select>
+                        </div>						 
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+

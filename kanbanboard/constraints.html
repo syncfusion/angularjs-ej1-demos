@@ -1,0 +1,16 @@
+<div ng-controller="constraintsCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">                
+				<div id="constraints" ej-kanban e-datasource="data" e-fields-content="Summary" e-allowTitle="true" e-fields-primaryKey="Id" e-fields-imageUrl="ImgUrl" e-keyField="Status">
+                    <div e-columns>
+                        <div e-column e-key="Open" e-headertext="Backlog"></div>
+                        <div e-column e-key="InProgress" e-headertext="In Progress" e-constraints-max="2" ></div>
+                        <div e-column e-key="Testing" e-headertext="Testing"></div>
+						<div e-column e-key="Close" e-headertext="Done"></div>
+                    </div>										
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>

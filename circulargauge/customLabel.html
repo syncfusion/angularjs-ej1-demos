@@ -1,0 +1,74 @@
+<div ng-controller="CustomLabelCircularGaugeCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+			<div id="digitalframe1" style="width:400px">
+                <div id="circularframe1">
+                    <ej-CircularGauge id="CircularGauge2" e-backgroundColor="transparent" e-width="300" e-isResponsive="true" e-readOnly="false" e-load= "loadGaugeTheme" e-enableAnimation="false" e-tooltip-showCustomLabelTooltip="true" e-outerCustomLabelPosition="left" e-tooltip-showCustomLabelTooltip="true">
+					 <e-scales>
+					   <e-scale e-showRanges="true"
+                        e-startAngle="122" e-sweepAngle="296" e-radius="130" e-showScaleBar="true" e-size="1" e-maximum="120" e-majorIntervalValue=" 20" e-minorIntervalValue="10" e-border-width="0.5">
+						<e-customLabels>
+						  <e-customLabel e-value="KM / H" e-position-x="150" e-position-y="220" e-color="Green" e-font-size="20px">
+						  </e-customLabel>
+						  <e-customLabel e-value="Average Driving Speed" e-positionType="outer"
+                          e-color="Red" e-font-size="20px">
+						  </e-customLabel>
+						</e-customLabels>
+						<e-pointers>
+						   <e-pointer e-value="60"
+                            e-showBackNeedle="true"
+                            e-backNeedleLength="20"
+                            e-length="95"
+                            e-width="7"
+                            e-pointerCap-radius="12">
+						   </e-pointer>
+						</e-pointers>
+						<e-ticks>
+						   <e-tick e-type="major",
+                            e-distanceFromScale="2"
+                            e-height="16"
+                            e-width="1" e-color="#8c8c8c">
+						   </e-tick>
+						   <e-tick e-type="minor" e-height="8" e-width="1" e-distanceFromScale="2" e-color="#8c8c8c">
+						   </e-tick>
+						</e-ticks>
+						<e-labels>
+						  <e-label e-color="#8c8c8c">
+						  </e-label>
+						</e-labels>
+						<e-ranges>
+						   <e-range e-distanceFromScale="-30"
+                            e-startValue="0"
+                            e-endValue="70">
+						   </e-range>
+						   <e-range e-distanceFromScale="-30"
+                            e-startValue="70"
+                            e-endValue="110"
+                            e-backgroundColor="#fc0606"
+                            e-border-color="#fc0606">
+						   </e-range>
+						   <e-range e-distanceFromScale="-30"
+                            e-startValue="110"
+                            e-endValue="120"
+                            e-backgroundColor="#f5b43f"
+                            e-border-color="#f5b43f">
+						   </e-range>
+						</e-ranges>
+					   </e-scale>
+					 </e-scales>
+                   </ej-CircularGauge>
+                </div>
+				</div>
+			</div>
+			<div>
+                  <h5 align="center"> Hover the mouse on custom label text</h5>
+             </div>
+		</div>
+	</div>
+</div>
+<style>
+        #digitalframe{
+            background: none;
+        }
+    </style>
