@@ -14,7 +14,7 @@ This section guides you to run the Syncfusion EJ1 AngularJS samples into your lo
 * [Documentation](#documentation)
 * [Demos](#demos)
 * [Release Notes](#release-notes)
-* [Support and Feedback](#support-and-feedback)
+* [Support and Feedback](#support-and-feedback) 
 
 ## Prerequisites
 
