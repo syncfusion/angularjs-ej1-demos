@@ -1,0 +1,38 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-commonSeriesOptions-type="pie" e-commonSeriesOptions-border-color="white" e-commonSeriesOptions-marker-dataLabel-visible="true" e-commonSeriesOptions-marker-dataLabel-enableContrastColor='true' e-commonSeriesOptions-marker-dataLabel-connectorLine-color= 'black' e-commonSeriesOptions-marker-dataLabel-type='bezier' e-isResponsive="true" e-legend-visible="true" e-seriesRendering="seriesRender" e-title-text="List of Countries by Population">
+				<e-series>
+				   <e-series e-labelPosition='inside' e-points="Points1"
+                      e-pieCoefficient="0.6"
+                      e-doughnutSize="0.6"
+                      e-name="Continents">
+				   </e-series>
+				   <e-series e-points="Points2" e-labelPosition='outside'
+                    e-name="Countries">
+				   </e-series>
+				</e-series>
+                </div>
+				<div class="panel-body">
+                <div id="property-window" class="box wide">
+				 <div class="row" style="margin: 10px 0;">
+                        <div class="col-md-3">
+                            Series Type
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <select name="selectIndex" autocomplete="off" id="type">
+                                <option value="pie">Pie</option>
+                                <option value="doughnut">Doughnut</option>
+                            </select>
+                        </div>
+                    </div>
+				</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
