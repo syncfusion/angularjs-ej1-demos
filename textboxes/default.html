@@ -1,0 +1,107 @@
+<div ng-controller="TextboxCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div id="control">
+                        <table class="sample" style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span>Numeric Textbox</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="numeric" type="text" ej-numerictextbox e-value="nvalue" e-change="isChange" e-width="width" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="input ejinputtext" ng-model="nvalue" width="300px" /><br />
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Percentage Textbox</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="percent" type="text" ej-percentagetextbox e-value="pvalue" e-width="width" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="input ejinputtext" ng-model="pvalue" width="300px" /><br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Currency Textbox</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="currency" type="text" ej-currencytextbox e-value="cvalue" e-width="width" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="input ejinputtext" ng-model="cvalue" width="300px" /><br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>MaskEdit Textbox</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="maskedit" type="text" ej-maskedit e-value="mvalue" e-inputmode="ej.InputMode.Text" e-maskformat='99-999' e-width="width" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="maskedit2" type="text" ej-maskedit e-value="mvalue" e-inputmode="ej.InputMode.Text" e-maskformat='99-999' e-width="width" /><br />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+    .control {
+        color: gray;
+        font-family: 'Segoe UI';
+        font-size: medium;
+    }
+
+    .e-widget.e-numeric, .e-widget.e-percent, .e-widget.e-currency, .e-mask.e-widget {
+        width: 100%;
+    }
+
+    td {
+        padding: 5px 2px;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .frame {
+        width: 400px;
+    }
+
+    .input {
+        height: 32px;
+        width: 300px;
+        text-indent: 10px;
+    }
+</style>

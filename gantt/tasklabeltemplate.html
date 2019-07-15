@@ -1,0 +1,55 @@
+﻿<div ng-controller="GanttCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div id="angulargantt" ej-gantt e-datasource="data"
+                     e-taskidmapping="taskID"
+                     e-tasknamemapping="taskName"
+                     e-childmapping="subtasks"
+                     e-startdatemapping="startDate"
+                     e-enddatemapping="endDate"
+                     e-progressmapping="progress"
+                     e-schedulestartdate="02/01/2017"
+                     e-scheduleenddate="03/16/2017"
+                     e-treecolumnindex="1"
+                     e-resources="columnTemplateResource"
+                     e-resourceinfomapping="resourceId"
+                     e-resourcenamemapping="resourceName"
+                     e-resourceidmapping="resourceId"
+                     e-righttasklabeltemplate="rightlabelTemplate"
+                     e-lefttasklabeltemplate="leftlabelTemplate"
+                     e-allowganttchartediting="false"
+                     e-rowheight="rowheight"
+                     e-isresponsive="true"
+                     style="width:100%;height:450px;">
+                </div>
+            </div>
+
+            <script>
+                function _getSeparator(length, idx) {
+                    if (idx < length - 1) {
+                        return ","
+                    }
+                }
+                var helpers = {};
+                helpers["_getSeparator"] = _getSeparator;
+                $.views.helpers(helpers);
+            </script>
+            <script id="rightlabelTemplate" type="text/x-jsrender">
+                {{if #data['resourceNames']}}
+                <div>
+                    {{for resourceInfo}}
+                    <img src="content/images/gantt/{{:resourceName}}.png" height="30px" />
+                    <span style="margin-left:5px;">{{:resourceName}}</span>
+                    {{:~_getSeparator(#get("array").data.length,#index)}}
+                    {{/for}}
+                </div>
+                {{/if}}
+            </script>
+
+            <script id="leftlabelTemplate" type="text/x-jsrender">
+                <div style="padding-top:5px;">
+                    <span>{{:#data['taskName']}}  [{{:status}}%]</span>
+                </div>
+
+            </script>

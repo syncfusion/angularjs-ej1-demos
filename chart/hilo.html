@@ -1,0 +1,66 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="Country" e-primaryXAxis-majorGridLines-visible="false" e-primaryXAxis-labelRotation="90"  e-primaryYAxis-title-text="Rainfall(mm)" e-primaryYAxis-axisLine-visible="false" e-primaryYAxis-rowIndex="0" e-primaryYAxis-majorGridLines-visible ="false" e-primaryYAxis-range-min="0" e-primaryYAxis-range-max="300" e-primaryYAxis-labelFormat="{value}mm" e-primaryYAxis-range-interval="50" e-commonSeriesOptions-type="hilo" e-isResponsive="true" e-legend-visible="false" e-title-text="Highest and Lowest Rainfall across World">
+				<e-series>
+				   <e-series e-name='Rainfall' e-points="Points1" 
+					e-tooltip-visible="true" 
+					e-tooltip-template='Tooltip'
+					e-enableAnimation="true">
+				   </e-series>
+				</e-series>
+                </div>
+            </div>
+				  <div id="Tooltip" style="display: none; width:125px;padding-top: 10px;padding-bottom:10px">       
+        <div align="center" style="font-weight:bold">
+                    #point.x#
+        </div>                
+        <table>
+            <tr>
+                <td>
+                    High:
+                </td>
+                <td>
+                    #point.high#mm
+                </td>               
+            </tr>
+             <tr>
+                <td>
+                    Low:
+                </td>
+                <td >
+                    #point.low#mm
+                </td>               
+            </tr>                          
+        </table>   
+    </div>
+        </div>
+    </div>
+</div>
+ <style class="cssStyles">
+    .tooltipDivcontainer table, table th, table tr 
+	{
+        border:0px none;
+        margin: 0 auto;
+    }
+    table td 
+	{
+        border:0px none;
+        margin: 0 auto;
+        display:inline;
+    }
+	.tooltipDivcontainer 
+	{
+        border:2px transparent;
+        color:white;
+    }
+	#Tooltip td
+	{
+		color:white;
+	}
+ </style>
+
+

@@ -1,0 +1,60 @@
+﻿<div ng-controller="CircularGaugeCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="circularframe">
+                    <ej-circulargauge id=e-circulargauge e-enableanimation="false" e-background="#e0e0e0" e-width="700"
+                                      e-height="600" e-radius="80" e-drawlabels="ndrawLabels" e-drawpointers="ndrawPointers">
+                        <e-scales>
+                            <e-scale e-showranges="true" e-showticks="false" e-showindicators="true" e-startangle="120"
+                                     e-sweepangle="300" e-radius="80" e-size="1" e-showscalebar="false" e-minimum="0"
+                                     e-maximum="100" e-majorintervalvalue="10" e-minorintervalvalue="10"
+                                     e-border-width="0.5">
+                                <e-customlabels>
+                                    <e-customlabel e-value="SPORTS" e-position-x="350" e-position-y="280" e-color="#333333" e-font-fontfamily="segoe ui" e-font-fontstyle="bold" e-font-size="24px">  </e-customlabel>
+                                    <e-customlabel e-value="Fan Ratio" e-position-x="350" e-position-y="310" e-color="#333333" e-font-fontfamily="Segoe UI" e-font-size="18px"></e-customlabel>
+                                    <e-customlabel e-value="(in million)" e-position-x="350" e-position-y="330" e-color="#333333" e-font-fontfamily="Segoe UI" e-font-size="12px"></e-customlabel>
+                                </e-customlabels>
+
+                                <e-labels>
+                                    <e-label e-color="transparent"></e-label>
+                                </e-labels>
+
+                                <e-ranges>
+                                    <e-range e-distancefromscale="-73" e-size="40" e-startvalue="0" e-endvalue="80" e-backgroundcolor="#bc4b4b" e-border-color="#bc4b4b" e-border-width="2"></e-range>
+                                    <e-range e-distancefromscale="-132" e-size="40" e-startvalue="0" e-endvalue="70" e-backgroundcolor="#21a56f" e-border-color="#21a56f" e-border-width="2"></e-range>
+                                    <e-range e-distancefromscale="-190" e-size="40" e-startvalue="0" e-endvalue="90" e-backgroundcolor="#2bafbc" e-border-color="#2bafbc" e-border-width="2"></e-range>
+                                </e-ranges>
+
+                                <e-pointers>
+                                    <e-pointer e-type="marker" e-markertype="image" e-value="80" e-distancefromscale="15" e-placement="far" e-length="43" e-width="43" e-backgroundcolor="transparent" e-border-width="0" e-border-color="transparent" e-imageurl="content/images/gauge/golfball.png"></e-pointer>
+                                    <e-pointer e-type="marker" e-markertype="image" e-value="70" e-distancefromscale="74" e-placement="far" e-length="43" e-width="43" e-backgroundcolor="transparent" e-border-width="0" e-border-color="transparent" e-imageurl="content/images/gauge/basketball.png"></e-pointer>
+                                    <e-pointer e-type="marker" e-markertype="image" e-value="90" e-distancefromscale="131" e-placement="far" e-length="43" e-width="43" e-backgroundcolor="transparent" e-border-width="0" e-border-color="transparent" e-imageurl="content/images/gauge/football.png"></e-pointer>
+                                </e-pointers>
+
+                                <e-indicators>
+                                    <e-indicator e-height="10" e-width="10" e-type="text" e-textlocation-x="0" e-textlocation-y="0">
+                                        <e-stateranges>
+                                            <e-staterange e-startvalue="0" e-endvalue="100" e-text="" e-textcolor="#8c8c8c" e-font-size="12px"></e-staterange>
+                                        </e-stateranges>
+                                    </e-indicator>
+                                    <e-indicator e-height="10" e-width="10" e-type="text" e-textlocation-x="0" e-textlocation-y="0">
+                                        <e-stateranges>
+                                            <e-staterange e-startvalue="0" e-endvalue="100" e-text="" e-textcolor="#8c8c8c" e-font-size="12px"></e-staterange>
+                                        </e-stateranges>
+                                    </e-indicator>
+                                    <e-indicator e-height="10" e-width="10" e-type="text" e-textlocation-x="0" e-textlocation-y="0">
+                                        <e-stateranges>
+                                            <e-staterange e-startvalue="0" e-endvalue="100" e-text="" e-textcolor="#8c8c8c" e-font-size="12px"></e-staterange>
+                                        </e-stateranges>
+                                    </e-indicator>
+                                </e-indicators>
+
+                            </e-scale>
+                        </e-scales>
+                    </ej-circulargauge>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+	<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-size-height="600px" e-isResponsive="true" e-load="loadTheme" e-legend-visible="true" e-legend-position="top" e-title-text="Project Cost Breakdown">
+				  <e-series>
+				     <e-series e-name="Newyork" e-points="Points1" 
+					e-type="doughnut" 
+					e-explode="true" 
+					e-doughnutSize="0.9"
+					e-labelPosition="inside" 
+					e-enableAnimation="true" e-marker-dataLabel-visible="true" 
+					e-marker-dataLabel-font-color="white" e-marker-dataLabel-font-size="30px" e-marker-dataLabel-font-fontWeight="lighter"
+					>
+					 </e-series>
+				  </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
