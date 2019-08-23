@@ -1,0 +1,100 @@
+<div ng-controller="TooltipCtrl">
+     <div class="content-container-fluid">
+        <div class="row">
+        <div class="cols-sample-area">
+        <div class="angularbind">
+            <div id="form" class="frame">
+                <form id="details" role="form" class="ang-tooltip" ej-tooltip e-trigger="hover" e-width="175px" e-height="30px" e-position="formsposition" e-target=".form-control">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="name">User Name:</label>
+                            <input class="form-control"  style="border-style:inset;border-width:2px" type="text" id="name" name="firstname" title="Please enter your name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input class="form-control" style="border-style:inset;border-width:2px" id="email" type="text" name="email" title="Enter a valid email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input class="form-control" style="border-style:inset;border-width:2px" id="pwd" type="password" name="pwd" title="Be at least 8 characters length">
+                        </div>
+                        <div class="form-group">
+                            <label for="Cpwd">Confirm Password:</label>
+                            <input class="form-control"  style="border-style:inset;border-width:2px" type="password" id="Cpwd" name="Cpwd" title="Re-enter your password">
+                        </div>
+                        <div>
+                            <input id="sample" type="submit" value="Submit">
+                            <input id="clear" type="reset" value="Reset">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+			</div>
+			</div>
+        </div>
+    </div>
+   <script type="text/javascript">
+   var  target = $("#details").ejTooltip({beforeOpen : "onOpen"}).data("ejTooltip");
+   $("#sample").ejButton({
+                showRoundedCorner: true,
+                size: "medium"
+            });
+			$("#clear").ejButton({
+                showRoundedCorner: true,
+                size: "medium"
+            });
+   function onOpen(args){
+			var currentElement = args.event.currentTarget, content = $(currentElement).attr("data-content");
+			if(content == "Enter a valid email address")
+				target.setModel({cssClass : "info"});
+			 
+			
+			else
+			    target.setModel({cssClass : "warning"}); 
+				 
+			
+		}
+   </script>
+ <style type="text/css" class="cssStyles"> 
+           .info {
+            background-color : #f9ce9b;
+			color : #b29b7f;
+        }
+		.warning{
+            background-color: #e56161;
+			color: #ffffff;
+		}
+        .cols-sample-area {
+            height: 500px;
+        }
+
+		.frame{
+			width : 500px;
+			box-sizing: border-box;
+			border : none;
+		}
+		.form-control{
+			box-sizing: border-box;
+			
+		}
+		.form-group {
+			margin-bottom: 10px;
+		}
+       
+        fieldset {
+            border: 1px solid #D9DEDD;
+            padding: 15px;
+			width : 100%;
+			box-sizing: border-box;
+           
+        }
+		#sample{
+			margin-right: 50px;
+		}
+		.e-button{
+			
+			margin: 10px;
+		}
+    </style>
+</div>
+

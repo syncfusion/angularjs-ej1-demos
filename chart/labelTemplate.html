@@ -1,0 +1,77 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-size-height="600px" e-load="loadTheme"  e-primaryXAxis-title-text="Years" e-primaryXAxis-valueType="category" e-primaryXAxis-range-min="2005" e-primaryXAxis-range-max="2011" e-primaryXAxis-range-interval="1" e-primaryYAxis-range-min="16" e-primaryYAxis-range-max="44" e-primaryYAxis-labelFormat="{value}%" e-primaryYAxis-range-interval="4" e-primaryYAxis-title-text="Percentage" e-series="SeriesOptionsProperties" e-commonSeriesOptions-type="spline" e-commonSeriesOptions-enableAnimation="true" e-commonSeriesOptions-marker-dataLabel-font-color="#000000" e-commonSeriesOptions-marker-dataLabel-shape="circle" e-commonSeriesOptions-marker-dataLabel-size-height="10" e-commonSeriesOptions-marker-dataLabel-size-width="10" e-commonSeriesOptions-marker-visible="true" e-isResponsive="true" e-legend-visible="true" e-title-text="Gross Investments">
+				<e-series>
+				  <e-series e-name='India' e-fill="#8CC640" e-points="Points1" e-tooltip-visible="true"
+                 e-marker-dataLabel-template='template' e-marker-dataLabel-template-verticalTextAlignment='far'
+                    e-marker-dataLabel-visible="true" e-marker-size-height="10" e-marker-size-width="10">
+				  </e-series>
+				   <e-series e-name='Singapore' e-fill="#CBA4C7" e-points="Points2" e-marker-dataLabel-visible="true" 
+					 e-marker-dataLabel-shape='Rectangle' e-marker-dataLabel-verticalTextAlignment='far'
+					 e-marker-dataLabel-font-size='14px' e-marker-size-height="10" e-marker-size-width="10"
+					>
+				  </e-series>
+				  <e-series e-name='Russia' e-points="Points3" e-marker-dataLabel-visible="true"
+				   e-marker-dataLabel-shape='Rectangle'
+				  e-marker-dataLabel-font-size='14px' e-marker-dataLabel-verticalTextAlignment='far'
+				  e-marker-size-height="10" e-marker-size-width="10"
+					>
+				  </e-series>
+				</e-series>
+                </div>
+            </div>
+			<div id="template">
+        <div id="left">
+			<img src="content/images/chart/icon_investments.png"/>
+		</div>
+        <div id="right">
+            <div id="point">#point.y#%</div>
+        </div>
+	</div>
+        </div>
+    </div>
+</div>
+ <style>
+    #point 
+	{
+        font-family: segoe ui;
+        font-size: 16px;
+        color: black;
+    }
+    
+	#left, #right 
+	{
+        float: left;   
+    }
+    
+	img 
+	{
+        height: 25px;
+        width: 30px;
+    }
+	
+	#left
+	{
+		background-color: #8CC640;   
+    }
+	
+	#right
+	{
+        background-color: #C3C3C3; 
+        height: 30px;
+        border-style:solid;
+        border-color:#8CC640;
+        border-width: 1px;				
+    }
+    
+	#template 
+	{
+        display:none;
+    }
+ </style>
+
+
