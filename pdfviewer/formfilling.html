@@ -1,0 +1,11 @@
+﻿<div ng-controller="PDFViewerFormController">
+    <div ej-toolbar id="selectioncontainer" e-height="56px" class="e-pdfviewer-toolbarcontainer" style="width:100%;padding-top:5px;padding-bottom:3px;padding-right:4px">
+        <div style="padding:10px">
+            <input type="file" id="fileUpload" style="display:block;visibility:hidden;width:0;height:0;">
+            <button ej-button id="fileUploadButton">Choose file from disk</button>
+        </div>
+    </div>
+    <div class="control">
+        <div ej-pdfviewer id="container" e-serviceurl="serviceurl" e-pdfservice="pdfService" e-documentpath="FormFillingDocument" style="width: 100%;height:680px"></div>
+    </div>
+</div>

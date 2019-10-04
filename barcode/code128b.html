@@ -1,0 +1,22 @@
+<div ng-controller="BarCodeController">
+    <div class="content-container-fluid">
+        <div class="row" align="center">
+			<div class="cols-sample-area">
+				<div class="frame">
+					<div id="code_128b" ej-barcode e-text="text_128b" e-symbologytype="code128b"></div>
+				</div>
+			</div>
+            <div class="row">
+                <br />
+                Text<input type="text" style="width: 150px; margin-left: 15px" id="textBox_128b" ng-model="text_128b" />
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+    .frame {
+        width: auto;
+    }
+</style>
+

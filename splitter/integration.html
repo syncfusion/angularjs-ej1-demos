@@ -1,0 +1,74 @@
+ <div id="splittercontrol" ng-controller="SplitterCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" style="height:400px; margin:0 auto;">
+                <div id="outterSpliter" class="ang-splitter" ej-splitter e-height ="100%" e-width="485" e-properties="proper"
+                    e-enableautoresize="true">
+					 <div>					
+                        <div class="cont">
+                            <h3 class="h3">FRENCH CITIES</h3>
+                            <ul id="treeView" class="visibleHide" ej-treeview e-nodeSelect="treeClicked">
+                                <li>PARIS
+                                        <ul>
+                                            <li id="paris" class="_child">Speciality</li>
+                                        </ul>
+                                </li>
+                                <li>CAMEMBERT
+                                            <ul>
+                                                <li id="camembert" class="_child">Speciality </li>
+                                            </ul>
+                                </li>
+                                <li>GRENOBLE
+                                            <ul>
+                                                <li id="grenoble" class="_child">Speciality</li>
+                                            </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cont">
+                            <div class="_content">
+                                Select any city from the tree to show the description.
+                            </div>
+                            <div class="paris spe">
+                                <h3>PARIS</h3>
+                                Paris, the city of lights and love - this short guide is full of ideas for how to make the most of the romanticism...
+                            </div>
+                            <div class="camembert spe">
+                                <h3>CAMEMBERT</h3>
+                                The village in the Orne département of Normandy where the famous French cheese is originated from.
+                            </div>
+                            <div class="grenoble spe">
+                                <h3>GRENOBLE</h3>
+                                The capital city of the French Alps and a major scientific center surrounded by many ski resorts, host of the Winter Olympics in 1968.
+                            </div>
+                        </div>
+                    </div>                                     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css" class="cssStyles">
+    .cont {
+            padding: 20px;
+            min-width: 50px;
+        }
+	#outterSpliter{
+	margin:0 auto;}
+            .cont #treeView_Container {
+                margin-bottom: 0;
+                border: none;
+            }
+
+        .h3 {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .spe {
+            display: none;
+        }
+</style>

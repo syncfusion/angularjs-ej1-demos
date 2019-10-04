@@ -1,0 +1,197 @@
+﻿<html ng-app="weatherApp">
+<head>
+    <title>Essential JS 1 for AngularJS | Weather Analysis</title>
+    <link href="../../content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../content/ejthemes/bootstrap-theme/ej.web.all.min.css" rel="stylesheet" />
+    <link href="css/weatheranalysis.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../../content/images/favicon.ico" />
+    <script src="../../scripts/respond.js"></script>
+    <!--[if lt IE 9]>
+	<script src="../../scripts/jquery-1.11.3.min.js" type="text/javascript" ></script> 
+	<![endif]-->
+    <!--[if IE 9]><!-->
+    <script src="../../scripts/jquery-3.4.1.min.js" type="text/javascript"> </script>
+    <!--<![endif]-->
+    <script src="../../scripts/jsrender.min.js"></script>
+    <script src="../../scripts/angular.min.js"></script>
+    <script src="../../scripts/ej.web.all.min.js"></script>
+    <script src="../../scripts/ej.widget.angular.min.js"></script>
+</head>
+<body>
+    <div class="top-section">
+        <div class="topbox"></div>
+        <img src="images/WeatherIcon.png" id="WeatherIcon" />
+        <div class="top-inner-section container">
+            <div class="row boxcompress">
+                <div id="Circle1" class="col-sm-4">
+                    <div id="Circle_Temperature">
+                    </div>
+                    <div id="Circle_SkyCondition">
+                    </div>
+                </div>
+                <div id="Circle2" class="col-sm-4">
+                    <div id="Circle_City">
+                        New York
+                    </div>
+                    <div id="Circle_Time">
+                    </div>
+                    <div id="Circle_Day">
+                    </div>
+                </div>
+                <div id="Circle3" class="col-sm-4">
+                    <div id="tophalf">
+                        <div id="Circle_Humidity">
+                        </div>
+                        <div id="HumidityCaption">
+                            Humidity
+                        </div>
+                    </div>
+                    <div id="bottomhalf">
+                        <div id="Circle_DewPoint">
+                        </div>
+                        <div id="DewPointCaption">
+                            Dew Point
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weather-samples container">
+        <div id="ScreenLeft" class="row">
+            <div id="HeaderBar1">
+                <div>
+                    <label id="CurrentDay"></label>
+                    <div class="buttons">
+                        <a class="signal inactive" id="ChartHour"></a>
+                        <a class="square active" id="GridHour"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="HourData">
+                <div ng-controller="hourGridCtrl">
+
+                    <div id="HourGrid" ej-grid e-datasource="griddata" e-allowscrolling="true" e-enablealtrow="false" e-scrollsettings="settings">
+                        <div e-columns>
+                            <div e-column e-field="Date" e-headertext="Time" e-textalign="center" e-width="125" e-format="{0:hh:mm tt}" e-customattributes="timecustom"></div>
+                            <div e-column e-field="SkyCondition" e-headertext="Sky Condition" e-textalign="center" e-width="120" e-customattributes="skycustom" e-format='<div class={SkyCondition} width="48px" heigth="48px" </div>' /></div>
+                       
+                        <div e-column e-field="Temperature" e-headertext="Temperature" e-textalign="center" e-width="100" e-customattributes="tempcustom" e-format='<label>{Temperature}&deg;c</label>'></div>
+                        <div e-column e-field="SkyCondition" e-headertext="Weather Description" e-textalign="center" e-width="150" e-customattributes="scustom"></div>
+                    </div>
+                </div>
+
+
+
+                <div ng-controller="Chart">
+                    <div id="HourChart" style="width: 100%" ej-chart e-isresponsive="true"
+                        e-canresize="false"
+                        e-primaryxaxis="primaryXaxis"
+                        e-primaryyaxis="primaryYaxis"
+                        e-load="hourChartLoad" e-axes="multipleAxes"
+                        e-commonseriesoptions-type="line" e-rowdefinitions="rowDefinitions"
+                        e-commonseriesoptions-enableanimation="true"
+                        e-commonseriesoptions-marker-shape="circle"
+                        e-commonseriesoptions-marker-size-height="6" e-commonseriesoptions-marker-size-width="6"
+                        e-commonseriesoptions-marker-visible="true"
+                        e-commonseriesoptions-marker-style-bordercolor="white" e-commonseriesoptions-marker-style-borderwidth="3" e-crosshair-visible="true"
+                        e-crosshair-type="trackball"
+                        e-crosshair-line-width="2" e-crosshair-line-color="#F4B16D"
+                        e-crosshair-marker-shape="circle" e-crosshair-marker-size-height="9" e-crosshair-marker-size-width="9" e-crosshair-marker-visible="true"
+                        e-background="white"
+                        e-chartarea-border-color="transparent"
+                        e-margin-left="20" e-margin-top="20"
+                        e-legend-visibele="true" e-legend-shape="circle" e-legend-position="Bottom" e-legend-itemstyle-width="10"
+                        e-legend-itemstyle-height="10">
+                        <e-series>
+                            <e-series e-name="Temperature" e-style-interior="#A0C037" e-tooltipFormat="#series.name#: #point.y# c">  </e-series>
+
+                            <e-series e-name="FeelsLike" e-yAxisName='yAxis1' e-style-interior="#369E45" e-tooltipFormat="#series.name#: #point.y# c">  </e-series>
+                            <e-series e-name="Humidity" e-yAxisName='yAxis2' e-style-interior="#9F5123" e-tooltipFormat="#series.name#: #point.y# c">  </e-series>
+                            <e-series e-name="Wind" e-yAxisName='yAxis3' e-style-interior="#2DA2D8" e-tooltipFormat="#series.name#: #point.y# c">   </e-series>
+                        </e-series>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ScreenRight" class="row">
+        <div id="HeaderBar2">
+            <div>
+                Average Conditions
+                    <div class="buttons">
+                        <a class="signal active" id="ChartAverage"></a>
+                        <a class="square inactive" id="GridAverage"></a>
+                    </div>
+            </div>
+        </div>
+        <div id="AverageData">
+            <div ng-controller="ChartAvg">
+                <div id="AverageChart" style="height: 500px"
+                    ej-chart e-isresponsive="true" e-canresize="false"
+                    e-primaryxaxis-opposedposition="true"
+                    e-primaryxaxis-axisline-visible="false"
+                    e-primaryxaxis-majorgridlines-visible="false"
+                    e-primaryxaxis-majorticklines-visible="false"
+                    e-primaryxaxis-valuetype="category"
+                    e-primaryyaxis-range-min="0" e-primaryyaxis-labelformat='{value} mm'
+                    e-primaryyaxis-range-max="150" e-primaryyaxis-range-interval="25"
+                    e-primaryyaxis-rangepadding="none" e-primaryyaxis-axisline-visible="false"
+                    e-primaryyaxis-majorgridlines-width="2" e-primaryyaxis-valuetype="double"
+                    e-load="averageChartLoad" e-axes="multipleAxes"
+                    e-commonseriesoptions-tooltip-visible="true" e-background="white" e-chartarea-border-color="transparent"
+                    e-margin-left="30"
+                    e-legend-visible="true" e-legend-shape="circle" e-legend-position="Bottom" e-legend-itemstyle-width="10" e-legend-itemstyle-height="10"
+                    e-series="series">
+                </div>
+            </div>
+            <div ng-controller="gridAvgCtrl">
+                <div class="averagegridwrapper">
+                    <div id="AverageGrid" ej-grid e-datasource="avgdata" e-enablealtrow="false" e-allowgrouping="true" e-height="500px" e-querycellinfo="queryCellInfo" e-columns="columnname" e-groupsettings="grouping">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="precipitationTooltip" style="display: none;">
+            <div class="value">
+                <div>
+                    <label class="month">#point.x#</label><br />
+                    <label class="precipitation">Avg Precipitation (mm) : <b>#point.y#</b></label>
+                </div>
+            </div>
+        </div>
+        <div id="sunlightTooltip" style="display: none;">
+            <div class="value">
+                <div>
+                    <label class="month">#point.x#</label><br />
+                    <label class="sunlight">Avg Sunlight (Hrs): <b>#point.y#</b></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

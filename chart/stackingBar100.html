@@ -1,0 +1,28 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="Year" e-primaryXAxis-range-min="2006" e-primaryXAxis-range-max="2015"  e-primaryYAxis-title-text="Sales Percentage"  e-primaryXAxis-range-interval="1" e-primaryYAxis-labelFormat="{value}%" e-commonSeriesOptions-type="stackingbar100" e-commonSeriesOptions-enableAnimation="true" e-commonSeriesOptions-tooltip-visible="true" e-commonSeriesOptions-tooltip-format=" #series.name# <br/> X :  #point.x# <br/> Y :  #point.y#  <br/>Percentage :  #point.percentage# %" e-isResponsive="true" e-legend-visible="true" e-legend-position="right" e-title-text="Sales by year">
+				 <e-series>
+				    <e-series e-name="John" e-points="Points1"
+					e-fill="#1ABC9C">
+					</e-series>
+					<e-series e-name="Andrew" e-points="Points2"
+					e-fill="#3498DB">
+					</e-series>
+					<e-series e-name="Thomas" e-points="Points3"
+					e-fill="#34495E">
+					</e-series>
+					<e-series e-name="Hendry" e-points="Points4"
+					e-fill="#00FFFF">
+					</e-series>
+				 </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
