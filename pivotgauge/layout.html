@@ -1,0 +1,58 @@
+﻿<div ng-controller="PivotGaugeLayoutCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" style="width: 100%">
+                <div class="control">
+                    <div>
+                        <div id="PivotGauge" ej-pivotgauge e-dataSource="dataSource" e-enabletooltip="enableTooltip" e-rowscount="rowsCount"
+                            e-columnscount="columnsCount" e-scales="scales" e-load="loadGaugeTheme" e-backgroundcolor="backgroundColor" e-labelFormatSettings="labelFormatSettings"
+                            style="min-height: 275px; height: 338px; width: 100%; overflow: auto; position:relative;" />
+                    </div>
+                </div>
+            </div>
+            <div id="panel-body">
+                <div id="property-window" class="box wide" style="width: 40%;margin-left: 40px">
+                    <div class="row" style="display: inline-block">
+                        <div class="col-md-3" style="width: 120px">
+                            Edit Row Count
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" name="name" class="e-ejinputtext" value="" ej-numerictextbox e-value="rowsCount"
+                                e-maxvalue="3" e-minvalue="1" e-width="100px" />
+                        </div>
+                    </div>
+                    <div class="row" style="display: inline-block">
+                        <div class="col-md-3" style="width: 120px">
+                            Edit Column Count
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" name="name" class="e-ejinputtext" value="" ej-numerictextbox e-value="columnsCount"
+                                e-maxvalue="3" e-minvalue="1" e-width="100px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <style>
+        .control
+        {
+            padding-left: 10px;
+        }
+        .row .cols-prop-area
+        {
+            min-height: 150px;
+            width: 30%;
+        }
+        .cols-prop-area [class*="col-md-3"] {
+    min-height: 0px;
+}
+        .circulardarkgradient, .circularlightgradient
+        {
+            width: 360px;
+            position:relative;
+        }
+    </style>
+<script>

@@ -1,0 +1,23 @@
+﻿<div ng-controller="DialogCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" style="height:400px; position:relative;">
+                <button id="btnOpen" ej-button e-click="openDialog">Open Dialog</button>
+                <div id="dialog" ej-dialog e-title="Twitter" e-contenturl="contenturl" e-contenttype="contenttype" e-close="closeDialog" e-target=".cols-sample-area">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .contentchild {
+        height: 500px;
+    }
+        .router{
+            margin-top: 0px;
+        }
+    .row .cols-sample-area {
+            position: relative;
+            overflow: auto;
+        } 
+</style>

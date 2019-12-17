@@ -1,0 +1,78 @@
+﻿
+<div ng-controller="RangeCtrl">
+    
+  <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+			 <div style="position: relative; left: 85px; height: 30px">
+                    Locale :
+                    <select id="locale" autocomplete="off">
+                        <option value="en-US">English</option>
+                        <option value="fr-FR">French</option>
+                    </select>
+
+                    IntervalType :
+                    <select id="interval" autocomplete="off">
+
+                        <option value="quarters">Quarter</option>
+                        <option value="weeks">Week</option>
+                    </select>
+                </div>
+           <div id="rangeContainer" ej-rangeNavigator e-enableDeferredUpdate="true" e-allowSnapping="true" e-padding="15" e-isResponsive="true" e-rangeChanged=chartloaded e-loaded="loadingtheme" e-valueType="datetime"
+                    e-selectedRangeSettings-start="2010/4/1" e-selectedRangeSettings-end="2010/9/30" e-border-color="#f2f3f4" e-border-width="2" e-tooltipSettings-labelFormat="MM/dd/yyyy" 
+                    e-tooltipSettings-tooltipDisplayMode="ondemand" e-tooltipSettings-visible="true" 
+                    e-load="loadingtheme" e-labelSettings-higherLevel-visible="false"
+                    e-labelSettings-lowerLevel-intervalType="quarters">				           
+                   <e-series>              
+                      <e-series e-name="ProductA" e-type="line" e-dataSource=dataSource e-xName="XValue" e-yName="YValue" e-border-color="transparent" e-border-width="2" e-fill="#69D2E7">					 
+					  </e-series>
+                    </e-series>
+				</div>
+           
+         </div>
+           
+        </div>
+</div>
+</div>
+<div ng-controller="chartCtrl">
+    
+  <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+               <div id="chartContainer" style="width: 100%" ej-chart e-isresponsive="true"
+                     e-primaryXAxis-majorGridLines-visible="false"
+                     e-primaryXAxis-valueType="datetime"
+                     e-primaryXAxis-labelFormat="MMM dd"
+                     e-primaryXAxis-title-text="Date" e-load=Chartload e-legend-visible="true" e-title-text="Stock Price Analysis"
+					 e-primaryYAxis-labelFormat="${value}"
+                     e-primaryYAxis-title-text="Price ($)"
+                     e-primaryYAxis-range-min="60" e-primaryYAxis-range-max="160" e-primaryYAxis-range-interval="20"
+					 e-crosshair-visible="true"
+                     e-crosshair-type="trackball" e-crosshair-line-color="transparent"
+                     e-crosshair-marker-shape="circle"
+					 e-crosshair-marker-size-height="9" e-crosshair-marker-size-width="9" e-crosshair-marker-visible="true"
+                     e-crosshair-marker-border-width="1" e-crosshair-marker-line-color="transparent"
+                                >
+                   <e-series>
+				      <e-series e-type="line"
+                                e-name="Product X"
+                                e-enableAnimation="true"
+                                e-tooltip-format="#point.x#  : #point.y#" e-tooltip-visible="true"
+                                e-border-width="2" 
+                                e-tooltip-format="#point.x#  : ej.format(#point.y#,n2)">
+					  </e-series>
+					   <e-series e-type="line"
+                                e-name="Product Y"
+                                e-enableAnimation="true"
+                                e-tooltip-format="#point.x#  : #point.y#" e-tooltip-visible="true"
+                                e-border-width="2" 
+                                e-tooltip-format="#point.x#  : ej.format(#point.y#,n2)">
+					  </e-series>
+                   </e-series>				   
+				</div>
+			</div>		   
+		</div>
+	</div>
+</div>
+
+

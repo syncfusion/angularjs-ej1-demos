@@ -1,0 +1,20 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="bar" style="width: 100%" ej-chart e-primaryxaxis-title-text="Year" e-primaryxaxis-range-min="2005" e-primaryxaxis-range-max="2012" e-primaryxaxis-range-interval="1" e-primaryyaxis-title-text="Percentage" e-primaryyaxis-range-min="3" e-primaryyaxis-labelformat="{value}%" e-primaryyaxis-range-max="12" e-primaryyaxis-range-interval="1" e-commonseriesoptions-type="bar" e-commonseriesoptions-enableanimation="true" e-commonseriesoptions-marker="marker" e-commonseriesoptions-tooltip-visible="true"  e-commonseriesoptions-tooltip-format="#series.name# <br/> #point.x# : #point.y#" e-load=onchartload e-size-height="600px" e-legend-visible="true" e-legend-position="right" e-legend-alignment="near" e-title-text="Unemployment rate" e-isresponsive="true" e-displaytextrendering=displaytext>
+                    <e-series>              
+                      <e-series e-name="India" e-dataSource=dataSource e-xName="x" e-yName="y1">					 
+					  </e-series>
+					  <e-series e-name="US" e-dataSource=dataSource e-xName="x" e-yName="y2">					 
+					  </e-series>
+                    </e-series>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

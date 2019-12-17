@@ -1,0 +1,26 @@
+<div ng-controller="reportdesignerCrtl" id='reportContainer'>
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div id="container" ej-reportdesigner="ej-reportdesigner" e-serviceurl="serviceUrl" style="height:100%;width:100%">
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+<script>
+angular.element(document.getElementById('reportContainer')).ready(function () {
+  angular.element(document.getElementById('reportContainer')).scope().openReport();
+});
+</script>
+<style type="text/css">
+    .control {
+        height:680px;
+        width:100%;
+    }
+    .e-rptdesigner .e-rptdesigner-toolbarul {
+        display: inline-block;
+    }
+</style>
