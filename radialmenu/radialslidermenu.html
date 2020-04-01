@@ -1,0 +1,58 @@
+<div ng-controller="RadialMenuSliderCtrl">
+    <div id="contentDiv">
+        <div id="radialtarget1" class="content-container-fluid">
+            <div class="row">
+                <div class="cols-sample-area">
+                    <textarea ej-rte id="rteSample1" rows="10" cols="70" style="height: 440px" e-width="100%" e-minwidth="10px" e-change="rteChange" e-select="radialShow" e-showtoolbar="false" e-showcontextmenu="false">
+                        <p>
+                            Model–view–controller (MVC) is a software architecture pattern which separates the representation of information from the user's interaction with it.
+                            The model consists of application data, business rules, logic, and functions. A view can be any output representation of data, such as a chart or a diagram.
+                            Multiple views of the same data are possible, such as a bar chart for management and a tabular view for accountants.
+                            The controller mediates input, converting it to commands for the model or view.The central ideas behind MVC are code reusability and in addition to dividing the application into three kinds of components, the MVC design defines the interactions between them.
+                        </p>
+
+                        <p>A controller can send commands to its associated view to change the view's presentation of the model (e.g., by scrolling through a document). It can also send commands to the model to update the model's state (e.g., editing a document).</p>
+
+                        <p>A model notifies its associated views and controllers when there has been a change in its state. This notification allows the views to produce updated output, and the controllers to change the available set of commands. A passive implementation of MVC omits these notifications, because the application does not require them or the software platform does not support them.</p>
+
+                        <p>A view requests from the model the information that it needs to generate an output representation to the user.</p>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+		 <div >
+           <ej-radialmenu id="defaultradialmenu" e-targetelementid="radialtarget1">
+               <e-items>
+                   <e-item e-imageurl="content/images/RadialMenu/copy.png" e-text="Copy" e-click="copy"></e-item>
+                   <e-item e-imageurl="content/images/RadialMenu/fontsize.png" e-text="Font" e-click="font" e-badge-value="2" e-badge-enabled="true" e-type="slider" e-slidersettings-ticks="ticksValue" e-slidersettings-strokewidth="1"></e-item>
+                   <e-item e-imageurl="content/images/RadialMenu/font.png" e-text="Bold" e-click="bold">
+                       <e-items>
+                           <e-item e-imageurl="content/images/RadialMenu/f1.png" e-text="Italic" e-click="italic"></e-item>
+                           <e-item e-imageurl="content/images/RadialMenu/font.png" e-text="Bold" e-click="bold"></e-item>
+                       </e-items>
+                   </e-item>
+                   <e-item e-imageurl="content/images/RadialMenu/list.png" e-text="List" e-click="unorderedList">
+                       <e-items>
+                           <e-item e-imageurl="content/images/RadialMenu/list.png" e-text="Bullets" e-click="unorderedList"></e-item>
+                           <e-item e-imageurl="content/images/RadialMenu/l5.png" e-text="Numbering" e-click="orderedList"></e-item>
+                       </e-items>
+                   </e-item>
+                   <e-item e-imageurl="content/images/RadialMenu/paste.png" e-text="Paste" e-click="paste"></e-item>
+                   <e-item e-imageurl="content/images/RadialMenu/undo.png" e-text="Undo" e-click="undo" e-enabled="false">
+                       <e-items>
+                           <e-item e-imageurl="content/images/RadialMenu/undo.png" e-text="Undo" e-click="undo" e-enabled="false"></e-item>
+                           <e-item e-imageurl="content/images/RadialMenu/redo.png" e-text="Redo" e-click="redo" e-enabled="false"></e-item>
+                       </e-items>
+                   </e-item>
+                   <e-item e-imageurl="content/images/RadialMenu/align.png" e-text="Alignment" e-click="center">
+                       <e-items>
+                           <e-item e-imageurl="content/images/RadialMenu/a1.png" e-text="Left" e-click="left"></e-item>
+                           <e-item e-imageurl="content/images/RadialMenu/a2.png" e-text="Right" e-click="right"></e-item>
+                       </e-items>
+                   </e-item>
+               </e-items>
+           </ej-radialmenu>
+		</div>
+    </div>
+</div>
+

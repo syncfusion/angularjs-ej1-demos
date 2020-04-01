@@ -1,0 +1,67 @@
+﻿<style>
+    .col-md-3 {
+        width: 600px;
+    }
+
+    .row [class*="cols-"] {
+        width: 99%;
+    }
+
+    #property-window .row {
+        padding: 10px;
+    }
+</style>
+
+<div ng-controller="diagramCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="panel-body">
+                <div id="property-window" style="padding:0px;" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div style="padding:5px;">
+                                <div style="float:left;margin-top: 4px;">Export As Image:</div>
+                                <div style="padding-left:20px;padding-top:3px;float:left;">
+                                    <button id="export_as_img">JPG</button>
+                                    <ul id="imgformatDiv">
+                                        <li id="jpg" text="jpg">JPG</li>
+                                        <li id="png" text="png">PNG</li>
+                                        <li id="bmp" text="bmp">BMP</li>
+                                    </ul>
+                                </div>
+
+                                <div style="padding-left:20px;padding-top:3px;float:left;margin-top:1px;">
+                                    <button id="export_svg" style="width: 100px; height: 30px; border: 0;  border-radius: 3px;">Export as SVG</button>
+                                </div>
+
+                                <div style="padding-left:20px;padding-top:3px;float:left;margin-top:1px;">
+                                    <button id="print" style="margin-right:8px; width: 100px; height: 30px; border: 0;  border-radius: 3px; ">Print</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cols-sample-area">
+                <ej-diagram id="diagram" e-height="500px"
+                            e-layout-type="layout.type"
+                            e-layout-orientation="layout.orientation"
+                            e-layout-fixednode="layout.fixedNode"
+                            e-layout-horizontalspacing="layout.horizontalSpacing"
+                            e-layout-verticalspacing="layout.verticalSpacing"
+                            e-layout-marginx="layout.marginX"
+                            e-layout-marginy="layout.marginY"
+                            e-nodetemplate="nodeTemplate"
+                            e-datasourcesettings-datasource="dataSourceSettings.dataSource"
+                            e-datasourcesettings-parent="dataSourceSettings.parent"
+                            e-datasourcesettings-id="dataSourceSettings.id"
+                            e-datasourcesettings-root="dataSourceSettings.root"
+                            e-defaultsettings-node="defaultSettings.node"
+                            e-defaultsettings-connector="defaultSettings.connector"
+                            e-snapsettings-snapconstraints="snapSettings.snapConstraints"
+                            e-pagesettings-scrolllimit="pageSettings.scrollLimit"
+                            e-enablecontextmenu="enableContextMenu"
+                            e-tool="tool" e-create="diagramcreate"></ej-diagram>
+            </div>
+        </div>
+    </div>
