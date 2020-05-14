@@ -1,0 +1,49 @@
+﻿<script src="scripts/MapsData/WorldMap.js"></script>
+<script src="scripts/MapsData/Country_LatLongPoints.js"></script>
+
+
+<div ng-controller="Map">
+    <div class="content-container-fluid">      
+            <div class="row">                
+                <div class="cols-sample-area">     
+				  <div style="background-color: white;border-color: lightgray;border-width: 2px;opacity: 0.6;margin-right: -10px;height: 60px;margin-left:80%">
+                    <select size="1" style="margin: 10px;width: 180px;margin-top: 15px; border-width: 1px;border-color: lightgray;margin-left: 15px;height: 30px" id="countriesCombo"
+                            onchange="buttonClick(this)"></select>
+                </div>
+				 <div style="min-height:465px">	
+					<div id="maps"  style="height: inherit; height:100%; width:100%;min-height:350px;" ej-map e-enableanimation="true" e-navigationControl-enableNavigation="true" e-navigationControl-orientation="vertical" e-navigationControl-absolutePosition-x="5" e-navigationControl-absolutePosition-y="15" e-navigationControl-dockPosition="none" e-onRenderComplete=Load e-zoomSettings-enableZoomOnSelection="true">
+				      <e-layers>
+					     <e-layer e-showToolTip="false"
+                        e-enableSelection="true"
+                        e-layerType="geometry"
+                        e-enableMouseHover="true"
+                        e-shapeDataPath="name"
+                        e-shapePropertyPath="name"
+                        e-dataSource="LatLongPoints" e-shapeSettings-fill="Grey"
+                            e-shapeSettings-strokeThickness="0.5"
+                            e-shapeSettings-stroke="white"
+                            e-shapeSettings-highlightColor="#F7CD1C"
+                            e-shapeSettings-highlightStroke="white"
+                            e-shapeSettings-highlightStrokeWidth="1"
+                            e-shapeSettings-selectionColor="#F96C0D"
+                            e-shapeSettings-valuePath="name"
+                            e-shapeSettings-selectionStroke="white"
+                            e-shapeSettings-selectionStrokeWidth="2"
+                            e-shapeSettings-autoFill="true"
+                            e-shapeSettings-colorPalette="custompalette"
+							e-shapeSettings-customPalette="Palette"
+							e-shapeData="Map_Data">
+						 </e-layer>
+					  </e-layers>
+					  
+					</div> 	
+				 </div>			 
+                </div>				
+            </div>
+    </div>
+ </div>
+   <style type="text/css">
+        .e-map {
+            background-color: white;
+        }
+    </style>

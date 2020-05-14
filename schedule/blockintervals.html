@@ -1,0 +1,52 @@
+<div ng-controller="ScheduleBlockIntervalCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <ej-schedule style="float: left" id="BlockintervalsSchedule" e-appointmentsettings-datasource="appointments" e-appointmentsettings-id="Id" e-appointmentsettings-subject="Subject" e-appointmentsettings-starttime="StartTime"
+                    e-appointmentsettings-endtime="EndTime" e-appointmentsettings-description="Description" e-appointmentsettings-allday="AllDay" e-appointmentsettings-recurrence="Recurrence" e-appointmentsettings-recurrencerule="RecurrenceRule" e-appointmentsettings-resourcefields="ownerId"
+                    e-blockoutsettings-enable="blockEnable" e-blockoutsettings-templateid="#blocktemplate" e-blockoutsettings-datasource="blockData" e-blockoutsettings-id="Id" e-blockoutsettings-subject="Subject" e-blockoutsettings-starttime="StartTime" e-blockoutsettings-endtime="EndTime" e-blockoutsettings-isblockappointment="BlockAppointment" e-blockoutsettings-resourceid="resId" e-blockoutsettings-isallday="FullDay" e-width="100%" e-height="525px" e-currentdate="setDate" e-currentview="day" e-timezone="UTC +00:00" e-group="group">
+                     <e-resources>
+                        <e-resource e-allowmultiple="false" e-field="ownerId" e-title="Owner" e-name="Owners" e-resourcesettings="resourcedata"></e-resource>                        
+                     </e-resources>
+                </ej-schedule>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .e-blocktimeappointment img
+    {
+        width: 36px;
+    }
+
+    .blocksubject
+    {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 1);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0px 5px;
+    }
+</style>
+
+<script id="blocktemplate" type="text/x-jsrender">
+        <span class="blocksubject">{{:Subject}}</span>
+        <div style='float:right; padding:5px;'>{{:~format(Subject)}}</div>
+</script>
+<script type="text/javascript">
+    function _getImages(Subject) {
+        switch (Subject) {
+            case "BAD MONSOON":
+                return "<img src='content/images/schedule/badmonsoon.png'/>";
+            case "MAINTENANCE":
+                return "<img src='content/images/schedule/maintenance_01.png'/>";
+            case "SERVICE":
+                return "<img src='content/images/schedule/service.png'/>";
+            default:
+                return null;
+        }
+    }
+    $.views.helpers({ format: _getImages });
+</script>

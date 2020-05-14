@@ -1,0 +1,41 @@
+﻿<div ng-controller="DigitalGaugeCtrl">
+    <div class="content-container-fluid" align="center">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div id="digitalframe">
+                    <ej-digitalgauge  id="digitalCore" e-isresponsive="true" e-height="200" e-value="nvalue" e-load="loadGaugeTheme">
+                        <e-items>
+                            <e-item e-segmentSettings-width="1" e-segmentSettings-spacing="0" e-characterSetting-opacity="0.8" e-position-x="52" e-position-y="52"></e-item>
+                        </e-items>
+                    </ej-digitalgauge>
+                </div>
+                <div class="panel-body">
+                    <div id="property-window" class="box wide">
+                        
+                        <div>
+                            <div class="col-md-3">
+                            Text Value:
+                        </div>
+                            <div class="col-md-3 aligntop">
+                                <input class="form-control" id="txtValue" ng-model="nvalue" ng-change="check()" style="width: 110px; background-color: transparent;">
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .col-md-3 .e-ddl .e-input {
+        line-height: 20px;
+    }
+
+    #digitalframe {
+        background-position: center;
+    }
+</style>
+

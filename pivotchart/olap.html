@@ -1,0 +1,21 @@
+﻿
+<div ng-controller="PivotChartOlapCtrl">
+    <div class="content-container-fluid">
+        <div class="control">
+            <div>
+                <div id="PivotChart" ej-pivotchart e-dataSource="dataSource" e-title-text="title" e-showtooltip="showTooltip" e-isResponsive ="isResponsive"
+                    e-animation="animation" e-commonseriesoptions-type="ctype" e-commonseriesoptions-tooltip-visible="showTooltip"
+                    e-size="size" e-primaryxaxis="primaryXAxis" e-primaryyaxis="primaryYAxis" e-legend="legend" e-load='loadTheme' e-zooming="zooming"
+                    style="height: 500px; width: 100%;"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .control
+        {
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+</style>

@@ -1,0 +1,83 @@
+﻿<div ng-controller="diagramCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <ej-diagram id="diagramCore" e-height="500px"
+                            e-layout-type="layout.type"
+                            e-layout-orientation="layout.orientation"
+                            e-layout-fixednode="layout.fixedNode"
+                            e-layout-horizontalspacing="layout.horizontalSpacing"
+                            e-layout-verticalspacing="layout.verticalSpacing"
+                            e-layout-marginx="layout.marginX"
+                            e-layout-marginy="layout.marginY"
+                            e-nodetemplate="nodeTemplate"
+                            e-datasourcesettings-datasource="dataSourceSettings.dataSource"
+                            e-datasourcesettings-parent="dataSourceSettings.parent"
+                            e-datasourcesettings-id="dataSourceSettings.id"
+                            e-datasourcesettings-root="dataSourceSettings.root"
+                            e-defaultsettings-node="defaultSettings.node"
+                            e-defaultsettings-connector="defaultSettings.connector"
+                            e-snapsettings-snapconstraints="snapSettings.snapConstraints"
+                            e-pagesettings-scrolllimit="pageSettings.scrollLimit"
+                            e-enablecontextmenu="enableContextMenu"
+                            e-tool="tool"></ej-diagram>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Layout Settings</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 aligntop" style="margin-right:-25px;">
+                            Orientation
+                        </div>
+                        <div class="col-md-3">
+                            <input id="orientation" ej-dropdownlist e-datasource="layoutOrientations" e-value="layout.orientation" e-width="200px" />
+                        </div>
+                        <div class="col-md-3 aligntop" style="margin-right:-25px;">
+                            Margin X
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="marginX" ej-numerictextbox e-value="layout.marginX" ng-model="layout.marginX" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 aligntop" style="margin-right:-25px;">
+                            Root
+                        </div>
+                        <div class="col-md-3">
+                            <input id="root" ej-dropdownlist e-datasource="rootList" e-value="dataSourceSettings.root" e-width="200px" />
+                        </div>
+                        <div class="col-md-3 aligntop" style="margin-right:-25px;">
+                            Margin Y
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="marginY" ej-numerictextbox e-value="layout.marginY" ng-model="layout.marginY" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <b>Spacing</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 aligntop" style="margin-right:-25px;">
+                            Horizontal
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="horizontalSpacing" ej-numerictextbox e-value="layout.horizontalSpacing" ng-model="layout.horizontalSpacing" />
+                        </div>
+                        <div class="col-md-3 aligntop" style="margin-right:-25px;">
+                            Vertical
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="verticalSpacing" ej-numerictextbox e-value="layout.verticalSpacing" ng-model="layout.verticalSpacing" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

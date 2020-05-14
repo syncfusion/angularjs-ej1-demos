@@ -1,0 +1,26 @@
+﻿<div ng-controller="DatetimepickerEventeventCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="control">
+                        <input type="text" id="datetimepicker" ej-datetimepicker e-width="100%" e-value="value" e-create="onCreate" e-open="onOpen" e-close="onClose" e-change="timeValChange" />
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='Logger' class='EventBox'>
+        <h4>Event Trace</h4>
+        <div class="console">
+            <div class='EventLog' id='EventLog'></div>
+        </div>
+        <button id="clrbutton" e-size='small' ej-button class="eventclear e-btn" e-contenttype="textonly" e-text='Clear' e-value="Clear" e-click="onClear" />
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+
+    td {
+        padding: 10px;
+    }
+</style>
