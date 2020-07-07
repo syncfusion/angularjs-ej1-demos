@@ -1,0 +1,143 @@
+﻿<div class="content-container-fluid" ng-controller="ScrollbarCtrl">
+    <div class="row">
+        <div class="cols-sample-area">
+            <div class="control">
+                <div id="scrollcontent" ej-scroller e-height="200" e-width="100%">
+                    <div>
+                        <div class="sampleContent">
+                            <h3 style="font-size: 20px;">MVC</h3>
+                            <div>
+                                <p>
+                                    Model view controller (MVC) is a software architecture pattern which separates the
+                                    representation of information from the user's interaction with it.
+                                    The model consists of application data, business rules, logic, and functions. A view can be any
+                                    output representation of data, such as a chart or a diagram. Multiple views of the same data
+                                    are possible, such as a bar chart for management and a tabular view for accountants.
+                                    The controller mediates input, converting it to commands for the model or view.The central
+                                    ideas behind MVC are code reusability and n addition to dividing the application into three
+                                    kinds of components, the MVC design defines the interactions between them.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <b>A controller </b>can send commands to its associated view to change the view's presentation of the model (e.g., by scrolling through a document).
+                                        It can also send commands to the model to update the model's state (e.g., editing a document).
+                                    </li>
+                                    <li>
+                                        <b>A model</b> notifies its associated views and controllers when there has been a change in its state. This notification allows the views to produce updated output, and the controllers to change the available set of commands.
+                                        A passive implementation of MVC omits these notifications, because the application does not require them or the software platform does not support them.
+                                    </li>
+                                    <li>
+                                        <b>A view</b> requests from the model the information that it needs to generate an output representation to the user.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div id="property-window" class="box wide">
+            <div class="row">
+                <div class="col-md-2">
+                    Enable / Disable
+                </div>
+                <div class="col-md-2">
+                    <input type="checkbox" id="enabled" ej-togglebutton class="e-togglebtn" e-defaulttext='Enable' e-activetext='Disable' e-width='105px' e-showroundedcorner='true' e-change='onEnabled' />
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    ScrollX
+                </div>
+                <div class="col-md-2">
+                    <input type="text" id="ScrollX" ej-numerictextbox e-showSpinButton='false' e-minvalue='0' class="input ejinputtext" e-width="105px" e-change="setScrollX" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    ScrollY
+                </div>
+                <div class="col-md-2">
+                    <input type="text" id="ScrollY" ej-numerictextbox e-showSpinButton='false' e-minvalue='0' class="input ejinputtext" e-width="105px" e-change='setScrollY' />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    Destroy
+                </div>
+                <div class="col-md-2">
+                    <input type="checkbox" id="destroy" ej-togglebutton class="e-togglebtn" e-defaulttext='Destroy' e-activetext='Restore' e-width="105px" e-showroundedcorner='true' e-change="onDestroyRestore" />
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    AutoHide
+                </div>
+                <div class="col-md-2">
+                    <input type="checkbox" id="autohide" class="e-togglebtn" ej-togglebutton e-defaulttext='True' e-activetext='False' e-showroundedcorner='true' e-width='105px' e-change="onAutoHide" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .control {
+        border: 1px solid #bbbcbb;
+        color: gray;
+        width: 65%;
+        height: 100%;
+    }
+
+    .sampleContent {
+        width: 700px;
+        padding: 15px;
+    }
+
+    .prop-grid .row .e-btn.e-select {
+        width: 95px;
+    }
+
+    .row #hexCode {
+        width: 95px;
+    }
+
+    .prop-grid .row .e-widget.e-numeric {
+        width: 95px;
+    }
+
+    .input.ejinputtext {
+        width: 93px;
+        height: 26px;
+    }
+
+    .e-btn {
+        height: 30px;
+    }
+
+    .e-prop.e-bootstrap .input.ejinputtext {
+        height: 30px;
+    }
+
+    input::-webkit-input-placeholder {
+        opacity: 0.5;
+        color: grey;
+        font-style: italic;
+    }
+
+    :-ms-input-placeholder {
+        opacity: 0.5;
+        color: grey;
+        font-style: italic;
+    }
+
+    @media (max-width: 700px) {
+        .control {
+            width: 85%;
+        }
+    }
+</style>

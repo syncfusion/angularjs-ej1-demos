@@ -1,0 +1,28 @@
+<div ng-controller="ScheduleDayofweekCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <ej-schedule style="float: left" id="DayofweekSchedule" e-appointmentsettings-datasource="appointments" e-appointmentsettings-id="Id" e-appointmentsettings-subject="Subject" e-appointmentsettings-starttime="StartTime"
+                    e-appointmentsettings-endtime="EndTime" e-appointmentsettings-description="Description" e-appointmentsettings-allday="AllDay" e-appointmentsettings-recurrence="Recurrence" e-appointmentsettings-recurrencerule="RecurrenceRule"
+                    e-width="100%" e-height="525px" e-currentdate="setDate" e-firstdayofweek="Monday">                   
+                </ej-schedule>
+            </div>
+            <div id="sampleProperties" class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">FirstDayOfWeek</div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="dayofweek" ej-dropdownlist e-datasource="workWeek" e-change="dayofweekChange" e-width="110px" e-selecteditemindex="1" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">WorkWeek</div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="workweeks" ej-dropdownlist e-datasource="workWeek" e-change="workweekChange" e-width="110px" e-checked="true" e-showcheckbox="true" e-selecteditems="selectedworkweek" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

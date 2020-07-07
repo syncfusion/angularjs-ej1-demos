@@ -1,0 +1,36 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="Year" e-primaryYAxis-title-text="Temperature" e-primaryXAxis-range-min="2006" e-primaryXAxis-range-max="2014" e-primaryXAxis-range-interval="1" e-primaryYAxis-labelFormat="{value} %" e-commonSeriesOptions-type="stackingarea100" e-commonSeriesOptions-enableAnimation="true" e-isResponsive="true" e-legend-visible="true" e-title-text="Annual Temperature Comparison">
+				<e-series>
+				  <e-series e-name="USA" e-points="Points1"
+                    e-border-color='transparent'
+					e-opacity="0.5" 
+					e-fill='#C4C24A'>
+				  </e-series>
+				  <e-series e-name="India" e-points="Points2"
+                    e-opacity="0.5" 
+					e-border-color='transparent'
+					e-fill='#69D2E7'>
+				  </e-series>
+				  <e-series e-name="Canada" e-points="Points3"
+                    e-opacity="0.5" 
+					e-border-color='transparent'
+					e-fill='#6A4B82'>
+				  </e-series>
+				  <e-series e-name="China" e-points="Points4"
+                    e-opacity="0.5"
+					e-border-color='transparent'
+					e-fill='#E7B0B2'>
+				  </e-series>
+				</e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

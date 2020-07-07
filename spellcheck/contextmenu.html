@@ -1,0 +1,24 @@
+<div ng-controller="spellcheckCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div id="SpellCheck" contenteditable="true" style="display:block" ej-spellcheck e-dictionarysettings="dictionarySettings" e-enablevalidateontype="true">
+                        It is a concept vehicle with Liuid Silver body colour, 20-inch wheels, fabric foding roof, electrically-controlled hood, 4-cylinder 2.0 TDI engine rated 204 PS (150 kW; 201 hp)
+                        and 400  (295.02 lbf ft), diesel particulate filter and Bluetec emission control system, quattro permanent four-wheel drve system,
+                        Audi S tronic dual-clutch gearbox, McPherson-strut front axle and a four-link rear axle, Audi drive select system with 3 modes (dynamic, sport, efficiency),
+                        MMI control panel with touch pad and dual-view technology, sound system with the proinent extending tweeters.
+                    </div>
+                </div>
+                <div class="spellbutton">
+                    <button id="CheckSpell" ej-button e-text="Spell Check" e-click="checkSpell"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .spellbutton {
+        padding-top: 15px;
+    }
+</style>

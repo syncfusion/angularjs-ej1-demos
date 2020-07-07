@@ -1,0 +1,24 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="Year"  e-primaryYAxis-title-text="GDP Per Annum"  e-primaryXAxis-range-min="2005" e-primaryXAxis-range-max="2013" e-primaryXAxis-range-interval="1" e-primaryXAxis-majorGridLines-visible="false"  e-commonSeriesOptions-type="stackingcolumn100" e-commonSeriesOptions-enableAnimation="true" e-commonSeriesOptions-tooltip-visible="true" e-commonSeriesOptions-tooltip-format=" #series.name#  <br/>X : #point.x# <br/> Y : #point.y# <br/>Growth Percentage : #point.percentage# % " e-isResponsive="true" e-legend-visible="true" e-title-text="Gross Domestic Product Growth ">
+				   <e-series>
+				     <e-series e-name="USA" e-points="Points1">
+					 </e-series>
+					  <e-series e-name="India" e-points="Points2">
+					 </e-series>
+					  <e-series e-name="China" e-points="Points3">
+					 </e-series>
+					  <e-series e-name="Canada" e-points="Points4">
+					 </e-series>
+				   </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

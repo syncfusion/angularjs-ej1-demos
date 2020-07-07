@@ -1,0 +1,66 @@
+<div ng-controller="signatureCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+				 <h3>Sign here</h3>
+                    <div id="apisignature" ej-signature e-height="400px" e-isresponsive="true" e-backgroundimage="content/images/signature/water.png" e-savewithbackground="true" e-strokewidth="3"></div>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row-fluid">
+                        <div class="row">
+                            <div class="col-md-3 col-xs-4">Stroke Color</div>
+                            <div class="col-md-3 col-xs-4">
+                                <input id="signstroke" ej-colorpicker e-value="colorValue" e-change="onstrokecolorchange" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4">StrokeWidth</div>
+                        <div class="col-md-3 col-xs-4">
+                            <input id="selectwidth" ej-dropdownlist e-datasource="dataList" e targetid="width" , e-width="100px" e-watermarktext="width" e-change="onchange" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4">Undo</div>
+                        <div class="col-md-3 col-xs-4">
+                            <input id="signundo" class="e-btn" type="button" value="Undo" ej-button e-width="50px" e-size="normal" e-showroundedcorner="true" e-click="onundo" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4">Redo</div>
+                        <div class="col-md-3 col-xs-4">
+                            <input id="signredo" class="e-btn" type="button" value="Redo" ej-button e-width="50px" e-size="normal" e-showroundedcorner="true" e-click="onredo" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4">Clear</div>
+                        <div class="col-md-3 col-xs-4">
+                            <input id="signclear" class="e-btn" type="button" value="Clear" ej-button e-width="50px" e-size="normal" e-showroundedcorner="true" e-click="onclear" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4">Save</div>
+                        <div class="col-md-3 col-xs-4">
+                                <input id="signsave" class="e-btn" type="button" value="Save" ej-button e-width="50px" e-size="normal" e-showroundedcorner="true" e-click="onsave" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-4">Hide/Show</div>
+                        <div class="col-md-3 col-xs-4">
+                            <input type="checkbox" id="signshow" class="e-togglebtn" ej-togglebutton e-width="50px" e-change="signshowChange" e-defaulttext="Hide" e-activetext="Show" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css" class="cssStyles">
+</style>
+

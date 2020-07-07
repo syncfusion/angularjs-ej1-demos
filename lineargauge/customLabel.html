@@ -1,0 +1,58 @@
+﻿<div ng-controller="LinearGauge">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="linearframe" style="margin-left: 300px;margin-right: 350px;">
+                    <ej-lineargauge id="linearCore" e-labelcolor="#8c8c8c" e-width="200"  e-tooltip-showCustomLabelTooltip="true" e-readonly="false" e-enableanimation="false" e-outerCustomLabelPosition="right" e-load="onLoad">
+					 <e-scales>
+					   <e-scale e-maximum="1000" e-majorIntervalValue="100" e-minorIntervalValue="20" e-width="30" e-type="rectangle"  e-border-color= "balck" e-border-width="0" e-showBarPointers="true" e-showCustomLabels="true" e-showRanges="true" e-length="310"
+                       e-position-x="107" e-position-y="50">
+					      <e-markerPointers>
+						    <e-markerPointer e-value="700" e-length="20" e-width="30" e-backgroundColor="#4D4D4D" e-border-color="#4D4D4D" e-type="diamond" e-placement="center">
+							</e-markerPointer>
+							</e-markerPointers>
+							<e-labels>
+							  <e-label e-font-size="11px" e-font-fontFamily="Segoe UI"  e-font-fontStyle="bold" e-distanceFromScale-x="-26">
+							  </e-label>
+						  </e-labels>
+						  <e-ticks>
+						    <e-tick e-type="majorinterval" e-width="1" e-color="#8c8c8c" e-distanceFromScale-x="-13">
+                            </e-tick>
+							<e-tick e-type="minorinterval" e-width="1" e-height="4" e-color="#8c8c8c" e-distanceFromScale-x="-13">
+							</e-tick>
+						  </e-ticks>
+						  <e-barPointers>
+						    <e-barPointer e-value="700" e-width="28" e-distanceFromScale="0" e-backgroundColor="#66C1DC">
+							</e-barPointer>
+						  </e-barPointers>
+						  <e-ranges>
+						    <e-range e-endValue="400" e-startValue="0" e-backgroundColor="#E94649" e-border-color="#E94649" e-startWidth="4" e-endWidth="4" e-placement="near" e-distanceFromScale="-5">
+							</e-range>
+							
+							<e-range e-endValue="1000" e-startValue="700" e-backgroundColor="Green" e-border-color="Green" e-startWidth="4" e-endWidth="4" e-placement="near" e-distanceFromScale="-5">
+							</e-range>	
+							<e-range e-endValue="700" e-startValue="400" e-backgroundColor="#F6B53F" e-border-color="#F6B53F" e-startWidth="4" e-endWidth="4" e-placement="near" e-distanceFromScale="-5">
+							</e-range>							
+						  </e-ranges>
+						  <e-customLabels>
+						    <e-customLabel e-value="Water Level in Liter" e-position-x="82" e-position-y="100" e-color="#8c8c8c"
+                             e-font-size="12px" e-font-fontFamily="Arial" e-font-fontStyle="bold">
+							 </e-customLabel>
+							 <e-customLabel e-value="700-1000 L Sufficient" e-color="Green" e-font-size="12px" e-font-fontFamily="Arial" e-font-fontStyle="bold">
+							</e-customLabel>
+							 <e-customLabel e-value="400-700 L Managable" e-color="#F6B53F" e-font-size="12px" e-font-fontFamily="Arial" e-font-fontStyle="bold">
+							</e-customLabel>
+							<e-customLabel e-value="0-400 L Inadequate" e-color="#E94649" e-font-size="12px" e-font-fontFamily="Arial" e-font-fontStyle="bold">
+						   </e-customLabel>
+						  </e-customLabels>
+					   </e-scale>
+					 </e-scales>
+                     </ej-lineargauge>
+                </div>
+				<div>
+                        <h5>Hold and Drag the bar pointer to interact with it and hover the mouse on label text</h5>
+                    </div>
+            </div>
+        </div>
+    </div>
+	</div>

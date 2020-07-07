@@ -1,0 +1,22 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load=load e-size-height="600px" e-primaryXAxis-labelIntersectAction="rotate45"e-primaryYAxis-labelFormat="${value}M" e-isResponsive="true" e-legend-visible="true" e-title-text="Company Revenue and Profit" e-commonSeriesOptions-marker-dataLabel-visible="true" e-commonSeriesOptions-marker-dataLabel-textPosition="middle" e-commonSeriesOptions-marker-dataLabel-font-color="#ffffff" e-commonSeriesOptions-marker-dataLabel-font-size="13px" e-commonSeriesOptions-marker-dataLabel-font-fontWeight="regular">
+				<e-series>
+				  <e-series e-points="Points1" e-fill="#C64E4A" e-positiveFill="#93C952"
+                        e-type='waterfall'
+                        e-border-color="#8E2827"
+                        e-enableAnimation="true"                       
+                        e-tooltip-visible="true">
+				  </e-series>
+				</e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
