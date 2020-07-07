@@ -1,1 +1,0 @@
-syncApp.controller('RTECtrl', function ($scope) {});
