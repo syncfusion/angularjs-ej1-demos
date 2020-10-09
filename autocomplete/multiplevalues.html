@@ -1,0 +1,43 @@
+<div ng-controller="AutocompleteMultiCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area"> 
+				<div class="frame">
+                <div class="angularbind">				 
+				    <div class="control">
+                        <span class="txt">Using Delimiter</span>
+                        <input type="text" id="automultiselectdeli" ej-autocomplete e-datasource="multidataList" e-width="100%" e-showpopupbutton="true" e-multiselectmode="multidelimit" id="delimit" />
+                    </div>
+                    <div class="control">
+                        <span class="txt">Using VisualMode</span>
+                        <input type="text"  id="automultiselectvisualmode" ej-autocomplete e-datasource="multidataList" e-width="100%" e-showpopupbutton="true" e-multiselectmode="multivisual" id="visualmode" />
+                    </div>				                 
+                </div>
+            </div>
+        </div>
+    </div>
+	</div>
+    <style type="text/css" class="cssStyles">
+        .angularbind > div {
+            margin-bottom: 15px;
+        }
+
+        #control {
+            margin-top: 10px;
+        }
+
+        .txt {
+            font-style: italic;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        .input {
+            height: 25px;
+            text-indent: 12px;
+            width: 99%;
+        }
+    </style>
+</div>
+
+
