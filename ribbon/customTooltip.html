@@ -1,0 +1,226 @@
+
+<div ng-controller="customTooltipCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div style="height: 300px;">
+                    <ul id="ribbonmenu">
+                        <li>
+                            <a>FILE</a>
+                            <ul>
+                                <li><a>New</a></li>
+                                <li><a>Open</a></li>
+                                <li><a>Save</a></li>
+                                <li><a>Save As</a></li>
+                                <li><a>Print</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul id="pasteSplit">
+                        <li><a>Paste</a></li>
+                    </ul>
+                    <div id="customTooltip" ej-ribbon e-width="100%" e-applicationtab-menuitemid="ribbonmenu" e-expandpinsettings-tooltip="Collapse the Ribbon" e-collapsepinsettings-tooltip="Pin the Ribbon" e-applicationtab-type="menu">
+                        <div e-tabs>
+                            <div e-tab e-id="home" e-text="HOME">
+                                <div e-groups>
+                                    <div e-group e-text="New" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="60" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="new" e-text="New" e-customtooltip-title="New" e-customtooltip-content="<h6>New.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-new" e-buttonsettings-click="executeAction">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Clipboard" e-aligntype="columns">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="splitbutton" e-defaults-width="60" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="paste" e-text="Paste" e-customtooltip-title="Paste" e-customtooltip-content="<h6>Paste the content.<br &#47;><br &#47;>Add content on the Clipboard to your document.<&#47;h6>" e-customtooltip-prefixicon="e-pastetip" e-splitbuttonsettings-contenttype="imageonly" e-splitbuttonsettings-prefixicon="e-icon e-ribbon e-ribbonpaste" e-splitbuttonsettings-targetid="pasteSplit" e-splitbuttonsettings-buttonmode="dropdown" e-splitbuttonsettings-arrowposition="bottom" e-splitbuttonsettings-click="executeAction">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div e-content e-defaults-type="button" e-defaults-width="60" e-defaults-isbig="false">
+                                                <div e-groups>
+                                                    <div e-group e-id="cut" e-text="Cut" e-customtooltip-title="Cut" e-customtooltip-content="<h6>Cut the content<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-prefixicon="e-icon e-ribbon e-ribboncut" e-buttonsettings-click="executeAction">
+                                                    </div>
+                                                    <div e-group e-id="copy" e-text="Copy" e-customtooltip-title="Copy" e-customtooltip-content="<h6>Copy the content<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-prefixicon="e-icon e-ribbon e-ribboncopy" e-buttonsettings-click="executeAction">
+                                                    </div>
+                                                    <div e-group e-id="clear" e-text="Clear" e-customtooltip-title="Clear" e-customtooltip-content="<h6>Clear the content<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-prefixicon="e-icon e-ribbon clearAll" e-buttonsettings-click="executeAction">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Font" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="dropdownlist" e-defaults-height="28">
+                                                <div e-groups>
+                                                    <div e-group e-id="fontfamily" e-customtooltip-title="FontFamily" e-customtooltip-content="<h6>Change font family of the content.<&#47;h6>" e-dropdownsettings-datasource="fontlist" e-dropdownsettings-text="Segoe UI" e-dropdownsettings-select="executeAction" e-dropdownsettings-width="150">
+                                                    </div>
+                                                    <div e-group e-id="fontsize" e-customtooltip-title="FontSize" e-customtooltip-content="<h6>Change font size of the content.<&#47;h6>" e-dropdownsettings-datasource="fontsize" e-dropdownsettings-text="1pt" e-dropdownsettings-select="executeAction" e-dropdownsettings-width="65">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div e-content e-defaults-isbig="false">
+                                                <div e-groups>
+                                                    <div e-group e-id="bold" e-text="bold" e-customtooltip-title="Bold" e-customtooltip-content="<h6>Bold the content.<&#47;h6>" e-type="togglebutton" e-togglebuttonsettings-contenttype="imageonly" e-togglebuttonsettings-defaulttext="Bold" e-togglebuttonsettings-activetext="Bold" e-togglebuttonsettings-defaultprefixicon="e-icon e-ribbon bold" e-togglebuttonsettings-activeprefixicon="e-icon e-ribbon bold" e-togglebuttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="italic" e-customtooltip-title="Italic" e-customtooltip-content="<h6>Italic the content.<&#47;h6>" e-type="togglebutton" e-togglebuttonsettings-contenttype="imageonly" e-togglebuttonsettings-defaulttext="Italic" e-togglebuttonsettings-activetext="Italic" e-togglebuttonsettings-defaultprefixicon="e-icon e-ribbon e-ribbonitalic" e-togglebuttonsettings-activeprefixicon="e-icon e-ribbon e-ribbonitalic" e-togglebuttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="underline" e-text="underline" e-customtooltip-title="Underline" e-customtooltip-content="<h6>Underline the content.<&#47;h6>" e-type="togglebutton" e-togglebuttonsettings-contenttype="imageonly" e-togglebuttonsettings-defaulttext="Underline" e-togglebuttonsettings-activetext="Underline" e-togglebuttonsettings-defaultprefixicon="e-icon e-ribbon e-ribbonunderline" e-togglebuttonsettings-activeprefixicon="e-icon e-ribbon e-ribbonunderline" e-togglebuttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="strikethrough" e-text="Strikethrough" e-customtooltip-title="Strikethrough" e-customtooltip-content="<h6>Strikethrough the content.<&#47;h6>" e-type="togglebutton" e-togglebuttonsettings-contenttype="imageonly" e-togglebuttonsettings-defaulttext="Strikethrough" e-togglebuttonsettings-activetext="Strikethrough" e-togglebuttonsettings-defaultprefixicon="e-icon e-ribbon strikethrough" e-togglebuttonsettings-activeprefixicon="e-icon e-ribbon strikethrough" e-togglebuttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="superscript" e-text="Superscript" e-customtooltip-title="Superscript" e-customtooltip-content="<h6>Superscript the content.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-superscripticon" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="subscript" e-text="Subscript" e-customtooltip-title="Subscript" e-customtooltip-content="<h6>Subscript the content.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-subscripticon" e-buttonsettings-click="executeAction"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Alignment" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-isbig="false">
+                                                <div e-groups>
+                                                    <div e-group e-id="bullet" e-text="Bullet Format" e-customtooltip-title="Bullet Format" e-customtooltip-content="<h6>Apply the bullet format.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-bullet" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="number" e-text="Number Format" e-customtooltip-title="Number Format" e-customtooltip-content="<h6>Apply the Number format.<&#47;h6>" e-enableseparator="true" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-numbericon" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="textindent" e-text="Indent" e-customtooltip-title="Indent" e-customtooltip-content="<h6>Apply the Text Indent.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-indent" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="textoudent" e-text="Outdent" e-customtooltip-title="Outdent" e-customtooltip-content="<h6>Apply the Text Outdent.<&#47;h6>" e-enableseparator="true" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-outdent" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="sortascending" e-text="Sort" e-customtooltip-title="Sort Ascending" e-customtooltip-content="<h6>Sort the selected content in ascending order.<&#47;h6>" e-enableseparator="true" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-sort" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="border" e-text="Border" e-customtooltip-title="Border" e-customtooltip-content="<h6>Apply the Border.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-border" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                            <div e-content e-defaults-type="button" e-defaults-isbig="false">
+                                                <div e-groups>
+                                                    <div e-group e-id="alignleft" e-text="JustifyLeft" e-customtooltip-title="JustifyLeft" e-customtooltip-content="<h6>Justify Left.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon alignleft" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="aligncenter" e-text="JustifyCenter" e-customtooltip-title="JustifyCenter" e-customtooltip-content="<h6>Justify Center.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon aligncenter" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="alignright" e-text="JustifyRight" e-customtooltip-title="JustifyRight" e-customtooltip-content="<h6>Justify Right.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon alignright" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="justify" e-text="JustifyFull" e-customtooltip-title="JustifyFull" e-customtooltip-content="<h6>Justify Full.<&#47;h6>" e-enableseparator="true" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon justify" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="uppercase" e-text="Upper Case" e-customtooltip-title="Upper Case" e-customtooltip-content="<h6>Upper Case.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-uppercase" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="lowercase" e-text="Lower Case" e-customtooltip-title="Lower Case" e-customtooltip-content="<h6>Lower Case.<&#47;h6>" e-buttonsettings-contenttype="imageonly" e-buttonsettings-prefixicon="e-icon e-ribbon e-lowercase" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Actions" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="40" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="undo" e-text="Undo" e-customtooltip-title="Undo" e-customtooltip-content="<h6>Undo.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-undo" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="redo" e-text="Redo" e-customtooltip-title="Redo" e-customtooltip-content="<h6>Redo.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-redo" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="View" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="zoomin" e-text="Zoom In" e-customtooltip-title="Zoom In" e-customtooltip-content="<h6>Zoom In.<&#47;h6>" e-width="58" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-zoomin" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="zoomout" e-text="Zoom Out" e-customtooltip-title="Zoom Out" e-customtooltip-content="<h6>Zoom Out.<&#47;h6>" e-width="70" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-zoomout" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="fullscreen" e-text="Full Screen" e-customtooltip-title="Full Screen" e-customtooltip-content="<h6>Full Screen.<&#47;h6>" e-width="73" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-fullscreen" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div e-tab e-id="insert" e-text="INSERT">
+                                <div e-groups>
+                                    <div e-group e-text="Tables" e-aligntype="columns">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="50" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="tables" e-text="Tables" e-customtooltip-title="Tables" e-customtooltip-content="<h6>Tables.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-table" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Illustrations" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="56" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="pictures" e-text="Pictures" e-customtooltip-title="Pictures" e-customtooltip-content="<h6>Pictures.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-picture" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="videos" e-text="Videos" e-customtooltip-title="Videos" e-customtooltip-content="<h6>Videos.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-video" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="shapes" e-text="Shapes" e-customtooltip-title="Shapes" e-customtooltip-content="<h6>Shapes.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-shape" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="charts" e-text="Charts" e-customtooltip-title="Charts" e-customtooltip-content="<h6>Charts.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-chart" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Comments" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="70" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="comments" e-text="Comments" e-customtooltip-title="Comments" e-customtooltip-content="<h6>Comments.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-comment" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Hyperlink" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="70" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="hyperlink" e-text="Hyperlink" e-customtooltip-title="Hyperlink" e-customtooltip-content="<h6>Hyperlink.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-hyperlink" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Equation" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="60" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="equation" e-text="Equation" e-customtooltip-title="Equation" e-customtooltip-content="<h6>Equation.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-equation" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Print Layout" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="80" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="printlayout" e-text="Print Layout" e-customtooltip-title="Print Layout" e-customtooltip-content="<h6>Print Layout.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-printlayout" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div e-group e-text="Save" e-aligntype="rows">
+                                        <div e-content>
+                                            <div e-content e-defaults-type="button" e-defaults-width="50" e-defaults-height="70">
+                                                <div e-groups>
+                                                    <div e-group e-id="print" e-text="Print" e-customtooltip-title="Print" e-customtooltip-content="<h6>Print.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-print" e-buttonsettings-click="executeAction"></div>
+                                                    <div e-group e-id="save" e-text="Save" e-customtooltip-title="Save" e-customtooltip-content="<h6>Save.<&#47;h6>" e-buttonsettings-contenttype="textandimage" e-buttonsettings-imageposition="imagetop" e-buttonsettings-prefixicon="e-icon e-ribbon e-save" e-buttonsettings-click="executeAction"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .e-gbtnposition {
+            margin-top: 5px;
+        }
+
+        .e-gbtnimg {
+            background-image: url("content/ejthemes/common-images/ribbon/homegallery.png");
+            background-repeat: no-repeat;
+            height: 64px;
+            width: 64px;
+        }
+
+        .e-extracontent .e-extrabtnstyle {
+            padding-left: 28px;
+            text-align: left;
+        }
+
+        .e-pastetip {
+            background-image: url("content/ejthemes/common-images/ribbon/paste.png");
+            background-repeat: no-repeat;
+            height: 64px;
+            width: 64px;
+        }
+    </style>
