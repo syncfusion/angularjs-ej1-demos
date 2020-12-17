@@ -1,0 +1,79 @@
+<div ng-controller="MethodsCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="ctrl">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div id="backBtn">
+                                        <button id="back" ej-button e-position="position" e-width="100%">Back</button>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <input type="text" class="e-textbox" placeholder="Search for...">
+                                </td>
+
+                                <td>
+                                    <div id="goBtn">
+                                        <button id="go" ej-button e-width="100%">Go</button>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div id="reloadBtn">
+                                        <button id="reload" ej-button e-width="100%" e-contenttype="imageonly" e-prefixicon="e-icon e-uiLight e-reload">reload</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div id="property-window" class="box wide">
+                <div class="row">
+                    <div class="col-md-6">Target Element </div>
+                    <div class="col-md-6">
+                        <select id="refresh" ej-dropdownlist e-selectedindex="2" e-width="110px" e-change="onEffectChange">
+                            <option value="back">Back Button</option>
+                            <option value="go">Go Button</option>
+                            <option value="reload">Reload Button</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">Disable\Enable </div>
+                    <div class="col-md-6">
+                        <input type="button" id="btnEnable" ej-button e-showroundedcorner="true" e-width="107px" e-click="onEnableDisable" e-text="Disable" e-enabled="false" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">Show\Hide </div>
+                    <div class="col-md-6">
+                        <input type="button" id="hideButton" ej-button e-showroundedcorner="true" e-width="107px" e-click="onShowHide" e-text="Show" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .frame {
+        width: 100%;
+        height: 250px;
+        box-sizing: border-box;
+    }
+
+    .ctrl {
+        margin-top: 80px;
+    }
+
+    table {
+        width: 100%;
+    }
+</style>
+

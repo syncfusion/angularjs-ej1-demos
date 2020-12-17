@@ -1,0 +1,115 @@
+﻿<script src="scripts/MapsData/USA.js"></script>
+<script src="scripts/MapsData/USA_State_PopulationData.js"></script>
+
+
+<div ng-controller="Map">
+    <div class="content-container-fluid">      
+            <div class="row">                
+                <div class="cols-sample-area">     
+				  <div style="background-color: #FAFAF9;border-color: lightgray;margin-left:0px;border-width: 2px;opacity: 0.7;height: 45px;width:250px;">
+                    <label style="color:Black;font-size:22px;margin:15px;margin-top:7px;margin-left:20px;margin-right:20px;height:25px;font-weight:Normal;">USA Population 2013</label>
+                </div>
+				 <div style="min-height:465px">	
+					<div id="maps"  style="height: inherit; height:100%; width:100%;min-height:350px;" ej-map e-enableanimation="true" e-enableResize="false">
+					   <e-layers>
+					       <e-layer e-showTooltip="false"                               
+                        e-enableSelection="false"
+                        e-layerType="geometry"
+                        e-shapeDataPath="name"
+                        e-shapePropertyPath="name"
+                        e-showMapItems="false"
+                        e-dataSource="State_PopulationData"
+						e-shapeData="UsMap"
+                        e-enableMouseHover="true" e-legendSettings-showLegend="true"
+                            e-legendSettings-position="bottomright"
+                            e-legendSettings-positionX="3"
+                            e-legendSettings-positionY="80"
+                            e-legendSettings-height="18"
+                            e-legendSettings-width="190"
+                            e-legendSettings-type="layers"
+                            e-legendSettings-mode="interactive"
+                            e-legendSettings-title="Population"
+                            e-legendSettings-leftLabel="0.5M"
+                            e-legendSettings-rightLabel="40M" e-shapeSettings-fill="#9CBF4E"
+                            e-shapeSettings-strokeThickness="0.5"
+                            e-shapeSettings-stroke="White"
+                            e-shapeSettings-highlightStroke="White"
+                            e-shapeSettings-autoFill="false"
+                            e-shapeSettings-highlightColor="#BC5353"
+                            e-shapeSettings-selectionColor="#BC5353"
+                            e-shapeSettings-highlightBorderWidth="1"
+                            e-shapeSettings-valuePath="population">
+							<e-shapeSettings-colorMappings-rangeColorMapping>
+							   <e-shaperangecolormap e-from="10000001"
+                                  e-to="40000000" e-color="#F1ECD8">
+							   </e-shaperangecolormap>
+							   <e-shaperangecolormap e-from="5000001"
+                                     e-to="10000000" e-color="#DEE2B9">
+							   </e-shaperangecolormap>
+							   <e-shaperangecolormap e-from="1000001"
+                                     e-to="5000000" e-color="#CBD89A">
+							   </e-shaperangecolormap>
+							   <e-shaperangecolormap e-from="500000"
+                                     e-to="1000000" e-color="#B8CE7B">
+							   </e-shaperangecolormap>
+							</e-shapeSettings-colorMappings-rangeColorMapping>
+						   </e-layer>
+					   </e-layers>
+					</div> 	
+				 </div>                   
+                </div>				
+                <div class="panel-body">
+                    <div id="property-window" class="box wide">
+                       <div class="row">                        
+			            <div class="col-md-3">
+                        Enable RTL: <input type="checkbox" onchange="enableRTL(this)" />
+                       </div>
+                       </div> 
+					</div>
+                    </div>
+                    </div>
+            </div>
+    </div>
+ </div>
+ 
+
+   <script id="template" type="application/jsrender">
+
+        <div style="margin-left:17px;margin-top:-45px;">
+            <div class="tip">
+                <p class="small" style="margin-top:8px">
+                    <label style="color:white;font-size:14px;font-weight:normal;">{{:name}}</label>
+                </p>
+                <p class="big">
+                    <label style="color:white;font-size:11px;font-weight:normal;">Population : {{:~parseDouble(population)}}</label>
+                </p>
+            </div>
+        </div>
+    </script>
+     <style type="text/css">
+        .e-map {
+            background-color: white;
+        }
+
+        p.small {
+            line-height: 70%;
+        }
+
+        p.big {
+            line-height: 110%;
+        }
+
+        .tip {
+            border: 1px solid #4D4D4D;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 7px;
+            margin-right: 25px;
+            min-width: 110px;
+            padding-top: 9px;
+            padding-right: 10px;
+            padding-left: 10px;
+            width: auto;
+            height: auto;
+            background: #4D4D4D;
+        }
+    </style>

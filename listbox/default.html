@@ -1,0 +1,39 @@
+﻿<div ng-controller="ListBoxDefaultCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="ctrllabel">Select a car</div>
+                    <div class="angularbind">
+                        <div id="control">
+                            <ul id="bookSelect" ej-listbox e-datasource="dataList" e-value="value" e-width="100%"></ul>
+                        </div>
+                        <div id="binding">
+                            <input type="text" id="dropValue" class="input ejinputtext" ng-model="value" />
+                        </div>
+                        <h6><span style="font-style: italic; font-weight: normal; margin: 5px; text-align: center">Note:Two Way Angular Support</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .angularbind > div {
+        padding: 5px;
+    }
+    .input {
+        height: 25px;
+        text-indent: 10px;
+        width: 100%;
+    }
+
+    .ctrllabel {
+        padding-bottom: 12px;
+        padding-left: 5px;
+    }
+
+</style>
+
+
+

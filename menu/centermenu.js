@@ -1,0 +1,1 @@
+syncApp.controller('MenuCtrl', function ($scope) {});
