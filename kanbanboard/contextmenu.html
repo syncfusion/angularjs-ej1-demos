@@ -1,0 +1,22 @@
+<div ng-controller="contextMenuCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">                
+				<div id="contextMenu" ej-kanban e-datasource="data" e-fields-content="Summary" e-allowTitle="true" e-fields-primaryKey="Id" e-fields-imageUrl="ImgUrl" e-contextmenusettings-enable="true" e-editsettings-allowediting="true" e-editsettings-allowadding="true" e-keyField="Status" e-fields-swimlaneKey="Assignee" e-fields-priority="RankId">
+                    <div e-columns>
+                        <div e-column e-key="Open" e-headertext="Backlog"></div>
+                        <div e-column e-key="InProgress" e-headertext="In Progress"></div>
+                        <div e-column e-key="Testing" e-headertext="Testing"></div>
+						<div e-column e-key="Close" e-headertext="Done"></div>
+                    </div>
+                  <div e-editsettings-edititems>
+                       <div e-editsettings-edititem e-field="Id" e-edittype="stringedit"></div>
+                       <div e-editsettings-edititem e-field="Status" e-edittype="dropdownedit"></div>
+                       <div e-editsettings-edititem e-field="Assignee" e-edittype="dropdownedit"></div>
+                       <div e-editsettings-edititem e-field="Summary" e-edittype="textarea" e-editparams="params"></div>
+                  </div>					
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>

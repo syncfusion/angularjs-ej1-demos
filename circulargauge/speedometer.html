@@ -1,0 +1,72 @@
+<div ng-controller="GaugeCtrl2">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="circularframe3">
+				   <div id="FrameCircularGauge3">
+                    <ej-CircularGauge id="CircularGauge3" e-backgroundColor="transparent" e-width="500" e-isResponsive="true" e-load= "loadGaugeTheme" >
+				   <e-scales>
+				      <e-scale e-radius="140"
+                    e-showScaleBar="true" e-size="0.3" e-showRanges="true" e-minorIntervalValue="5">
+					   <e-pointers>
+					      <e-pointer e-showBackNeedle="true"
+                        e-length="90"
+                        e-width="8"
+                        e-pointerCap-radius="12">
+						  </e-pointer>
+					    </e-pointers>
+						<e-ranges>
+						   <e-range e-distanceFromScale="-30"
+                        e-startValue="0"
+                        e-endValue="50">
+						   </e-range>
+						   <e-range e-distanceFromScale="-30"
+                        e-startValue="50"
+                        e-endValue="80"
+                        e-backgroundColor="#fc0606"
+                        e-border-color="#fc0606">
+						   </e-range>
+						   <e-range e-distanceFromScale="-30"
+                        e-startValue="80"
+                        e-endValue="100"
+                        e-backgroundColor="#f5b43f"
+                        e-border-color="#f5b43f">
+						   </e-range>
+						</e-ranges>
+						<e-ticks>
+						  <e-tick e-type="major" e-width="1" e-color="#8c8c8c">
+						  </e-tick>
+						  <e-tick e-type="minor"
+                        e-height="7"
+                        e-width="1" e-color="#8c8c8c">
+						  </e-tick>
+						</e-ticks>
+						<e-labels>
+						  <e-label e-font-size="11px" e-font-fontFamily="Segoe UI" e-font-fontStyle="Bold" e-color="#8c8c8c">
+						  </e-label>
+						</e-labels>
+						<e-customLabels>
+						  <e-customLabel e-value="0"
+                        e-position-x="250" e-position-y="270"
+                        e-font-size="15px" e-font-fontFamily="Segoe UI" e-font-fontStyle="Bold" e-color="#666666">
+						  </e-customLabel>
+						  <e-customLabel e-value="KM / H"
+                        e-position-x="250" e-position-y="290" 
+                        e-font-size="12px" e-font-fontFamily="Segoe UI" e-font-fontStyle="Normal" e-color="#666666">
+						  </e-customLabel>
+						</e-customLabels>
+						</e-scale>
+				   </e-scales>
+				    </ej-CircularGauge>
+				   </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+     <style>
+        #circularframe{
+            background: none;
+        }
+    </style>

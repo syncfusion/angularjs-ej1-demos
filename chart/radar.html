@@ -1,0 +1,36 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryYAxis-range-min="15" e-primaryYAxis-range-max="90" e-primaryYAxis-range-interval="15" e-commonSeriesOptions-type="radar" e-commonSeriesOptions-enableAnimation="true" e-commonSeriesOptions-tooltip-visible="true" e-isResponsive="true" e-legend-visible="true">
+				<e-series> 
+				   <e-series e-zOrder=2 e-points="Points1"
+					e-marker-visible="true"
+					e-name='Line'>
+				   </e-series>
+				   <e-series e-drawType='column' e-points="Points2"
+					e-zOrder=1
+					e-border-color='white' e-width="1"
+					e-name='Column'
+					e-tooltip-visible="true"
+					e-tooltip-fill='white'
+					e-tooltip-border-width="1" e-tooltip-border-color='black'
+					e-tooltip-font-color="black"
+					>
+				   </e-series>
+				   <e-series e-zOrder=0 e-points="Points3"
+					e-drawType='area'
+					e-marker-visible="true"
+					e-name='Area'>
+				   </e-series>
+				</e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
