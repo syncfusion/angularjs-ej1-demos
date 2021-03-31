@@ -1,0 +1,37 @@
+﻿<div ng-controller="angularBullet">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="bulletCore" ej-bulletgraph e-load="nload" e-width="500" e-height="100" e-value="nvalue" e-comparativemeasurevalue="CMvalue">
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Value
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="txtValue" value="" ej-numerictextbox e-value="nvalue" e-minvalue="0" e-maxvalue="10" style="width: 110px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Comparitive Measure Value
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="txtcmpValue" ej-numerictextbox e-value="CMvalue" e-minvalue="0" e-maxvalue="10" style="width: 110px" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .col-md-3 .e-ddl .e-input {
+            line-height: 20px;
+        }
+    </style>
+</div>

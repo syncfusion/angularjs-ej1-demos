@@ -1,0 +1,75 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-size-height="600px" e-primaryXAxis-title-text="Months" 
+				e-primaryXAxis-range="RangeSetting"
+				e-primaryXAxis-intervalType="months"
+				e-primaryXAxis-valueType="datetime"    
+				e-primaryXAxis-edgeLabelPlacement="shift"          
+				e-primaryXAxis-labelFormat="MMM/yyyy"
+				e-primaryYAxis-range-min="500" e-primaryYAxis-range-max="1500" e-primaryYAxis-range-interval="100"			
+                e-primaryYAxis-title-text="Sales Count"
+				e-commonSeriesOptions-type="line" 
+				e-commonSeriesOptions-enableAnimation="true" 
+				e-commonSeriesOptions-tooltip-visible="true"
+				e-commonSeriesOptions-dragSettings-enable="true"
+				e-commonSeriesOptions-marker-visible="true"
+				e-isResponsive="true" e-load="loadTheme" e-legend-visible="true" e-title-text="Sales Prediction of Products">
+				<e-series>
+				   <e-series e-name="Product 1" e-points="Points1">
+				   </e-series>
+				   <e-series e-name="Product 2" e-points="Points2">
+				   </e-series>
+				</e-series>
+                </div>
+            </div>
+			 <div class="panel-body">
+                <div id="property-window" class="box wide">
+		         <div class="row" style="margin: 10px 0;">
+                            <div class="col-md-3">
+                                Allow Drag
+                            </div>
+                            <div class="col-md-3 aligntop">
+                                <input type="checkbox" checked="checked"  id="enabledrag"/>
+                            </div>
+                            </div>
+						<div class="row" style="margin: 10px 0;">
+                            <div class="col-md-3">
+								  Drag Type
+							</div>
+							<div class="col-md-3 aligntop">
+								<select name="selectIndex" autocomplete="off" id="dragtype" style="width:100px;">
+									<option value="XY">XY</option>
+									<option value="X">X</option>
+									<option value="Y">Y</option>
+								</select>
+							</div>							
+						</div>						
+                    	<div class="row" style="margin: 10px 0;">
+							<div class="col-md-3">
+								 Series Type
+							</div>
+							<div class="col-md-3 aligntop">
+								<select name="selectIndex" autocomplete="off" id="charttype">
+									<option value=0>Line</option>
+                                    <option value=1>Spline</option>
+                                    <option value=2>Area</option>
+                                    <option value=3>Column</option>
+                                    <option value=4>Bar</option>
+                                    <option value=5>Bubble</option>
+                                    <option value=6>Scatter</option>
+                                    <option value=7>Step Area</option>
+                                    <option value=8>Step Line</option>
+                                    <option value=9>Spline Area</option>
+								</select>
+							</div>
+						</div>	
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+

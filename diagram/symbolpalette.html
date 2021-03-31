@@ -1,0 +1,89 @@
+﻿
+<script id="svgTemplate" type="text/x-jsrender">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="225px" height="28px" viewBox="0 -5 225 28">
+        <g visibility="visible" class="node-svg-template">
+            <image width="20px" height="20px" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{:addInfo.source}}"></image>
+            <text x="40" y="18" font-size="14">
+                <tspan>{{:name}}</tspan>
+            </text>
+        </g>
+    </svg>
+</script>
+
+<div ng-controller="diagramCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div ej-symbolpalette id="symbolpalette" e-height="450px" e-width="300px"
+                     e-palettes="palettes"
+                     e-selectedpalettename="selectedPaletteName"
+                     e-headerheight="headerHeight"
+                     e-showpaletteitemtext="showPaletteItemText">
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <b>Connectors</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 aligntop" style="margin-right: -10px;">
+                            Selected Palette
+                        </div>
+                        <div class="col-md-3">
+                            <input id="segment" ej-dropdownlist e-datasource="selectedPalette" e-value="selectedPaletteName" e-width="120px" />
+                        </div>
+                        <div class="col-md-3 aligntop" style="margin-right: -10px;">
+                            Header Height
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="headerHeight" ej-numerictextbox e-value="headerHeight" e-minvalue="20" e-maxvalue="70" e-width="120px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 aligntop" style="margin-right: -10px;">
+                            Item Text
+                        </div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox e-checked="showPaletteItemText" id="itemtext" e-change="change" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <b>Palette</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 aligntop" style="margin-right: -10px;">
+                            Header Visiblity
+                        </div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="headervisibility" checked="checked" e-change="change" />
+                        </div>
+                        <div class="col-md-3 aligntop" style="margin-right: -10px;">
+                            Palette Visiblilty
+                        </div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="visiblepalette" checked="checked" e-change="change" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 aligntop" style="margin-right: -10px;">
+                            Expandable
+                        </div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="headerinteraction" checked="checked" e-change="change" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

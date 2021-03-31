@@ -1,0 +1,50 @@
+﻿<div ng-controller="DialogCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" style="position:relative;">  
+                <div class="control">			
+                <div id="dialog1" ej-dialog e-title="London" e-position="position1" e-target=".cols-sample-area" e-minwidth="215" e-minheight="135">                   
+                        <p>
+                            London, one of the most popular tourist destinations in the world for a reason. A cultural and historical hub, London has an excellent public transportation system that allows visitors to see all the fantastic sights without spending a ton of money on a rental car.
+							London contains four World Heritage Sites.
+                        </p>
+                </div>
+				 <div id="dialog2" ej-dialog e-title="Paris" e-position="position2" e-target=".cols-sample-area" e-minwidth="215" e-minheight="135">   
+				         <p>
+                            Paris, the city of lights and love - this short guide is full of ideas for how to make the most of the romanticism that oozes from every one of its beautiful corners.You couldn't possibly visit Paris without seeing the Eiffel Tower.
+							Even if you do not want to visit this world famous structure, you will see its top from all over Paris.
+                        </p>
+				 </div>
+				 <div id="dialog3" ej-dialog e-title="Rome" e-position="position3" e-target=".cols-sample-area" e-minwidth="215" e-minheight="135">  
+						 <p>
+                            Rome, one of the world's most fascinating cities. The old adage that Rome was not built in a day - and that you won't see it in one or even in three - is true. For the intrepid traveler who can keep pace, here is a list of must-sees.
+							But remember what the Romans say: Even a lifetime isn't enough to see Rome.
+                        </p>
+				 </div>
+				 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .control {
+        height: 500px;
+    }	
+
+        .router{
+            margin-top: 0px;
+        }
+    .row .cols-sample-area {
+            position: relative;
+            overflow: auto;
+        } 
+
+    p {
+        margin: 0px;
+        text-align: justify;
+    }
+
+    #dialog1, #dialog2, #dialog3 {
+        padding: 10px;
+    }
+</style>

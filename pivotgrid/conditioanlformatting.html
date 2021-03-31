@@ -1,0 +1,35 @@
+﻿<div ng-controller="PivotGridFormattingCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div>
+                        <div id="PivotGrid" ej-pivotgrid e-datasource="datasource" e-enableconditionalformatting="true" e-isResponsive="isResponsive" style="height: 350px;
+                            width: 100%; float: left; overflow: auto" />
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide" style="width:40%; margin-left: 20px">
+                    <div class="row" style="margin: 10px 0 10px 20px">
+                        <div>
+					        <div style="margin-top:10px">
+					        Conditional Formatting:
+						        </div>
+					        <div style="margin-top:15px">
+						        <button id="ApplyBtn" class="ang-pivotgrid" ej-button e-showroundedcorner=true e-size="small" e-click="ApplyChanges">Apply</button>
+						        <button id="ResetBtn" class="ang-pivotgrid" ej-button e-showroundedcorner=true e-size="small" e-click="Reset">Reset</button>
+					        </div>
+				        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+        .control
+        {
+            padding-left: 10px;
+        }
+    </style>

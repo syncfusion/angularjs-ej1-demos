@@ -1,0 +1,76 @@
+﻿<script src="scripts/MapsData/WorldMap.js"></script>
+<script src="scripts/MapsData/SyncfusionLocation.js"></script>
+
+
+<div ng-controller="Map">
+    <div class="content-container-fluid">      
+            <div class="row">                
+                <div class="cols-sample-area">     
+				  <div style="background-color: #FAFAF9;border-color: lightgray;margin-left:0px;border-width: 2px;opacity: 0.7;height: 50px; width:290px">
+                    <label style="color:Black;font-size:22px;margin-top:7px;margin-left:20px;margin-right:20px;height:25px;font-weight:Normal;">Top Population Countries</label>
+                </div>
+				 <div style="min-height:465px">	
+					<div id="maps"  style="height: inherit; height:100%; width:100%;min-height:350px;" ej-map e-enableanimation="true" e-navigationcontrol-enableNavigation="true" e-navigationcontrol-orientation="vertical" e-navigationcontrol-absolutePosition-x="5" e-navigationcontrol-absolutePosition-y="15" e-navigationcontrol-dockPosition="none" onRenderComplete="Render">
+					  <e-layers>
+					     <e-layer e-layerType="geometry"
+                          e-enableSelection="false"
+                          e-enableMouseHover="false"
+                          e-markers="MarkerData"
+                          e-showMapItems="false"
+                          e-markerTemplate="template" e-shapeSettings-fill="#626171"
+                              e-shapeSettings-strokeThickness="1"
+                              e-shapeSettings-stroke="#6F6F79"
+                              e-shapeSettings-highlightStroke="#6F6F79"
+                              e-shapeSettings-valuePath="name"
+                              e-shapeSettings-highlightColor="gray" e-shapeData="MapData">
+						 </e-layer>
+					  </e-layers>
+					</div> 	
+				 </div>                   
+                </div>				
+            </div>
+    </div>
+ </div>
+ 
+ <script id="template" type="application/jsrender">
+        <div>
+            <div style="background-image:url(content/images/maps/pin.png);margin-top:-38px;margin-left:-13px;height:40px;width:26px;background-repeat:no-repeat;">
+
+            </div>
+            <div style="background-image:url(content/images/maps/mappath.png);margin-left:3px;height:25px;width:90px;margin-top:-15px;">
+            </div>
+            <div style="margin-left:8px;height:45px;width:120px;margin-top:-23px;">
+                <label class="label1" style="color:white;margin-left:15px;font-weight:normal">{{:Name}}</label>
+                <p />
+            </div>
+
+        </div>
+
+    </script>
+ <style type="text/css">
+        .panButton {
+            border-radius: 5px;
+        }
+
+        .panButton, .incrementButton {
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            width: 18px;
+            height: 18px;
+            border: 1px solid white;
+            background-color: gray;
+        }
+
+        .e-map {
+            background-color: white;
+        }
+
+        .panButton:hover, .incrementButton:hover {
+            cursor: pointer;
+            background-color: #676868;
+        }
+    </style>
+

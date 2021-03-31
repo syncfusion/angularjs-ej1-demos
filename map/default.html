@@ -1,0 +1,120 @@
+﻿<div ng-controller="Map">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div style="margin-left: 0px; border-width: 2px; opacity: 0.7; height: 50px; width: 290px">
+                    <label style="color: Black; font-size: 22px; margin-top: 7px; margin-left: 20px; margin-right: 20px; height: 25px; font-weight: Normal;">World Sales Data</label>
+                </div>
+                <div style="min-height: 400px">
+                    <div id="map" style="height: inherit; min-height: 356px;" ej-map e-enableanimation="nenableanimation"
+                        e-enablepan="nenablepan" e-zoomsettings-enablezoom="nenablezoom" e-zoomsettings-level="nlevel" e-zoomsettings-factor="nfactor"
+                        e-navigationcontrol-enablenavigation="nenablenavigation" e-navigationcontrol-orientation="norientation"
+                        e-navigationcontrol-absoluteposition="nabsoluteposition" e-navigationcontrol-dockposition="ndockposition">
+                        <div e-layers>
+                            <div e-layer e-shapedata="nshapedata" e-datasource="ndatasource1" e-mapitemstemplate="nmapItemsTemplate" e-showmapitems="nshowmapitems" e-shapesettings-fill="nfill"
+                                e-enableselection="nenableselection" e-enablemousehover="nenablemousehover"
+                                e-shapesettings-strokethickness="nstrokethickness" e-shapesettings-selectioncolor="nselectioncolor" e-shapesettings-colorvaluepath="Sales"
+                                e-shapesettings-stroke="nstroke" e-bubblesettings-showbubble="nshowbubble" e-shapesettings-highlightcolor="nhighlightcolor"
+                                e-bubblesettings-valuepath="nvaluepath" e-bubblesettings-minvalue="nminvalue" e-bubblesettings-maxvalue="nmaxvalue"
+                                e-bubblesettings-color="ncolor" e-shapedatapath="nshapeDataPath" e-shapepropertypath="nshapePropertyPath">
+                                <div e-bubblesettings-colormappings-rangecolormapping>
+                                    <e-bubblerangecolormap e-from="nfrom1" e-to="nto1" e-color="ncolor1">
+                                         </e-bubblerangecolormap>
+                                    <e-bubblerangecolormap e-from="nfrom2" e-to="nto2" e-color="ncolor2">
+                                         </e-bubblerangecolormap>
+                                    <e-bubblerangecolormap e-from="nfrom3" e-to="nto3" e-color="ncolor3">
+                                         </e-bubblerangecolormap>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Zoom Settings</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            EnableZoom: 
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="checkbox" ng-model="nenablezoom">
+                        </div>
+                        <div class="col-md-3">
+                            EnablePan: 
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="checkbox" ng-model="nenablepan">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Bubble Settings</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            ShowBubble: 
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="checkbox" ng-model="nshowbubble">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Shape Settings</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Shape Color
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="Text11" ng-model="nfill" style="width: 110px">
+                        </div>
+                        <div class="col-md-3">
+                            Stroke Thickness
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="Text12" ng-model="nstrokethickness" style="width: 110px">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Selection Color
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="Text13" ng-model="nselectioncolor" style="width: 110px">
+                        </div>
+                        <div class="col-md-3">
+                            Highlight Color
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="Text14" ng-model="nhighlightcolor" style="width: 110px">
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="labeltemplate" type="application/jsrender">
+
+                <div style="margin-top:-10px;margin-left:-1px;">
+                    <table style="width:40px;">
+                        <tr>
+                            <td>
+                                <label style="color:Black;font-size:10px;width:40px;text-wrap:normal;text-align:center;" id="Label4">{{:Sales}}</label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+</script>

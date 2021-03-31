@@ -1,0 +1,28 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="chartContainer" style="width: 100%" ej-chart e-size-height="600px" e-commonSeriesOptions-labelPosition="outside"
+                e-commonSeriesOptions-tooltip-visible="true" e-commonSeriesOptions-tooltip-format="#point.x# : #point.y#%"
+						e-commonSeriesOptions-marker-dataLabel-shape="none" 
+						e-commonSeriesOptions-marker-dataLabel-visible="true" 
+						e-commonSeriesOptions-marker-dataLabel-textPosition="top" 
+						e-commonSeriesOptions-marker-dataLabel-border-width="1"
+						e-commonSeriesOptions-marker-dataLabel-connectorLine-height="30" e-commonSeriesOptions-marker-dataLabel-connectorLine-stroke="black"
+                 e-enable3D="true" e-enableRotation="true" e-depth="30" e-wallSize="2" e-tilt="-30" e-rotation="-30" e-perspectiveAngle="90" e-sideBySideSeriesPlacement="true" e-isResponsive="true" e-load=load e-title-text="People's Hobbies" e-legend-visible="false">
+				 <e-series>
+				     <e-series e-points="Points1" e-type="doughnut"
+					e-explodeIndex="4" 
+					e-doughnutCoefficient="0.5" 
+					e-doughnutSize="0.8">
+					 </e-series>
+				 </e-series>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
