@@ -1,0 +1,124 @@
+﻿<div class="content-container-fluid" ng-controller="ColorPickerCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" style="min-height: 450px">
+                <div class="frame">
+                    <div class="color_control">
+                        <label class="fadetext">Choose a color</label>
+                        <div class="element">
+                            <input id="picker" ej-colorpicker e-value="value" e-modeltype='picker' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div id="property-window" class="box wide">
+            <div class="row">
+                <div class="col-md-6">
+                    Value (prefix with '#')
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="color-value" ej-textbox class="input ejinputtext" placeholder="Value" e-width="113px" e-change="change" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    Preview
+                </div>
+                <div class="col-md-6">
+                    <input type="checkbox" id="preview" ej-togglebutton class="e-togglebtn" e-defaulttext='True' e-activetext='False' e-showroundedcorner='true' e-click='onpreview' e-width='105px' />
+                </div>
+            </div>
+          
+            <div class="row">
+                <div class="col-md-6">
+                    Enable
+                </div>
+                <div class="col-md-6">
+                    <input type="checkbox" id="enabled" ej-togglebutton class="e-togglebtn" e-showroundedcorner='true' e-defaulttext='Disable' e-activetext='enable' e-click='onEnabled' e-width='105px' />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    Show Recent Color
+                </div>
+                <div class="col-md-6">
+                    <input type="checkbox" ej-togglebutton id="recentColor" class="e-togglebtn" e-showroundedcorner='true' e-width='105px' e-activetext='False' e-defaulttext='True' e-click="onRecentColor" />
+                </div>
+            </div>
+         
+                <div class='row'>
+                    <div class="col-md-6">
+                        Show switcher
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="switcher" ej-togglebutton class="e-togglebtn" e-showroundedcorner='true' e-width='105px' e-click='onSwitcher' e-activetext='True' e-defaulttext='False' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        Show Buttons
+                    </div>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="showButton" ej-togglebutton class="e-togglebtn" e-showroundedcorner='true' e-width='105px' e-click='onShowButton' e-activetext='True' e-defaulttext='False' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        Get HexCode
+                    </div>
+                    <div class="col-md-6">
+                        <input type="button" ej-button class="e-btn e-select" id="hexCode" value="Value" e-click="getHexCode" showroundedcorner='true' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .color_control {
+            margin-left: 40%;
+        }
+
+        .prop-grid .row .e-btn.e-select {
+            width: 105px;
+        }
+
+        .row #hexCode {
+            width: 105px;
+        }
+
+        .prop-grid .row .e-widget.e-numeric {
+            width: 105px;
+        }
+
+        .input.ejinputtext {
+            text-indent: 10px;
+            width: 103px;
+            height: 26px;
+        }
+
+        .e-btn {
+            height: 30px;
+        }
+
+        .e-prop.e-bootstrap .input.ejinputtext {
+            height: 30px;
+        }
+
+        input::-webkit-input-placeholder {
+            opacity: 0.5;
+            color: grey;
+            font-style: italic;
+        }
+
+        :-ms-input-placeholder {
+            opacity: 0.5;
+            color: grey;
+            font-style: italic;
+        }
+    </style>
+

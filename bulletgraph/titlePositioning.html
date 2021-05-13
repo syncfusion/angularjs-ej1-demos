@@ -1,0 +1,97 @@
+﻿
+<div ng-controller="angularBullet1">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="bulletCore1" ej-bulletgraph e-load="loadBulletTheme"
+					e-value="8"
+					e-applyRangeStrokeToTicks="true"
+					e-comparativeMeasureValue="5"
+					e-width="650"
+					e-height="400"                
+					e-quantitativeScaleSettings-location-x="93" e-quantitativeScaleSettings-location-y="175"
+					e-quantitativeScaleSettings-labelSettings-offset="14" e-quantitativeScaleSettings-labelSettings-size="10"
+					e-quantitativeScaleSettings-majorTickSettings-size="13" e-quantitativeScaleSettings-majorTickSettings-width="1" e-quantitativeScaleSettings-majorTickSettings-stroke='gray'
+					e-quantitativeScaleSettings-minorTickSettings-size="5" e-quantitativeScaleSettings-minorTickSettings-width="1" e-quantitativeScaleSettings-minorTickSettings-stroke='gray'
+                  e-captionSettings-textAngle="0" e-captionSettings-location-x="5"  e-captionSettings-location-y="241" e-captionSettings-text="Revenue YTD" e-captionSettings-textPosition='right'
+				  e-captionSettings-subTitle-textAngle="0"  e-captionSettings-subTitle-textPosition='right'
+				 e-captionSettings-subTitle-text="$ in Thousands" e-captionSettings-subTitle-location-x="5"  e-captionSettings-subTitle-location-y="257"					
+				>
+				<e-qualitativeRanges>				
+				  <e-qualitativeRange e-rangeEnd="3" e-rangeStroke="#61a301">
+				  </e-qualitativeRange>
+				  <e-qualitativeRange e-rangeEnd="7" e-rangeStroke="#fcda21">
+				  </e-qualitativeRange>
+				  <e-qualitativeRange e-rangeEnd="10" e-rangeStroke="#d61e3f">
+				  </e-qualitativeRange>
+				<e-qualitativeRanges>
+			</div>
+			  <div class="panel-body">
+                <div id="property-window" class="box wide">
+					<div class="row">
+							<div class="col-md-3">
+								Caption Position 
+							</div>
+							<div class="col-md-3">
+								<select onchange="BulletCapPosition(this)">
+									<option>Top</option>
+									<option>Left</option>
+									<option selected="selected">Right</option>
+									<option>Bottom</option>
+									<option>Float</option>
+								</select>
+							</div>
+							<div class="col-md-3">
+								Caption Alignment 
+							</div>
+							<div class="col-md-3">
+								<select onchange="BulletCapAlignment(this)">
+									<option>Near</option>
+									<option>Far</option>
+									<option>Center</option>
+								</select>
+							</div>
+						</div><br/>
+						<div class="row">                        
+							<div class="col-md-3">
+								Subtitle Position
+							</div>
+							<div class="col-md-3">
+								<select onchange="BulletSubtitlePosition(this)">
+									<option>Top</option>
+									<option>Left</option>
+									<option selected="selected">Right</option>
+									<option>Bottom</option>
+									<option>Float</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-3">
+								Subtitle Alignment
+							</div>
+							<div class="col-md-3">
+								<select onchange="BulletSubtitleAlignment(this)">
+									<option>Near</option>
+									<option>Far</option>
+									<option>Center</option>
+								</select>
+							</div>
+							<div class="col-md-3" style="width:auto;">
+								<input type="checkbox" checked="checked" onchange="BulletTrim(this)" />
+								</div>
+								<div class="col-md-3">
+								Enable Trim
+							</div>
+                   </div>
+				   </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+

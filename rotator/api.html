@@ -1,0 +1,165 @@
+
+<div ng-controller="RotatCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="control">
+                        <ul id="sliderContent" ej-rotator e-slidewidth="200px" e-displayitemscount="3" e-isResponsive="true" e-slideheight="auto" e-framespace="4px" e-pagerposition="outside" e-showthumbnail="false" e-orientation="horizontal" e-showpager="true" e-enabled="true" e-showcaption="false" e-allowkeyboardnavigation="true" e-showplaybutton="false" e-animationtype="slide">
+                            <li>
+                                <img class="image" src="content/images/rotator/nature.jpg" title="Nature" />
+                            </li>
+                            <li>
+                                <img class="image" src="content/images/rotator/bird.jpg" title="Beautiful Bird" />
+                            </li>
+                            <li>
+                                <img class="image" src="content/images/rotator/sculpture.jpg" title="Amazing Sculptures" />
+                            </li>
+                            <li>
+                                <img class="image" src="content/images/rotator/seaview.jpg" title="Sea-View" />
+                            </li>
+                            <li>
+                                <img class="image" src="content/images/rotator/snowfall.jpg" title="Snow Fall" />
+                            </li>
+                            <li>
+                                <img class="image" src="content/images/rotator/card.jpg" title="Credit Card" />
+                            </li>
+                            <li>
+                                <img class="image" src="content/images/rotator/night.jpg" title="Colorful Night" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Item Display
+                        </div>
+                        <div class="col-md-3">
+                            <select id="changeDisplay" ej-dropdownlist e-selecteditemindex="2" e-change="onDisplayChange" e-width="120px">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            Item Move
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="itemMove" ej-dropdownlist e-datasource="third" e-selecteditemindex="0" e-change="onMoveChange" e-width="120px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            PagerPosition
+                        </div>
+                        <div class="col-md-3">
+                            <select id="changePager" ej-dropdownlist e-selecteditemindex="4" e-change="onPagerChange" e-width="120px">
+                                <option value="topleft">TopLeft</option>
+                                <option value="topright">TopRight</option>
+                                <option value="bottomleft">BottomLeft</option>
+                                <option value="bottomright">BottomRight</option>
+                                <option value="outside">Outside</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Animation
+                        </div>
+                        <div class="col-md-3">
+                            <select id="changeAnimation" ej-dropdownlist e-selecteditemindex="0" e-change="onAnimationChange" e-width="120px">
+                                <option value="slide">Slide</option>
+                                <option value="slowSlide">SlowSlide</option>
+                                <option value="fastSlide">FastSlide</option>
+                                <option value="slideshow">Slideshow</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Orientation
+                        </div>
+                        <div class="col-md-3">
+                            <select id="changeOrientation" ej-dropdownlist e-selecteditemindex="0" e-change="onOrientationChange" e-width="120px">
+                                <option value="horizontal">Horizontal</option>
+                                <option value="vertical">Vertical</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">Show/Hide Pager</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" id="ChkPager" ej-checkbox class="e-chkbox" value="Pager" checked="checked" e-change="onPager" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Enable/Disable</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" id="ChkEnable" class="e-chkbox" checked="checked" ej-checkbox e-change="EnableDisable" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Action
+                        </div>
+                        <div class="col-md-3">
+                            <input type="button" class="e-btn" id="previous" ej-button value="Previous" ng-click="previous($event)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3">
+                            <input type="button" class="e-btn" id="Button2" ej-button value="Next" ng-click="next($event)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Current Index
+                        </div>
+                        <div class="col-md-3">
+                            <input type="button" class="e-btn" id="GetValue" ej-button value="Get Index" ng-click="getValue($event)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css" class="cssStyles">
+       .frame {
+            padding-left: 12px;
+            width: 610px;
+        }
+
+        #sliderContent > li .image {
+            width: 200px;
+            height: 165px;
+        }
+
+        input {
+            line-height: normal;
+            width: 113px;
+        }
+
+            input.ejinputtext {
+                text-indent: 10px;
+            }
+
+        .e-btn {
+            width: 120px;
+        }
+
+        .e-togglebutton {
+            width: 100px;
+        }
+
+        #itemMove {
+            line-height: normal;
+            width: 117px;
+        }
+    </style>
+
+</div>

@@ -1,0 +1,79 @@
+﻿<div ng-controller="radialSliderCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                   <div id="apiradialSlider" ej-radialslider  e-innercircleimageurl="content/images/radialslider/chevron-right.png"></div>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                     <div class="row-fluid">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:left">
+                                Start Angle (0-360)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="startAngleSlider" ej-slider e-height="16", e-width="225",e-value="0" e-minvalue="0" e-maxvalue="360" e-incrementstep="10" e-change="onStartchange" e-slide="onchange">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:left">
+                                End Angle (360-0)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="endAngleSlider" ej-slider e-height="16" e-width="225" e-value="360" e-minvalue="360" e-maxvalue="0" e-incrementstep="10" e-change="onEndchange" e-slide="onchange">					
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Stroke width
+                        </div>
+                        <div class="col-md-3">
+                            <input id="numeric" type="text" ej-numerictextbox e-value="nvalue" e-width="108" e-change="valueChange" e-minvalue="1" e-maxvalue="10" type="text" />
+                            <!--<input id="numeric" ej-numerictextbox e-name="numeric"  e-width="108" e-change="valueChange" e-minvalue="1" e-maxvalue="10" type="text" />-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Show
+                        </div>
+                        <div class="col-md-3">
+                            <input type="checkbox" id="radialshow" class="e-togglebtn" ej-togglebutton e-width="107px" e-change="radialshowChange" e-defaultText="Hide" e-activeText="Show"  />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css" class="cssStyles">
+    .input {
+        height: 22px;
+        text-indent: 10px;
+        width: 100px;
+    }
+
+    .control {
+        overflow: hidden;
+    }
+    #apiradialSlider {
+        margin:0 auto;
+    }
+	.panel-body{
+		overflow-x: auto;
+	}
+</style>
+

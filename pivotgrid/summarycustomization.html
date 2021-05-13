@@ -1,0 +1,82 @@
+﻿<div ng-controller="PivotGridSummaryCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div id="PivotGrid" ej-pivotgrid e-datasource="datasource" e-enableGroupingBar="true", e-enableRowGrandTotal="false" e-isResponsive="isResponsive" style="height: 350px;width: 100%; float: left; overflow: auto" />
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide" style="width:70%; margin-left: 20px">
+				    <div class="row">
+					    <table>
+                            <tr>
+                                <td class="chkrad">
+                                    Data Source:
+                                </td>
+                                <td class="chkrad">
+                                    <input type="radio" ej-radiobutton e-name="type" id="rdbRelational" checked="checked" e-change="renderGrid" /><label for="rdbRelational" class="radioBtnLabel">Relational</label>
+                                </td>
+                                <td class="chkrad" colspan="2">
+                                    <input type="radio" ej-radiobutton e-name="type" id="rdbOlap" e-change="renderGrid" /><label for="rdbOlap" class="radioBtnLabel">OLAP</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="row">
+					    <table>
+                            <tr>
+                                <td class="chkrad">
+                                    Hide GrandTotal:
+                                </td>
+                                <td class="chkrad">
+                                    <input type="radio" ej-radiobutton e-name="hidetotal" id="hiderowgdtot" checked="checked" e-change="renderGrid" /><label for="hiderowgdtot" class="radioBtnLabel">Row</label>
+                                </td>
+                                <td class="chkrad">
+                                    <input type="radio" ej-radiobutton e-name="hidetotal" id="hidecolumngdtot" e-change="renderGrid" /><label for="hidecolumngdtot" class="radioBtnLabel">Column</label>
+                                </td>
+                                 <td class="chkrad">
+                                    <input type="radio" ej-radiobutton e-name="hidetotal" id="hidegdtot" e-change="renderGrid" /><label for="hidegdtot" class="radioBtnLabel">Both</label>
+                                </td>
+                            </tr>
+                        </table>
+				    </div>
+                    <div class="row sourcefield"  style="display: inline-block">
+                        <div class="col-md-3" style="line-height: 2.5; width: 48%">
+                            Hide SubTotal:
+                        </div>
+                        <div class="col-md-3">
+                            <input id="Row" type="text" name="name" class="e-ejinputtext" value="" ej-dropdownlist e-datasource="SubTotalList"
+                                e-width="150px" e-showcheckbox="true" e-watermarkText="HideSubTotals" e-change="onChange" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .control
+    {
+        padding-left: 10px;
+    }
+    .radioBtnLabel {
+        margin-left: 5px;
+    }
+
+    .cols-prop-area .content {
+        width: auto;
+    }
+
+    .row .cols-prop-area {
+        min-height: 170px;
+        width: auto;
+    }
+    .chkrad {
+        width: 150px;
+        padding: 10px;
+    }
+    .clslab {
+        margin-left: 10px;
+    }
+</style>
