@@ -1,0 +1,17 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="livechart" style="width: 100%" ej-chart e-primaryxaxis-majorgridlines-visible="false" e-load=load e-size-height="600px" e-legend-visible="false" e-title-text="Foreign Exchange Rate Analysis" e-isresponsive="true">
+                    <e-series>              
+                      <e-series e-type="line" e-points="livepoints" e-enableanimation="false">					 
+					  </e-series>            
+                    <e-series e-type="line" e-points="livepoints1" e-enableanimation="false">					 
+					  </e-series>   
+                    </e-series>
+                </div>
+            </div>
+        </div>
+   </div>
+ </div>

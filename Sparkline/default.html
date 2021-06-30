@@ -1,0 +1,58 @@
+
+<div ng-controller="sparkline">
+    <div class="content-container-fluid">
+        <div id="sparkline" class="row">
+            <div class="cols-sample-area">
+			
+                <table style="width:100%;height:325px">                  
+                    <tr>
+                        <td align="center"><i>Revenue Status</i></td>
+                        <td>
+                            <div id="column" style="height:100px;width:150px" ej-sparkline e-type="ctype" e-enableanimation="false" e-tooltip-visible="false" e-rangebandsettings-color="rangeColor"  e-rangebandsettings-startrange="value" e-rangebandsettings-endrange="value2" e-width="strokeWidth" e-datasource="cdata" e-lowpointcolor="low" e-negativepointcolor="negativeColor" e-highpointcolor="colorValue" e-size-height="cheight" e-size-width="cwidth"></div>
+                        </td>						
+                    </tr>                     
+                </table>
+				
+            </div>
+			 <div id="sampleProperties" class="panel-body">
+                <div id="property-window" class="box wide">			 
+                    <div class="row">
+                         
+                         <div class="col-md-3" style="width: 70px; margin-top: 10px">
+                            HighColor:
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input id="custom1" ej-colorpicker e-value="colorValue" e-opacityvalue="opacity" e-modeltype="modelType" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3" style="width: 70px; margin-top: 10px">
+                            LowColor:
+                        </div>
+                        <div class="col-md-3 aligntop">
+                             <input id="custom" ej-colorpicker e-value="low" e-opacityvalue="opacity" e-modeltype="modelType" />
+                        </div>
+                    </div>
+					 <div class="row">
+                        <div class="col-md-3" style="width: 70px; margin-top: 10px">
+                            StartRange:
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="txtValue" value="" ej-numerictextbox e-value="value" e-minvalue=-3 e-maxvalue=12 style="width: 110px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3" style="width: 70px; margin-top: 10px">
+                            EndRange:
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="txtValue" value="" ej-numerictextbox e-value="value2" e-minvalue= -3 e-maxvalue=12 style="width: 110px" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+

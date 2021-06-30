@@ -1,0 +1,103 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/jsondatachart.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load=load e-size-height="600px" e-primaryXAxis-title-text="Date"
+                e-primaryXAxis-columnIndex="0"
+                e-primaryXAxis-majorTickLines-visible="false"
+                e-primaryXAxis-labelFormat="dd/MM/yyyy"
+                e-primaryXAxis-valueType="datetime"
+				e-primaryYAxis-rowIndex="0"
+				e-primaryYAxis-rowSpan="2"
+                e-primaryYAxis-range-min="83" e-primaryYAxis-range-max="87" e-primaryYAxis-range-interval="1"
+                e-primaryYAxis-font-size="14px"
+                e-primaryYAxis-title-text= "Million USD"
+				e-axes="Axes" e-commonSeriesOptions-enableAnimation="true" e-isResponsive="true" e-legend-visible="false"" e-title-text="Conn's,Inc Stock Details">
+				<e-rowDefinitions>
+				  <e-rowDefinition e-rowHeight="25"
+                    e-unit="percentage">
+				  </e-rowDefinition>
+				    <e-rowDefinition e-rowHeight="75"
+                    e-unit="percentage">
+				  </e-rowDefinition>
+				</e-rowDefinitions>
+				<e-series> 
+				   <e-series e-name="series1"
+					e-yAxisName="y1SecondQuater"
+					e-type='column'
+					e-fill="#94D3F1" 
+					e-opacity="1" 					
+					e-tooltip-visible="true">
+				   </e-series>
+				   <e-series e-name="series5"   
+					e-type='hiloopenclose'
+                    e-border-width="2"
+					e-tooltip-visible="true" 
+				    e-template='Tooltip'
+					>
+				   </e-series>
+				</e-series>
+                </div>
+            </div>
+				<div id="Tooltip" style="display: none; height:100px; width:125px;padding-top: 10px;padding-bottom:10px">       
+        <div align="center" style="font-weight:bold">
+            #point.x#
+        </div>  
+        <table>
+            <tr>
+                <td>
+                   Open:
+                </td>
+                <td>
+                    $#point.open#
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    High:
+                </td>
+                <td>
+                    $#point.high#
+                </td>               
+            </tr>
+             <tr>
+                <td>
+                    Low:
+                </td>
+                <td >
+                    $#point.low#
+                </td>               
+            </tr>
+             <tr>
+                <td>
+                    Close:
+                </td>
+                <td>
+                    $#point.close#
+                </td>               
+            </tr>             
+        </table>  
+	</div>
+        </div>
+    </div>
+</div>
+
+  <style class="cssStyles">
+    .tooltipDivcontainer table, table th, table tr , table td
+	{
+        border:0px none;
+        margin: 0 auto;
+    }
+  	.tooltipDivcontainer 
+	{
+        border:2px transparent;
+        color:white;
+    }
+	#Tooltip td
+	{
+		color:white;
+	}
+ </style>  
+
