@@ -1,0 +1,33 @@
+<style>
+    #resizeBorder {
+        stroke: black;
+        stroke-width: 3px;
+        stroke-dasharray: none;
+        opacity: 1;
+    }
+
+    #nw-resize, #n-resize, #ne-resize, #w-resize, #e-resize, #sw-resize, #s-resize, #se-resize {
+        fill: none;
+        stroke: transparent;
+    }
+</style>
+
+<div ng-controller="diagramCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <ej-diagram id="diagram" e-height="height"
+                            e-width="width"
+                            e-defaultsettings="defaultSettings"
+                            e-tool="tool"
+                            e-layout="layout"
+                            e-nodetemplate="nodeTemplate"
+                            e-snapsettings="snapSettings"
+                            e-datasourcesettings="dataSourceSettings" 
+                            e-pagesettings="pageSettings"
+                            e-enablecontextmenu="enableContextMenu">
+                </ej-diagram>
+            </div>
+        </div>
+    </div>
+</div>
