@@ -1,0 +1,70 @@
+﻿<div ng-controller="ListBoxIconsCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="ctrllabel">Select an item</div>
+                    <ul id="selecticons">
+                        <li>
+                            <img src="content/images/listbox/Categorize.png" alt="Categorize" />
+                            Categorize and Move
+                        </li>
+                        <li>
+                            <img src="content/images/listbox/Done.png" alt="Done" />
+                            Done
+                        </li>
+                        <li>
+                            <img src="content/images/listbox/Flag.png" alt="Flag" />
+                            Flag & Move
+                        </li>
+                        <li>
+                            <img src="content/images/listbox/Forward.png" alt="Forward" />
+                            Forward
+                        </li>
+                        <li>
+                            <img src="content/images/listbox/Move.png" alt="Move" />
+                            Move to Folder
+                        </li>
+                        <li>
+                            <img src="content/images/listbox/Email.png" alt="E-mail" />
+                            New E-mail
+                        </li>
+                        <li>
+                            <img src="content/images/listbox/Meeting.png" alt="Meeting" />
+                            New Meeting
+                        </li>
+                        <li>
+                            <img src="content/images/listbox/Reply.png" alt="Reply" />
+                            Reply & Delete
+                        </li>
+                    </ul>
+                    <div class="angularbind">
+                        <div id="control">
+                            <ul id="selecticons" ej-listbox e-allowmultiselection="true" e-width="width" e-height="height"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .angularbind > div {
+        padding: 5px;
+    }
+
+    .ctrllabel {
+        padding-bottom: 12px;
+    }
+
+    img {
+        padding-right: 10px;
+        padding-top: 3px;
+        width: 15px;
+        height: 15px;
+        pointer-events: none;
+    }
+</style>
+
+
+

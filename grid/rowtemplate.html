@@ -1,0 +1,99 @@
+﻿<div ng-controller="PhoneListCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div id="Grid" ej-grid e-datasource="data" e-allowpaging="true" e-pagesettings-pagesize="5" e-pagesettings-pagecount="2" e-rowTemplate="rowTemp">
+					<div e-columns>
+						<div e-column e-field="Photo" e-headertext="Photo" e-width="30"></div>
+						<div e-column e-headertext="Employee Details" e-width="70"></div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+ <script id="templateData" type="text/x-jsrender">
+        <tr>
+            <td class="photo">
+                <img src="~/../Content/images/Employees/{{:EmployeeID}}.png" alt="{{:EmployeeID}}" />
+            </td>
+            <td class="details">
+                <table class="CardTable" cellpadding="3" cellspacing="2">
+                    <colgroup>
+                        <col width="50%">
+                        <col width="50%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="CardHeader">First Name </td>
+                            <td>{{:FirstName}} </td>
+                        </tr>
+                        <tr>
+                            <td class="CardHeader">Last Name</td>
+                            <td>{{:LastName}} </td>
+                        </tr>
+                        <tr>
+                            <td class="CardHeader">Title
+                            </td>
+
+                            <td>{{:Title}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CardHeader">Birth Date
+                            </td>
+                            <td>{{:BirthDate}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="CardHeader">Hire Date
+                            </td>
+                            <td>{{:HireDate}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </script>
+	 <style type="text/css" class="cssStyles">
+        .photo img
+        {
+            width: 130px;
+			height: 115px;
+        }
+
+        .photo, .details
+        {
+            border-color: #c4c4c4;
+            border-style: solid;
+        }
+
+        .photo
+        {
+            border-width: 1px 0px 0px 0px;
+        }
+
+        .details
+        {
+            border-width: 1px 0px 0px 1px;
+        }
+		 #RowGrid tbody tr td
+        {
+            vertical-align: middle;
+        }
+
+            .details > table
+            {
+                width: 100%;
+            }
+
+        .CardHeader
+        {
+            font-weight: bolder;
+        }
+		td
+		{
+			padding: 2px 2px 3px 2px;
+		}
+    </style>

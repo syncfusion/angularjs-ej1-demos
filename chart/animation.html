@@ -1,0 +1,114 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-primaryXAxis-title-text="Countries"
+				e-primaryXAxis-labelIntersectAction="trim" e-primaryYAxis-title-text="Number of airports" e-isResponsive="true" e-load="loadTheme" e-size-height="600px" e-legend-visible="false" e-title-text="Total number of Airports in various countries">
+				<e-series>
+				  <e-series e-name="Airports" e-drawType="column" e-tooltip-visible="true" e-tooltip-template="Tooltip"
+					e-enableAnimation="true" e-type="spline" e-fill="#5e35b1"
+					e-marker-shape="circle"
+				    e-marker-size-height="10" e-marker-size-width="10" 
+                    e-marker-visible="true" e-points="Points1"
+							>
+				  </e-series>
+				</e-series>
+                </div>
+            </div>
+			<div id="Tooltip" style="display: none;">
+		<div id="icon">	
+            <div id="airplaneicon">
+			</div>
+	    </div>
+        <div id="value">
+            <div>
+                <label id="no-of-airports">&nbsp;#point.y#
+			   </label>
+               <label id="airport">Airports
+			   </label>
+            </div>
+        </div>
+    </div>
+			 <div class="panel-body">
+                <div id="property-window" class="box wide">
+				     <div class="row">
+                        <div class="col-md-3">
+                            Series Type
+                        </div>
+                        <div class="col-md-3">
+                            <select name="selectIndex"  id="seriestype">
+								<option value="spline">Spline</option>
+                                <option value="area">Area</option>
+								<option value="column">Column</option>
+								<option value="bar">Bar</option>
+								<option value="scatter">Scatter</option>
+								<option value="bubble">Bubble</option>
+                                <option value="pie">Pie</option>
+								<option value="doughnut">Doughnut</option>
+								<option value="polar">Polar</option>
+                            </select>
+                        </div>
+                    </div>
+					<div class="row">
+						<div class="col-md-3">
+							 Series Animation
+						</div>
+						<div class="col-md-3 aligntop">
+                            <input type="checkbox" checked="checked" id="series"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							 Animation Duration
+						</div>
+						<div class="col-md-3 aligntop">
+                            <input type="text"  id="duration"><br>
+						</div>
+					</div>	
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+  <style class="cssStyles">
+        label{
+		margin-bottom : -25px !important ;
+		text-align :center !important;
+		}
+        .tooltipDiv {
+            background-color:#E94649;        
+            color: white;
+			width:130px;
+        }
+        #Tooltip >div:first-child {
+            float: left;
+        }
+        #Tooltip #value {
+            float: right;
+            height: 50px;
+            width: 60px;
+        }
+        #Tooltip #value >div {
+            margin: 5px 5px 5px 5px;            
+        }
+        #Tooltip #no-of-airports {
+            font-size: 20px;
+            font-family: segoe ui;
+			padding-left: 2px;
+			color: #ffffff;
+        }
+         #Tooltip #airport {
+            font-size: 12px;
+            font-family: segoe ui;
+			color: #ffffff;
+        }
+        #airplaneicon {			
+            background-image: url("content/images/chart/airplane.png");
+            height: 60px;           
+            width: 60px;
+            background-repeat: no-repeat;
+        }		 
+  </style>
+
+

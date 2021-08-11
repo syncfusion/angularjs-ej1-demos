@@ -1,0 +1,80 @@
+<div ng-controller="spellcheckCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div id="SpellCheck" contenteditable="true" style="display:block" ej-spellcheck e-dictionarysettings="dictionarySettings" e-enablevalidateontype="true">
+                        Amazon.com, Inc., often refered to as simply Amazon, is an American electronic commerce and cloud computing company with headquarters in Seattle, Washington. It is the largest web-based retailer in the United States. Amazon.com started as bookstore on the web, later diversifying to sell DVDs, Blu-rays, CDs, video downloads/streaming, MP3 downloads/streaming, audiobook downloads/streaming, software, video games, electronics, apparel, furniture, food, toys and jewelry. The company also produces consumer electronics notably, Amazon Kindle e-book readers, Fire tablets, Fire TV and Fire Phone and is the world's largest provider of cloud infrastructure services (IaaS). Amazon also sells certain low-end products like USB cables under its in-house brand AmazonBasics.
+                        Amazon has separate retail websites for United States, United Kingdom and Ireland, France, Canada, Germany, Italy, Spain, Netherlands, Australia, Brazil, Japan, China, India and Mexico. Amazon also offers international shipping to cetain other countries for some of its products.
+                    </div>
+                </div>
+                <div class="spellbutton">
+                    <button id="CheckSpell" ej-button e-text="Spell Check" e-click="checkSpell"></button>
+                </div>
+            </div>
+            <div id="sampleProperties">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">Ignore AlphaNumeric Words</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="ignoreAlphaNumericWords" e-checked="true" e-change="onIgnoreAlphaNumericWords" />
+                        </div>
+                        <div class="col-md-3">Ignore UpperCase</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="ignoreUpperCase" e-checked="true" e-change="onIgnoreUpperCase" />
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3">Ignore MixedCase Words</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="ignoreMixedCaseWords" e-checked="true" e-change="onIgnoreMixedCaseWords" />
+                        </div>
+                        <div class="col-md-3">Ignore Url</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="ignoreUrl" e-checked="true" e-change="onIgnoreUrl" />
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3">Ignore FileNames</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="ignoreFileNames" e-checked="true" e-change="onIgnoreFileNames" />
+                        </div>
+                        <div class="col-md-3">Ignore Email Address</div>
+                        <div class="col-md-3">
+                            <input type="checkbox" ej-checkbox class="nodetext" id="ignoreEmailAddress" e-checked="true" e-change="onIgnoreEmailAddress" />
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3">Maximum Suggestion Count</div>
+                        <div class="col-md-3">
+                            <input id="maxSuggestionCount" type="text" ej-numerictextbox e-value="nvalue" e-change="maxSuggestionChange" />
+                        </div>
+                        <div class="col-md-3 aligntop">MisspellWordCss</div>
+                        <div class="col-md-3">
+                            <input id="misspellWordCss" ej-dropdownlist e-datasource="cssNameList" e-fields="cssNamesFields" e-selectedindex="2" e-change="changeErrorHighlight" />
+                        </div>
+                    </div><br />
+                    <div class="row">
+                        <div class="col-md-3">Ignore Words</div>
+                        <div class="col-md-3">
+                            <input id="ignoreWordsDropDown" ej-dropdownlist e-datasource="dataList" e-fields="ignoreWordsFields" e-showcheckbox=true e-change="addIgnoreWords" e-watermarktext="Select your ignore words" e-width="width" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .spellbutton {
+        padding-top: 15px;
+    }
+
+    .errorword {
+        color: red;
+    }
+
+    .highlighter {
+        color: blue;
+    }
+</style>

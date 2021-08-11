@@ -1,0 +1,82 @@
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="chartContainer" style="width: 100%" ej-chart e-primaryxaxis-title-text="Days" e-primaryyaxis-title-text="Sales" e-zooming-enable="enable" e-load=onchartload e-size-height="600px" e-legend-visible="true" e-title-text="AngularJS Support" e-xzoomfactor="xZoomFactor" e-yzoomfactor="yZoomFactor" e-xzoomposition="xZoomPosition" e-yzoomposition="yZoomPosition">
+                    <e-series>              
+                      <e-series e-name="John" e-dataSource=dataSource e-xName="Day" e-yName="John" e-visibility=johnVisibilty >					 
+					  </e-series>
+					  <e-series e-name="Hendry"  e-dataSource=dataSource e-xName="Day" e-yName="Hendry" e-visibility=hendryVisibilty>					   
+					  </e-series>
+                    </e-series>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <b>Primary X-Axis:</b>
+                    <br />
+                    <br>
+                    <div id="row">
+                        <div class="col-md-3">
+                            Zoom Factor
+                        </div>
+                        <div class="col-md-3 aligntop">
+
+                            <input id="xZoomFactor" type="text" name="name" class="e-ejinputtext" value="" ej-numerictextbox e-value="xZoomFactor" e-incrementstep="0.1" e-decimalplaces="4" e-maxvalue="1" e-minvalue="0" e-width="100px" e-enablestrictmode="true" />
+                        </div>
+
+
+                        <div class="col-md-3">
+                            Zoom Position
+                        </div>
+                        <div class="col-md-3 aligntop">
+
+                            <input id="xZoomPosition" type="text" name="name" class="e-ejinputtext" value="" ej-numerictextbox e-value="xZoomPosition" e-incrementstep="0.1" e-decimalplaces="4" e-maxvalue="1" e-minvalue="0" e-width="100px" e-enablestrictmode="true" />
+                        </div>
+                    </div>
+                    <b>Primary Y-Axis:</b><br />
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3">
+                            Zoom Factor
+                        </div>
+                        <div class="col-md-3 aligntop">
+
+                            <input id="yZoomFactor" type="text" name="name" class="e-ejinputtext" value="" ej-numerictextbox e-value="yZoomFactor" e-incrementstep="0.1" e-decimalplaces="4" e-maxvalue="1" e-minvalue="0" e-width="100px" e-enablestrictmode="true" />
+                        </div>
+                        <div class="col-md-3">
+                            Zoom Position
+                        </div>
+                        <div class="col-md-3 aligntop">
+
+                            <input id="yZoomPosition" type="text" name="name" class="e-ejinputtext" value="" ej-numerictextbox e-value="yZoomPosition" e-incrementstep="0.1" e-decimalplaces="4" e-maxvalue="1" e-minvalue="0" e-width="100px" e-enablestrictmode="true" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Series 1 Visibility
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <select ng-model="johnVisibilty">
+                                <option value="visible">Visible</option>
+                                <option value="hidden">Hidden</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            Series 2 Visibility
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <select ng-model="hendryVisibilty">
+                                <option value="visible">Visible</option>
+                                <option value="hidden">Hidden</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

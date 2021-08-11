@@ -1,0 +1,83 @@
+<div ng-controller="AutocompleteKeyBoardCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+				<div class="frame">
+                <span>Select Car</span>
+                <div class="angularbind">
+                    <div id="control">
+                        <input type="text"  id="autokeyboard" ej-autocomplete e-datasource="keyboarddataList" e-watermarktext="Choose skills" e-multiselectmode="keyboardmultiselect" e-width="100%" />
+                    </div>  
+					</div>
+					</div>
+                <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Alt + j
+                        </div>
+                        <div class="col-md-3">
+                            Focuses the control
+                        </div>
+                    </div>
+					 <div class="row">
+                        <div class="col-md-3">
+                            Up
+                        </div>
+                        <div class="col-md-3">
+                            Moves to previous item
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Down
+                        </div>
+                        <div class="col-md-3">
+                            Moves to next item
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Enter
+                        </div>
+                        <div class="col-md-3">
+                            Selects the focused item
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Esc
+                        </div>
+                        <div class="col-md-3">
+                            Closes the popup
+                        </div>
+                    </div>
+                </div>
+                </div>						
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css" class="cssStyles">
+        .angularbind > div {
+            margin-bottom: 15px;
+        }
+
+        #control {
+            margin-top: 10px;
+        }
+
+        .txt {
+            font-style: italic;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        .input {
+            height: 25px;
+            text-indent: 12px;
+            width: 99%;
+        }
+    </style>
+
+
