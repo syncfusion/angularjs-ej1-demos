@@ -1,0 +1,17 @@
+<div ng-controller="DropDownCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                 <div class="cascadding">
+                        <div id="control" >
+							<span class="txt">Select Group</span>
+							<input id="groupsList" ej-dropdownlist e-datasource="data" e-fields="fields" e-width="100%" e-cascadeto="cascadding"/>
+                        </div> 
+                        <div id="binding">
+							<span class="txt">Select Country</span>
+							<input id="countryList" type="text" ej-dropdownlist e-datasource="countrydata" e-enabled=false e-width="100%" e-fields="fields" />
+                        </div> 
+                    </div>
+        </div>
+    </div> 
+</div>

@@ -1,0 +1,41 @@
+﻿<div ng-controller="radialSliderCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div id="angularRadialSlider" ej-radialslider e-value="sliderValue" e-innercircleimageurl="content/images/radialslider/chevron-right.png"></div>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Value
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" maxlength="3" name="radialslider" class="input ejinputtext" value="" ng-model="sliderValue" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+    .input {
+        height: 22px;
+        text-indent: 10px;
+        width: 100px;
+    }
+
+    .control {
+		overflow-x: auto;
+        overflow-y: hidden;
+    }
+    #angularRadialSlider {
+        margin:0 auto;
+    }
+</style>
+

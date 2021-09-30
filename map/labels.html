@@ -1,0 +1,103 @@
+﻿<script src="scripts/MapsData/USA.js"></script>
+<script src="scripts/MapsData/USA_State_PopulationData.js"></script>
+
+
+<div ng-controller="Map">
+    <div class="content-container-fluid">      
+            <div class="row">                
+                <div class="cols-sample-area">     
+				  <div style="background-color: #FAFAF9;margin-left:0px;border-color: lightgray;border-width: 2px;opacity: 0.7;height: 45px;width:280px" >
+						<label style="color:Black;font-size:22px;margin:15px;margin-top:7px;margin-left:20px;margin-right:20px;height:25px;font-weight:Normal;">USA Population 2013</label>   
+					</div> 
+				 <div style="min-height:465px">	
+					<div id="maps"  style="height: inherit; height:100%; width:100%;min-height:350px;" ej-map e-enableanimation="true" e-enablePan="false">
+					  <e-layers>
+					      <e-layer e-layerType="geometry"
+                         e-enableMouseHover="true"
+                         e-enableSelection="true"
+                         e-showTooltip="false"
+                         e-shapeDataPath="name" 
+						 e-labelSettings-showLabels="true"
+                                   e-labelSettings-labelPath="iso_3166_2"
+                                   e-labelSettings-enableSmartLabel="true"
+							 e-legendSettings-showLegend="false"
+                             e-legendSettings-positionX="10"
+                             e-legendSettings-positionY="85"
+                             e-legendSettings-height="20"
+                             e-legendSettings-width="20"
+                             e-legendSettings-position="none"
+                             e-legendSettings-type="Layers"
+                             e-legendSettings-mode="default"
+					     e-shapePropertyPath="name"
+                         e-showMapItems="false"
+                         e-dataSource="Datasource1"
+						 e-shapeData="Map" e-shapeSettings-autoFill="false"
+                             e-shapeSettings-highlightBorderWidth="1"
+                             e-shapeSettings-strokeThickness="0.5"
+                             e-shapeSettings-stroke="white"
+                             e-shapeSettings-highlightColor="#DAD1CF"
+                             e-shapeSettings-highlightStroke="#1A5D65"
+                             e-shapeSettings-valuePath="population"
+                             e-shapeSettings-selectionColor="#FFC200"
+                             e-shapeSettings-selectionStroke="white"
+                             e-shapeSettings-selectionStrokeWidth="2.5">
+							 <e-shapeSettings-colorMappings-rangeColorMapping>
+							   <e-shaperangecolormap e-from="500000"
+                                          e-to="1000000"
+                                          e-color="#9BC585">
+							   </e-shaperangecolormap>
+							    <e-shaperangecolormap e-from="1000001"
+                                             e-to="5000000"
+                                             e-color="#D2DB9A">
+							   </e-shaperangecolormap>
+							    <e-shaperangecolormap e-from="5000001"
+                                             e-to="10000000"
+                                             e-color="#A4D4BF">
+							   </e-shaperangecolormap>
+							   <e-shaperangecolormap e-from="10000001"
+                                             e-to="40000000"
+                                             e-color="#E0C68F">
+							   </e-shaperangecolormap>
+							 </e-shapeSettings-colorMappings-rangeColorMapping>
+						  </e-layer>
+					   </e-layers>
+					</div> 	
+				 </div>                   
+                </div>				
+            </div>
+    </div>
+ </div>
+ 
+   <script  id="template" type="application/jsrender">
+				 <div class="tip" >				
+				    <p class="small">
+                                <label  style="color:white;font-size:11px;font-weight:normal;">State : {{name}}</label>
+                    </p>
+                    <p class="big">
+                                <label style="color:white;font-size:11px;font-weight:normal;">Count : {{parseDouble(population)}}</label>
+                    </p>
+				</div> 
+</script> 
+
+ <style type="text/css">	 
+ .e-map{
+	background-color:white;
+	}
+            p.small {line-height:70%;}
+            p.big {line-height:110%;}
+
+            .tip {
+                    border: 1px solid #4D4D4D;
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                    border-radius: 7px;
+                    margin-right: 25px;
+                    min-width: 110px;
+                    padding-top: 9px;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    width: auto;
+                    height: auto;
+                    background: #4D4D4D;
+                }
+
+	</style>

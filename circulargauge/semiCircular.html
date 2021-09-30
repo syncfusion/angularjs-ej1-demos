@@ -1,0 +1,93 @@
+<div ng-controller="CircularGaugeCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="circularframe">
+				   <div id="FrameCircularGauge">
+                    <ej-CircularGauge id="CircularGauge1" e-backgroundColor="transparent" e-width="500" e-enableAnimation="false" e-radius="130" e-renderComplete="PointerRange" e-readOnly="false" e-mouseClickUp="MouseClickUp" e-gaugePosition="topcenter" e-distanceFromCorner="10" e-isResponsive="true" e-load= "loadGaugeTheme" e-frame-frameType='halfcircle'
+                    e-frame-halfCircleFrameStartAngle="180" e-frame-halfCircleFrameEndAngle="360">
+					<e-scales>
+					   <e-scale e-showRanges="true"
+                    e-startAngle="180" e-sweepAngle="180" e-radius="130" e-showScaleBar="true"
+                    e-size="10" e-backgroundColor="#CBCFCE" e-border-color="#FEA501" e-border-width="2"
+                    e-maximum="120" e-majorIntervalValue="20" e-minorIntervalValue="10" e-pointerCap-radius="10"
+                        e-pointerCap-backgroundColor="#0000F0"
+                        e-pointerCap-borderColor="#262F36"
+                        e-borderWidth="2"> 
+					     <e-pointers>
+						      <e-pointer e-value="70"
+                        e-showBackNeedle="false"
+                        e-length="85"
+                        e-width="10"                      
+                        e-backgroundColor="#FEA501"
+                        e-border-color="#FEA501">
+							  </e-pointer>
+						   </e-pointers>
+						<e-ticks>
+						  <e-tick e-type="major"
+                        e-distanceFromScale="0"
+                        e-height="16"
+                        e-width="3" e-color="#FEA501">
+						  </e-tick>
+						  <e-tick e-type="minor" e-height="8" e-width="2" e-distanceFromScale="0" e-color="#FEA501">
+						  </e-tick>
+						</e-ticks>
+						<e-labels>
+						  <e-label e-color="Red" e-distanceFromScale="0" e-autoAngle="true">
+						  </e-label>
+						</e-labels>
+						<e-ranges>
+						  <e-range e-distanceFromScale="30"
+                        e-startValue="0"
+                        e-endValue="70"
+                        e-backgroundColor="#0000F0"
+                        e-border-color="#0000F0" e-border-width="0">
+						  </e-range>
+						</e-ranges>
+					   </e-scale>
+					<e-scales>
+                   </ej-CircularGauge>
+				   </div>
+                </div>
+			</div>
+			<div class="panel-body">
+                <div id="property-window" class="box wide">
+				      <div class="row">
+                        <div class="col-md-3">
+                            Gauge Position
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="gaugePosition" />
+                        </div>
+                    </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                            Distance from corner
+                        </div>
+                        <div class="col-md-3">
+                            <div id="distanceFromCorner"></div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-3">
+                            Label Auto Angle
+                        </div>
+                        <div class="col-md-3">
+                            <input type="checkbox" id="chkAutoAngle" class="e-chkbox" value="LabelAutoAngle" />
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <style>
+        .col-md-3 .e-ddl .e-input {
+            line-height:20px;
+        }
+        canvas{
+            border:1px solid #8c8c8c;
+        }
+    </style>
