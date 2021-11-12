@@ -1,0 +1,92 @@
+﻿<div ng-controller="diagramCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <ej-diagram id="diagramCore" e-height="height" e-width="width" e-nodes="nodes" e-connectors="connectors"
+                            e-enablecontextmenu="enableContextMenu"
+                            e-backgroundcolor="backgroundColor"
+                            e-bridgedirection="bridgeDirection"
+                            e-defaultsettings-node="defaultSettings.node"
+                            e-defaultsettings-connector="defaultSettings.connector"
+                            e-pagesettings-pagebackgroundcolor="pageSettings.pageBackgroundColor"
+                            e-scrollsettings-horizontaloffset="scrollSettings.horizontalOffset"
+                            e-scrollsettings-verticaloffset="scrollSettings.verticalOffset"
+                            e-scrollsettings-zoomfactor="scrollSettings.zoomFactor">
+                </ej-diagram>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Model Properties</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Width
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="txtWidth" ng-model="width" e-value="width" e-width="100px" />
+                        </div>
+                        <div class="col-md-3">
+                            Height
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="txtHeight" ng-model="height" e-value="height" e-width="100px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Enable ContextMenu
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="checkbox" ng-model="enableContextMenu" e-checked="enableContextMenu" style="outline: none;">
+                        </div>
+                        <div class="col-md-3">
+                            Background Color
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input id="background" ej-dropdownlist e-datasource="backgroundColorList" e-value="backgroundColor" e-width="100px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Bridge Direction
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input id="bridgeDirection" ej-dropdownlist e-datasource="bridgeDirectionList" e-value="bridgeDirection" e-width="100px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Scroll Settings</b>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Horizontal Offset
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="Text1" ng-model="scrollSettings.horizontalOffset" ej-numerictextbox e-value="scrollSettings.horizontalOffset" e-width="100px" />
+                        </div>
+                        <div class="col-md-3">
+                            Vertical Offset
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="Text1" ng-model="scrollSettings.verticalOffset" ej-numerictextbox e-value="scrollSettings.verticalOffset" e-width="100px" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Zoom Factor
+                        </div>
+                        <div class="col-md-3 aligntop">
+                            <input type="text" id="Text1" ng-model="scrollSettings.zoomFactor" ej-numerictextbox e-incrementstep="0.1" e-minvalue="0" e-maxvalue="1" e-decimalplaces="1" e-value="scrollSettings.zoomFactor" e-width="100px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

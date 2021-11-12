@@ -1,0 +1,43 @@
+﻿<div ng-controller="TreeGridCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div ej-treegrid id="treegrid"
+                     e-datasource="data"
+                     e-editsettings="editSettings"
+                     e-columns="columns"
+                     e-childmapping="subtasks"
+                     e-isresponsive="true"
+                     e-allowfiltering="true"
+                     e-filtersettings="filterSettings"
+                     e-treecolumnindex="treeColumnIndex"
+                     e-toolbarsettings="toolbarSettings">
+                </div>            
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">                    
+                        <div class="col-md-3">
+                            Filter Type
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="mode" />
+                            <div id="editMode">
+                                <ul>
+                                    <li>Filter Bar</li>
+                                    <li>Menu</li>
+                                </ul>
+                            </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" >
+    $('#mode').ejDropDownList({
+        targetID: "editMode",
+        change: "onModeChange",
+        text: "Filter Bar",
+        width: "118px"
+    });
+</script>
