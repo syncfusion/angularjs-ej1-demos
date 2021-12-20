@@ -1,0 +1,72 @@
+﻿<div ng-controller="ButtoneventCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="control">
+                        <table>
+                            <tr>
+                                <td>Normal Button</td>
+                                <td class="btnsht">
+                                    <button id="button" class="ang-button btn" ej-button e-showroundedcorner="true" e-size="large" e-contenttype="textonly" e-text="Button" e-click="btnClick" e-create="btnLoad"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Toggle Button</td>
+                                <td>
+                                    <input type="checkbox" id="toggle1" ej-togglebutton e-showroundedcorner="true" e-size="large" e-contenttype="textandimage" e-defaulttext="Play" e-activetext="Pause" e-defaultprefixicon="e-icon e-mediaplay" e-activeprefixicon="e-icon e-mediapause" e-create="tglebtnLoad" e-click="tglebtnClick" e-change="tglebtnChange" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Split Button</td>
+                                <td>
+                                    <button id="split1" ej-splitbutton e-size="large" e-showroundedcorner="true" e-contenttype="textonly" e-targetid="Ul51" e-text="login" e-create="spltbtnLoad" e-beforeOpen="onFocusIn" e-open="spltbtnOpened" e-click="spltbtnClick" e-itemMouseOver="spltbtnitmHover" e-itemMouseOut="spltbtnitmOut" e-itemSelected="spltbtnitmSelected" e-close="spltbtnClosed"></button>
+                                    <ul id="Ul51">
+                                        <li><span>User</span></li>
+                                        <li><span>Guest</span></li>
+                                        <li><span>Admin</span></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Group Button</td>
+
+
+
+                                <td>
+                                    <div class="element">
+                                        <div id="group1" ej-groupbutton e-groupbuttonmode="radiobutton" e-width="100%" e-showroundedcorner="true" e-datasource="dataSource" e-create="grpbtnLoad" e-select="grpbtnSelect" e-beforeSelect="grpbtnBeforeSelect" e-keyPress="grpbtnKeyPress"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='Logger' class='EventBox'>
+        <h4>Event Trace</h4>
+        <div class="console">
+        <div class='EventLog' id='EventLog'></div>
+            </div>
+          <button id="clrbutton" e-size='small' ej-button class="eventclear e-btn" e-contenttype="textonly" e-text='Clear' e-value="Clear" e-click="onClear" />
+        </div>
+    </div>
+
+<style type="text/css" class="cssStyles">
+    @media only screen and (min-width: 480px) {
+        .control {
+            padding: 0 10%;
+            
+
+        }
+    }
+    .frame {
+     width:50%;
+    }
+    td {
+        padding: 10px 20px;
+    }
+    
+</style>
