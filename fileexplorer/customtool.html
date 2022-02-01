@@ -1,0 +1,48 @@
+<div ng-controller="FileExplorerCustomTool">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div id="customtool" class="ang-fileexplorer" ej-fileexplorer e-path="path" e-filetypes="*.png,*.gif,*.jpg,*.jpeg,*.docx" e-ajaxaction="ajaxaction" e-toolsList="toolsList" e-tools="tools" e-isresponsive="true" e-layout="tile" e-width="100%" e-minwidth="150px"></div>
+                    <div id="helpDialog" title="Use of FileExplorer" ej-dialog e-enableresize="false" e-enablemodal="true" e-showoninit="false" e-width="350" e-maxwidth="100%" e-cssclass="e-fe-dialog" e-target="#customtool">
+                        <div class="text-content">
+                            <div class="header-content">Need assistance?</div>
+                            <div class="header-content">Our help document assists you to know more about FileExplorer control.</div>
+                            <div class="header-content">Please refer -> <a href="//help.syncfusion.com/js/fileexplorer/overview" target="_blank">Help Document</a></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <style class="cssStyles">
+        .e-fileExplorer-toolbar-icon {
+            height: 22px;
+            width: 22px;
+            font-family: 'ej-webfont';
+            font-size: 18px;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+            .e-fileExplorer-toolbar-icon.Help:before {
+                content: "\e72b";
+            }
+
+        .e-dialog .header-content:not(:last-child) {
+            margin-bottom: .5em;
+        }
+
+        .e-dialog > .e-titlebar {
+            padding: .25em .25em .25em 1em;
+        }
+
+        .e-dialog.e-dialog-wrap {
+            border: none;
+        }
+
+        .e-dialog .e-dialog-icon {
+            right: 0;
+        }
+    </style>
+

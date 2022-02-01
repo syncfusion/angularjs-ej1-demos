@@ -1,0 +1,51 @@
+﻿<div ng-controller="DatePickerCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <span>Select Show Date </span>
+                <div class="angularbind">
+                    <div id="control">
+                        <input id="blackout" ej-datepicker e-value="dateValue" e-specialdates="splDates" e-width="100%"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+    .angularbind > div {
+        padding: 5px;
+    }
+	
+    .flags {
+            width: 16px !important;
+            background-image: url("content/images/tab/flags.png");
+            background-repeat: no-repeat;
+        }
+
+        .sprite-Australia {
+            background-position: 0 -2px;
+        }
+
+        .sprite-Germany {
+            background-position: 0 -398px;
+        }
+
+        .sprite-India {
+            background-position: -3px -462px;
+        }
+
+        .sprite-France {
+            background-position: 0px -331px;
+        }
+
+        .sprite-USA {
+            background-position: 0 -1121px;
+        }
+
+        .e-datepicker.e-calendar { /*change the width of the calender along with table cells*/
+            width: 24em;
+        }
+</style>
+
+

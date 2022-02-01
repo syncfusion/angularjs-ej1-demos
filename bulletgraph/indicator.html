@@ -1,0 +1,75 @@
+﻿
+<div ng-controller="angularBullet1">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="bulletCore1" ej-bulletgraph e-enableAnimation="true" e-load="loadBulletTheme" e-qualitativeRangeSize="32" e-quantitativeScaleLength="475" e-orientation="Horizontal" e-flowDirection="Forward"
+				e-quantitativeScaleSettings-location-x="110" e-quantitativeScaleSettings-location-y="10"
+                e-quantitativeScaleSettings-minimum="0"
+                e-quantitativeScaleSettings-maximum="10"
+                e-quantitativeScaleSettings-interval="1"
+				e-value="8" e-comparativeMeasureValue="6.7"
+                e-quantitativeScaleSettings-minorTicksPerInterval="4"
+                e-quantitativeScaleSettings-tickPosition="Far"
+                e-quantitativeScaleSettings-majorTickSettings-width="1" e-quantitativeScaleSettings-majorTickSettings-size="13" e-quantitativeScaleSettings-majorTickSettings-stroke="gray"
+                e-quantitativeScaleSettings-minorTickSettings-width="1" e-quantitativeScaleSettings-minorTickSettings-size="5" e-quantitativeScaleSettings-minorTickSettings-stroke="gray"
+                e-quantitativeScaleSettings-labelSettings-position="Below" e-quantitativeScaleSettings-labelSettings-offset="14" e-quantitativeScaleSettings-labelSettings-size="10"
+                e-quantitativeScaleSettings-featuredMeasureSettings-width="6"   
+                e-quantitativeScaleSettings-comparativeMeasureSettings-width="5"			
+				e-captionSettings-textAngle="0"
+                e-captionSettings-location-x="17" e-captionSettings-location-y="20" e-captionSettings-text="Revenue YTD"
+				e-captionSettings-font-color="null" e-captionSettings-font-fontFamily="Segoe UI" e-captionSettings-font-fontStyle="Normal" e-captionSettings-font-size="12px" e-captionSettings-font-fontWeight="regular" e-captionSettings-font-opacity="1"
+				e-captionSettings-subTitle-textAngle="0"
+                e-captionSettings-subTitle-text="$ in Thousands" e-captionSettings-subTitle-location-x="10" e-captionSettings-subTitle-y="35" e-e-captionSettings-subTitle-font-color="null" e-captionSettings-subTitle-font-fontFamily="Segoe UI" e-captionSettings-subTitle-font-fontStyle="Normal" e-captionSettings-subTitle-font-size="12px" e-captionSettings-subTitle-font-fontWeight="Normal" e-captionSettings-subTitle-font-opacity="1"
+				e-captionSettings-indicator-visible="true" e-captionSettings-indicator-textSpacing="8" e-captionSettings-indicator-text=" $ 1.3 K " e-captionSettings-indicator-location-x="15" e-captionSettings-indicator-y="195" e-captionSettings-indicator-symbol-size-width="10" e-captionSettings-indicator-symbol-size-height="10"  e-captionSettings-indicator-symbol-shape='triangle'  e-captionSettings-indicator-symbol-color='green'>
+				<e-qualitativeRanges>
+				    <e-qualitativeRange e-rangeEnd="4.3">
+					</e-qualitativeRange>
+					<e-qualitativeRange e-rangeEnd="7.3">
+					</e-qualitativeRange>
+					<e-qualitativeRange e-rangeEnd="10">
+					</e-qualitativeRange>
+				</e-qualitativeRanges>
+                </div>
+            </div>
+			<div class="panel-body">
+                <div id="property-window" class="box wide">
+				       <div class="row">
+                        <div class="col-md-3">
+                            Symbol shape
+                        </div>
+                        <div class="col-md-3">
+                            <select style="max-width:90%" autocomplete="off" id="symShape" onchange="ChangeBulletSymbol(this)">
+                                <option value="circle">Circle</option>
+                                <option value="uparrow">Up Arrow</option>
+                                <option value="downarrow">Down Arrow</option>
+                                <option value="leftarrow">Left Arrow</option>
+                                <option value="rightarrow">Right Arrow</option>
+                                <option value="cross">Cross</option> 
+                                <option value="horizontalline">Horizontal Line</option>
+                                <option value="verticalline">VerticalLine</option>
+                                <option value="triangle" selected="selected">Triangle</option>
+                                <option value="invertedtriangle">Inverted Triangle</option>
+                                <option value="hexagon">Hexagon</option>
+                                <option value="wedge">Wedge</option>
+                                <option value="pentagon">Pentagon</option>
+                                <option value="star">Star</option>
+                                <option value="rectangle">Rectangle</option>
+                                <option value="trapezoid">Trapezoid</option>
+                                <option value="diamond">Diamond</option>
+                                <option value="ellipse">Ellipse</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+

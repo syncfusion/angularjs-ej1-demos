@@ -1,0 +1,35 @@
+<div ng-controller="ScheduleTimescaleCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <ej-schedule style="float: left" id="TimescaleSchedule" e-appointmentsettings-datasource="appointments" e-appointmentsettings-id="Id" e-appointmentsettings-subject="Subject" e-appointmentsettings-starttime="StartTime"
+                    e-appointmentsettings-endtime="EndTime" e-appointmentsettings-description="Description" e-appointmentsettings-allday="AllDay" e-appointmentsettings-recurrence="Recurrence" e-appointmentsettings-recurrencerule="RecurrenceRule"
+                    e-width="100%" e-height="525px" e-currentdate="setDate" e-timescale-minorslotcount="5" e-timescale-majorslot="60">                   
+                </ej-schedule>
+            </div>
+            <div id="sampleProperties" class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">MinorSlotCount</div>
+                        <div class="col-md-3 aligntop">
+                            <input id="minorslot" type="text" ej-dropdownlist e-datasource="minorslotlist" e-selecteditemindex="4" e-width="110px" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3">MajorSlot</div>
+                        <div class="col-md-3 aligntop">
+                            <input id="majorslot" type="text" ej-dropdownlist e-datasource="majorslotlist" e-selecteditemindex="0" e-width="110px" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="e-btn" ej-button id="submit" e-click="changeTime" e-width="80px" e-height="25px">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

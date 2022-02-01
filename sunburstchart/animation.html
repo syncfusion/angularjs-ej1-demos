@@ -1,0 +1,38 @@
+<div ng-controller="animationCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="animation" ej-sunburstchart e-datasource="ndatasource" e-valuememberpath="Population" 
+				e-datalabelsettings-visible="true" e-innerradius="0.2" e-tooltip-visible="true" 
+				e-legend-visible="true" e-legend-position="top" e-enableanimation="true"
+				e-title-text="Population Details" e-levels= "levels" style="height:600px;">					
+                </div>
+            </div>
+			<div class="panel-body">
+              <div id="property-window" class="box wide">			
+			      <div class="row">
+                <div class="col-md-3">
+                    Enable Animation
+                </div>
+                <div class="col-md-3 aligntop">
+                   <input type="checkbox" checked="checked" id="enable" onchange="visible()" />
+                </div>
+            </div>
+			   <div class="row" style="margin: 10px 0;">
+                <div class="col-md-3">
+                  Animation Type
+					 </div>
+                <div class="col-md-3 aligntop">
+                       <select name="selectIndex" autocomplete="off" id="animationtype" style="width:100px;">
+                        <option value="0" selected>Rotation</option>
+                        <option value="1">FadeIn</option>
+                    </select>
+                </div>
+            </div>
+		     </div>
+		    </div>
+        </div>
+    </div>
+</div>
+
+
