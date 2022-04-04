@@ -1,0 +1,54 @@
+﻿<div ng-controller="ListBoxVirtualScrollingCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="ctrllabel">Select a customer</div>
+                    <div class="angularbind">
+                        <div id="control">
+                            <ul id="selectcustomer" ej-listbox e-datasource="dataList" e-width="100%" e-fields-text="text" e-query="query" e-allowvirtualscrolling="true" e-itemrequestcount="10"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div id="property-window" class="box wide">
+                        <div class="col-md-3">Select mode</div>
+                        <div class="col-md-3">
+                            <input type="text" id="dropdwn" ej-dropdownlist e-targetid="dropdown" e-width="100%" e-popupwidth="200" e-change="onValueChange" e-selecteditemindex="0" />
+                            <div id="dropdown">
+                                <ul>
+                                    <li value="disablevirtual">Normal Mode</li>
+                                    <li value="enablevirtual">Continuous Mode</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .angularbind > div {
+        padding: 5px;
+    }
+
+    .e-ddl-popup {
+        width: 100%;
+    }
+
+    .input {
+        height: 25px;
+        text-indent: 10px;
+        width: 100%;
+    }
+
+    .ctrllabel {
+        padding-bottom: 12px;
+        padding-left: 5px;
+    }
+
+</style>
+
+
+
