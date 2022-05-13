@@ -1,0 +1,33 @@
+	<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-size-height="600px" e-primaryXAxis-title-text="Sales Across Years"
+                e-primaryXAxis-range="RangeSetting"
+                e-primaryXAxis-intervalType="Years"
+                e-primaryXAxis-labelFormat="MMM-yyyy"
+                e-primaryXAxis-valueType="datetime"
+                e-primaryYAxis-title-text="Sales Amount in millions"
+                e-primaryYAxis-labelFormat="${value}"
+                e-primaryYAxis-rangePadding="additional"
+				e-commonSeriesOptions-tooltip-visible="true"
+				e-isResponsive="true" e-load="loadTheme" e-legend-visible="false" e-title-text="Average Sales Comparison">
+				   <e-series>
+				     <e-series e-points="Points1" e-name='Sales' 
+					e-type='line' 
+					e-enableAnimation="true"
+					e-marker-shape='circle'
+				    e-marker-size-height="10" e-marker-size-width="10"
+                    e-marker-visible="true"
+                    e-border-width="3"
+					e-tooltip-format="TooltipFormat">
+					 </e-series>
+				   </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

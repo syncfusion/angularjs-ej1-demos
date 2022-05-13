@@ -1,0 +1,62 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load=load e-size-height="600px" e-primaryxaxis-title-text="Time(sec)"
+                     e-primaryxaxis-valuetype="datetime" e-primaryxaxis-labelformat="mm:ss"
+                     e-primaryxaxis-majorgridlines-visible="false" e-primaryyaxis-plotoffset="80"
+                     e-primaryxaxis-axisline-visible="false" e-primaryyaxis-range-min="-15" e-primaryyaxis-title-text="Velocity(m/s)"
+                     e-primaryyaxis-range-max="15" e-primaryyaxis-majorgridlines-visible="false" e-primaryyaxis-range-interval="5"
+                     e-series="SeriesOptionsProperties" e-commonseriesoptions-enableanimation="true"
+                     e-isresponsive="true" e-legend-visible="true" e-legend-position="top"
+                     e-title-text="Seismograph comparison of two countries">
+                    <e-rowdefinitions>
+                        <e-rowdefinition e-rowheight="100"
+                                         e-linecolor="gray"
+                                         e-linewidth="0"
+                                         e-unit='percentage'>
+                        </e-rowdefinition>
+                    </e-rowdefinitions>
+                    <e-columndefinitions>
+                        <e-columndefinition e-columnwidth="50"
+                                            e-linecolor="blue"
+                                            e-linewidth="0"
+                                            e-unit='percentage'>
+                        </e-columndefinition>
+                        <e-columndefinition e-columnwidth="50"
+                                            e-linecolor="gray"
+                                            e-linewidth="1"
+                                            e-unit='percentage'>
+                        </e-columndefinition>
+                    </e-columndefinitions>
+                    <e-axes>
+                        <e-axis e-columnindex="1"
+                                e-name="yAxis"
+                                e-plotoffset="80"
+                                e-majorgridlines-visible="false"
+                                e-range-min="-15" e-range-max="15" e-range-interval="5"
+                                e-title-text="Velocity(m/s)" e-title-visible="true"></e-axis>
+                    </e-axes>
+                    <e-series>
+                        <e-series e-type='line'
+                                  e-istransposed="true"
+                                  e-name="Indonesia"
+                                  enableanimation="false"
+                                  e-fill="#E46455" e-opacity="0.8">
+                        </e-series>
+                        <e-series e-type='line'
+                                  e-name="Japan"
+                                  e-istransposed="true"
+                                  e-enableanimation="false"
+                                  e-yaxisname='yAxis'
+                                  e-opacity="0.8">
+                        </e-series>
+                    </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,79 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="Date" e-primaryXAxis-valueType="datetime" e-primaryXAxis-labelFormat="dd, MMM" e-primaryYAxis-labelFormat="${value}" e-primaryYAxis-range-min="55" e-primaryYAxis-range-max="75" e-primaryYAxis-range-interval="5"  e-axes="Axes" e-isResponsive="true" e-legend-visible="false" e-zooming-enable="true" e-crosshair-visible="true" e-crosshair-type="trackball" e-title-text="Momentum Indicator">
+				<e-series>
+				  <e-series e-dataSource="ChartData" 
+					e-xName="xDate" 
+					e-high="High" 
+					e-low="Low" 
+					e-open="Open"
+					e-close="Close"
+                    e-name='Hilo'
+					e-type='hiloopenclose'
+					e-drawMode='both' 
+					e-tooltip-visible="false" 
+					e-tooltip-format="TooltipFormat"
+					e-enableAnimation="true">
+				  </e-series>
+				</e-series>
+				<e-indicators>
+				  <e-indicator e-type="momentum" 
+					e-seriesName="Hilo" 
+					e-yAxisName="yaxis"
+					e-upperLine-width="2"
+					e-lowerLine-width="2"
+					e-width="2"
+					e-tooltip-visible="false" 
+				    e-tooltip-format="" e-tooltip-fill="transparent" 
+					e-tooltip-border-color="transparent"
+					e-enableAnimation="true"
+					e-fill="blue">
+				  </e-indicator>
+				</e-indicators>
+                </div>
+            </div>
+			 <div class="panel-body">
+                <div id="property-window" class="box wide">
+				    		<div class="row">
+					<div class="col-md-3">
+						Period:
+					</div>
+					<div class="col-md-3 aligntop">
+						<input type="text" id="period" value="5" />
+					</div>
+				</div>
+				<div class="row">
+                    <div class="col-md-3">
+                        Upper Line Stroke:
+                    </div>
+                    <div class="col-md-3 aligntop">
+                        <select name="upperLine" autocomplete="off" id="upLine">
+                            <option value="0">Red</option>
+                            <option value="1">Yellow</option>
+                            <option value="2">Green</option>
+							<option value="3">Blue</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        Signal Line Stroke:
+                    </div>
+                    <div class="col-md-3 aligntop">
+                        <select name="signalLine" autocomplete="off" id="signalLine">
+                            <option value="0">Blue</option>
+                            <option value="1">Yellow</option>
+                            <option value="2">Green</option>
+							<option value="3">Red</option>
+                        </select>
+                    </div>
+				</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+

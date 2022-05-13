@@ -1,0 +1,99 @@
+﻿ <script src="scripts/treemapdata.js"></script>
+<div ng-controller="TreeMapcontroller">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div id="treemap" ej-treemap e-datasource="ndatasource" e-colorValuePath="Expense" e-borderBrush="#666666" e-showTooltip="true" e-tooltipTemplate="tooltiptemp" e-borderThickness="0"
+                   e-weightvaluepath="Sales" e-desaturationColorMapping-from="1" e-desaturationColorMapping-to="0.5" e-desaturationColorMapping-color="#41B8C4" e-desaturationColorMapping-rangeMinimum="2000" e-desaturationColorMapping-rangeMaximum="8000" style="height:405px;"
+                     >                  
+                    
+				<e-levels>
+				  <e-level e-groupPath="Country" e-groupGap="3" e-showHeader="true" e-headerHeight="25" e-headerTemplate="headertemplate" e-showLabels="true" e-labelTemplate="labeltemplate">
+				  </e-level>
+				</e-levels>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+     <script id="tooltiptemp" type="application/jsrender">
+
+        <table style="background-color:#222222;width: 166px;height: 107px;">
+            <tr>
+                <td colspan="3">
+                    <label style="font-size:18px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">{{:Country}}</label>
+                </td>
+            </tr>
+            <tr>
+                <td> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">Region</label></td>
+                <td> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">:</label></td>
+                <td colspan="3"> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">{{:Name}}</label></td>
+                <td style="width:20px;"></td>
+            </tr>
+            <tr>
+                <td> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">Sales</label></td>
+                <td> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">:</label></td>
+                <td colspan="3"> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">{{:Sales}}</label></td>
+            </tr>
+            <tr>
+                <td> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">Expense</label></td>
+                <td> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">:</label></td>
+                <td colspan="3"> <label style="font-size:14px;color:white;margin-left:10px;opacity:0.8;font-weight:normal;">{{:Expense}}</label></td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+    </script>
+    <script id="headertemplate" type="application/jsrender">
+
+        <div>
+            <label style="color:gray;font-size:18px;font-weight:normal;margin-left:5px;" id="Label1">{{:header}}</label><br />
+        </div>
+    </script>
+    <script id="labeltemplate" type="application/jsrender">
+
+        <div align="center" style="width:120px; height:120px;background-image:url('//js.syncfusion.com/demos/jquery/images/treemap/circle.png');">
+            <table style="text-align:center;margin-left:-10px; margin-top:10px;">
+
+                <tr>
+                    <td></td>
+                    <th>
+                        <div style="margin-top:10px;margin-left:10px;">
+                            <label style="color:white;font-size:16px;font-weight:normal;" id="Label2">Sales</label>
+                        </div>
+                    </th>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div style="margin-top:-5px;">
+                            <label style="color:white;font-size:15px;font-weight:normal;" id="Label5">98486</label>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr />
+
+                <tr>
+                    <td></td>
+                    <th>
+                        <div style="margin-top:3px;margin-left:2px;">
+                            <label style="color:white;font-size:16px;margin-top:-5px;font-weight:normal;" id="Label3">Expense</label>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+
+                    <td></td>
+                    <td>
+                        <div style="margin-top:-5px;">
+                            <label style="color:white;font-size:15px;font-weight:normal;" id="Label4">87000</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </script>
