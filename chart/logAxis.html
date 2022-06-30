@@ -1,0 +1,21 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-size-height="600px" e-load="loadTheme" e-primaryYXAxis-range-min="1990" e-primaryXAxis-range-max="2000" e-primaryXAxis-range-interval="1" e-primaryXAxis-title-text="Years" e-primaryYAxis-range-min="10" e-primaryYAxis-range-max="10000" e-primaryYAxis-range-interval="1" e-primaryYAxis-valueType="logarithmic" e-primaryYAxis-minorTicksPerInterval="5" e-primaryYAxis-majorGridLines-width="1.5" e-primaryYAxis-majorGridLines-opacity="0.8" e-primaryXAxis-minorGridLines-visible="true" e-primaryYAxis-minorTickLines-width="1" e-primaryYAxis-minorTickLines-size="4" e-primaryYAxis-minorTickLines-visible="true" e-primaryYAxis-title-text="Profit" e-primaryYAxis-labelFormat="${value}" e-isResponsive="true" e-displayTextRendering="OndataLabel" e-title-text="Business Growth from 1990 to 2000" e-legend-visible="false">
+				 <e-series>
+				   <e-series e-type='line' e-points="Points1"
+					e-border-width="3"
+					e-tooltip-visible="true" 
+					e-enableAnimation="true">
+				   </e-series>
+				 </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

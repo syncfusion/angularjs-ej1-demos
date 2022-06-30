@@ -1,0 +1,90 @@
+<div ng-controller="SplitButtonCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <table class="table-condensed f11 table-nowrap">
+                        <tr>
+                            <td> Normal</td>
+                            <td>
+                                <div class="spltspan">
+                                    <button id="spltbutton11" ej-splitbutton e-size="normal" e-showroundedcorner="true" e-contenttype="imageonly" e-prefixicon="e-icon e-login" e-targetid="Ul11"></button>
+                                    <ul id="Ul11">
+                                        <li><span>User</span></li>
+                                        <li><span>Guest</span></li>
+                                        <li><span>Admin</span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Mini</td>
+                            <td>
+                                <button id="spltbutton21" ej-splitbutton e-size="mini" e-showroundedcorner="true" e-text="login" e-targetid="Ul21"></button>
+                                <ul id="Ul21">
+                                    <li><span>User</span></li>
+                                    <li><span>Guest</span></li>
+                                    <li><span>Admin</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Small</td>
+                            <td>
+                                <button id="spltbutton31" ej-splitbutton e-size="small" e-showroundedcorner="true" e-text="login" e-targetid="Ul31"></button>
+                                <ul id="Ul31">
+                                    <li><span>User</span></li>
+                                    <li><span>Guest</span></li>
+                                    <li><span>Admin</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Medium</td>
+                            <td>
+                                <button id="spltbutton41" ej-splitbutton e-size="medium" e-showroundedcorner="true" e-text="login" e-targetid="Ul41"></button>
+                                <ul id="Ul41">
+                                    <li><span>User</span></li>
+                                    <li><span>Guest</span></li>
+                                    <li><span>Admin</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Large</td>
+                            <td>
+                                <button id="spltbutton51" ej-splitbutton e-size="large" e-showroundedcorner="true" e-contenttype="textandimage" e-targetid="Ul51" e-prefixicon="e-icon e-login" e-text="login"></button>
+                                <ul id="Ul51">
+                                    <li><span>User</span></li>
+                                    <li><span>Guest</span></li>
+                                    <li><span>Admin</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+        @media only screen and (min-width: 480px){
+		.control{
+			padding:0 30%;
+		}
+     }
+	
+	.table-nowrap td {
+	    white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+	} 
+
+    td {
+        padding: 10px;
+    }
+
+    .spltspan {
+        width: 50px;
+    }
+</style>

@@ -1,0 +1,50 @@
+﻿
+<div ng-controller="chartCtrl">
+    
+  <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+               <div id="chartContainer" style="width: 100%" ej-chart e-isresponsive="true"
+                     e-primaryXAxis-crosshairLabel-visible="true" e-primaryYAxis-crosshairLabel-visible="true"
+                     e-primaryYAxis-range-min="80" e-primaryYAxis-range-max="130" e-primaryYAxis-range-interval="10" e-load=Chartload e-legend-visible="false" e-crosshair-visible="true">
+                     <e-series>
+					    <e-series e-type="line"
+                          e-tooltip-format="#point.x#  : #point.y#" e-tooltip-visible="true"
+                          e-border-width="2">
+						</e-series>
+                     </e-series>					 
+				</div>
+			</div>			   
+		</div>
+	</div>
+</div>
+
+<div ng-controller="RangeCtrl">
+    
+  <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+           <div id="rangeContainer" ej-rangeNavigator e-enableDeferredUpdate="true" e-isResponsive="true" e-rangeChanged="onRangeChanged" e-loaded="loadingtheme"
+                    e-selectedRangeSettings="SelectedRangeSetting" e-tooltipSettings-labelFormat="MM/dd/yyyy" 
+                    e-tooltipSettings-tooltipDisplayMode="always" e-tooltipSettings-backgroundColor ="gray"e-tooltipSettings-visible="true" 
+                    e-load="loadingtheme" e-enableRTL="true" e-scrollRangeSettings="ScrollSetting" e-enableScrollbar="true" e-scrollStart="onScrollStart" e-scrollEnd="onScrollbarChanged" e-load="onchartload">				           
+                   <e-series>              
+                      <e-series e-name="ProductA" e-type="line" e-dataSource=dataSource e-xName="XValue" e-yName="YValue" e-border-color="transparent" e-border-width="2" e-fill="#69D2E7">					 
+					  </e-series>
+                    </e-series>
+				</div>
+           
+         </div>
+           
+        </div>
+</div>
+</div>
+
+
+<style>
+        .e-waitpopup-pane {
+            background-color: transparent;
+        }
+    </style>
+
+
