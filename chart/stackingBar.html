@@ -1,0 +1,26 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="Month" e-primaryYAxis-title-text="Percentage" e-primaryXAxis-range-min="2005" e-primaryXAxis-range-max="2012" e-primaryXAxis-labelRotation="45" e-primaryXAxis-range-interval="1" e-primaryYAxis-range-min="-20" e-primaryYAxis-range-max="100" e-primaryYAxis-range-interval="20" e-primaryYAxis-labelFormat="{value}%" e-commonSeriesOptions-type="stackingbar" e-commonSeriesOptions-enableAnimation="true" e-commonSeriesOptions-tooltip-visible="true" e-commonSeriesOptions-tooltip-for-mat="#series.name# <br/> #point.x# : #point.y#" e-isResponsive="true" e-legend-visible="true" e-legend-position="right" e-title-text="Sales Comparison">
+				 <e-series>
+				    <e-series e-name='Apple' e-points="Points1"
+					 e-fill="#1ABC9C">
+					</e-series>
+					<e-series e-name='Orange' e-points="Points2"
+					e-fill="#3498DB">
+					</e-series>
+					<e-series e-name='Wastage' e-points="Points3"
+					e-fill="#34495E"
+					e-opacity="0.7">
+					</e-series>
+				 </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

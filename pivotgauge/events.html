@@ -1,0 +1,50 @@
+﻿<div ng-controller="PivotGaugeEventsCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" style="width: 100%">
+                <div class="control">
+                    <div>
+                        <div id="PivotGauge" ej-pivotgauge e-dataSource="dataSource" e-enabletooltip="enableTooltip" e-rowscount="rowsCount"
+                            e-columnscount="columnsCount" e-scales="scales" e-load="loadGaugeTheme" e-backgroundcolor="backgroundColor" e-labelFormatSettings="labelFormatSettings" e-beforeServiceInvoke ="onBeforeServiceCall", e-afterServiceInvoke="onAfterServiceCall",
+                            e-renderSuccess="onClientSuccess", e-drawLabels="onLabelDraw" style="min-height: 275px; height: 338px; width: 100%; overflow: auto; position:relative;" />
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+			    <div id="property-window" class="box wide" style="width:35%; margin-left: 20px">
+                    <div>
+                        <div class="heading">
+                            <span>Event Trace</span>
+                        </div>
+                        <div class="prop-grid content" style="height: 150px;overflow:auto">
+                            <div class="eventarea">
+                                <div class="EventLog" id="EventLog">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="evtbtn" style="margin-top: 30px">
+                            <button id="clear" class="ang-pivotgrid" ej-button e-showroundedcorner=true e-size="small" e-click="onClear">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <style>
+        .control
+        {
+            padding-left: 10px;
+        }
+        .EventLog {
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .circulardarkgradient, .circularlightgradient
+        {
+            width: 360px;
+            position:relative;
+        }
+    </style>

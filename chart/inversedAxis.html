@@ -1,0 +1,79 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="Years" e-primaryXAxis-majorGridLines-visible="false" e-primaryXAxis-valueType="datetime" e-primaryXAxis-labelFormat="MMM-yyyy" e-primaryXAxis-range="RangeSetting" e-primaryYAxis-isInversed="true" e-primaryYAxis-title-text="Exchange Rate"  e-primaryXAxis-intervalType="years" e-primaryYAxis-range-min="34" e-primaryYAxis-range-max="60" e-primaryYAxis-range-interval="2" e-isResponsive="true" e-legend-visible="false" e-title-text="Exchange rate">
+				<e-series>
+				   <e-series e-marker-visible="true"
+                    e-type='line' e-points="Points1"
+					e-tooltip-visible="true"                  
+                    e-enableAnimation="true"
+                    e-border-width="2">
+				   </e-series>
+				</e-series>
+                </div>
+            </div>
+				<div id="Tooltip" style="display: none; height:125px; width:125px;padding-top: 10px;padding-bottom:10px">
+		<div align="center" style="font-weight:bold">
+             #point.x#
+        </div>  
+        <table>
+            <tr>
+                <td>
+                   Open:
+                </td>
+                <td>
+                    $#point.open#
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    High:
+                </td>
+                <td>
+                    $#point.high#
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    Low:
+                </td>
+                <td>
+                    $#point.low#
+                </td>               
+            </tr>
+            <tr>
+                <td>
+                    Close:
+                </td>
+                <td>
+                    $#point.close#
+                </td>
+               
+            </tr>
+             
+        </table>   
+    </div>
+        </div>
+    </div>
+</div>
+ <style class="cssStyles">
+    .tooltipDivcontainer table, table th, table tr , table td
+	{
+		border:0px none;
+		margin: 0 auto;
+     }
+  	.tooltipDivcontainer 
+	{
+        border:2px transparent;
+         color:white;
+    }
+	#Tooltip td
+	{
+		color:white;
+	}
+ </style>
+
+

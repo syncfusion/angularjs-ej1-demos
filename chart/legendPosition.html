@@ -1,0 +1,155 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-isResponsive="true" e-preRender="legendBorder" e-legend-visible="true" e-legend-border-color="black" e-legend-border-width="1" e-legend-alignment="near" e-legend-textOverflow="none" e-legend-title-text="Countries" e-legend-title-textAlignment="center" e-title-text="Internet users in 2013" e-commonSeriesOptions-marker-dataLabel-visible="true"
+                e-commonSeriesOptions-marker-dataLabel-shape='none'
+				e-commonSeriesOptions-marker-dataLabel-connectorLine-type='bezier' e-commonSeriesOptions-marker-dataLabel-connectorLine-color='blue'
+                e-commonSeriesOptions-marker-dataLabel-font-size='14px' e-commonSeriesOptions-marker-dataLabel-font-color="white" e-commonSeriesOptions-marker-dataLabel-connectorLine-color="white"
+                       >
+				 <e-series>
+				    <e-series e-points="Points1" e-border-width="1" e-border-color='white'
+                    e-name='Expenses'
+					e-type='pie' 
+					e-enableAnimation="true" 
+					e-labelPosition="inside" 
+					e-enableSmartLabels="true" 
+					e-startAngle="270"
+					e-marker-dataLabel-font-size='14px' e-marker-dataLabel-font-color="white">
+					</e-series>
+				 </e-series>
+                </div>
+            </div>
+			 <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Position
+                        </div>
+                        <div class="col-md-3">
+                            <select name="selectIndex" id="optPositionChange">
+                                <option value="0">Bottom</option>
+                                <option value="1">Left</option>
+                                <option value="2">Top</option>
+                                <option value="3">Right</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Alignment
+                        </div>
+                        <div class="col-md-3">
+                            <select name="disableItem" id="optAlignmentChange">
+                                <option value="0">Near</option>
+                                <option value="1">Center</option>
+                                <option value="2">Far</option>
+                            </select>
+                        </div>
+                    </div>
+					<div class="row">
+						<div class="col-md-3">
+                           Height
+                        </div>
+                        <div class="col-md-3">
+                            <input type="textbox" id="legendHeight" style="width:104px" />
+                        </div>						
+                        <div class="col-md-3">
+                            (eg. 10% or 100)
+                        </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Width
+                        </div>
+                        <div class="col-md-3">
+                            <input type="textbox" id="legendWidth" style="width:104px" />
+                        </div>                        
+                        <div class="col-md-3">
+                            (eg. 10% or 100)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Row Count
+                        </div>
+                        <div class="col-md-3">
+                            <select name="disableItem" id="optRowcount">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="6">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Column Count
+                        </div>
+                        <div class="col-md-3">
+                            <select name="disableItem" id="optColumncount">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="6">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Text Overflow
+                        </div>
+                        <div class="col-md-3">
+                            <select name="selectIndex" id="optTextoverflow">
+                                <option value="0">None</option>
+                                <option value="1">Trim</option>
+                                <option value="2">Wrap</option>
+                                <option value="3">WrapAndTrim</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Text Width
+                        </div>
+                        <div class="col-md-3">
+                            <input type="textbox" id="textWidth" style="width:104px" />
+                        </div>
+                    </div> 
+				</div>
+				</div>
+        </div>
+    </div>
+</div>
+ <style class="cssStyles">
+    .tooltipDivcontainer table, table th, table tr , table td
+	{
+		border:0px none;
+		margin: 0 auto;
+     }
+  	.tooltipDivcontainer 
+	{
+        border:2px transparent;
+         color:white;
+    }
+	#Tooltip td
+	{
+		color:white;
+	}
+ </style>
+
+

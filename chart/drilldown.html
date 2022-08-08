@@ -1,0 +1,29 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+			<div id="link"> 
+				<a id="category" onclick="category()" href="javascript:void(0)" style="visibility:hidden; display:inline-block">
+					Sales by Category 
+				</a>
+				<p style="visibility:hidden; display:inline-block" id="symbol">&nbsp;&gt;&gt;&nbsp;</p>
+				<p id="text" style="display:inline-block;"></p>  
+			</div>
+                <div id="container" style="width: 100%" ej-chart e-pointregionclick="onclick" e-seriesrendering="completeAnimation" e-commonseriesoptions-type="pie" e-isresponsive="true" e-load="loadTheme" e-size-height="600px" e-title-text="Automobile Sales by Category" e-legend-visible="true"
+                     e-legend-position="right"
+                     e-legend-textoption-font-size='20px'
+                     e-legend-itemsize-height="12" e-legend-itemsize-width="12">
+                    <e-series>
+                        <e-series e-points="Points1" e-name='Market' e-explode="true" e-enableanimation="true"
+                                  e-marker-datalabel-visible="true"
+                                  e-marker-datalabel-font-size="24px" e-marker-datalabel-font-color="#FFFFFF">
+                        </e-series>
+                    </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
