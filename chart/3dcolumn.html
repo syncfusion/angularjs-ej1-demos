@@ -1,0 +1,21 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="chartContainer" style="width: 100%" ej-chart  e-primaryxaxis-labelintersectaction="multipleRows" e-primaryxaxis-valuetype="category" e-primarxyaxis-majorgridlines-visible="true" e-primarxyaxis-majorgridlines-visible="true" e-commonseriesoptions-tooltip-visible="true" e-commonseriesoptions-tooltip-format="#series.name#<br/>#point.x# : #point.y#mg" e-commonseriesoptions-type="column" e-load=onchartload e-enable3D="true" e-enablerotation="true" e-depth="100" e-wallsize="2" e-tilt="0" e-rotation="14" e-perspectiveangle="20" e-sidebysideseriesplacement="true" e-size-height="600px" e-legend-visible="true" e-title-text="Chemicals in Soaps"
+				e-isresponsive="true">
+                    <e-series>              
+                      <e-series e-name="Chemicals in Soap X" e-dataSource=dataSource e-xname="x" e-yName="y1" >
+                     </e-series>					  
+                     <e-series e-name="Chemicals in Soap Y" e-dataSource=dataSource e-xName="x" e-yName="y2">					  
+					  </e-series>
+                    </e-series>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

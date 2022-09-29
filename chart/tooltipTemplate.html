@@ -1,0 +1,75 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load=load e-size-height="600px" e-chartArea-visible="false" e-primaryXAxis-range-min="2001" e-primaryXAxis-range-max="2013" e-primaryXAxis-range-interval="1" e-primaryXAxis-axisLine-color="#EFEFEF" e-primaryXAxis-axisLine-width="3" e-primaryXAxis-majorGridLines-visible="false" e-primaryXAxis-font-color="white" e-primaryXAxis-font-size="15px" e-primaryXAxis-edgeLabelPlacement="hide" e-primaryXAxis-majorTickLines-visible="false"  e-primaryYAxis-labelFormat="{value}" e-primaryXAxis-title-text="Billion Bushels" e-primaryXAxis-title-font-color="white" e-primaryYAxis-title-font-width="20px" e-primaryYAxis-majorGridLines-color="#EFEFEF" e-primaryYAxis-majorGridLines-width="3" e-primaryYAxis-axisLine-color="#EFEFEF"e-primaryYAxis-range-max="2.7" e-primaryYAxis-range-min="1.5" e-primaryYAxis-range-interval="0.2" e-primaryYAxis-majorTickLines-visible="false" e-commonSeriesOptions-type="line" e-commonSeriesOptions-enableAnimation="true" e-commonSeriesOptions-marker-visible="true" e-commonSeriesOptions-fill="#333333" e-isResponsive="true" e-legend-visible="false" e-title-text="USA Wheat production" e-backGroundImageUrl="content/images/chart/wheat.png">
+				  <e-series>
+                     <e-series e-name='India' e-points="Points1"
+					  e-tooltip-visible="true" 
+					 e-tooltip-template='Tooltip'>
+                     </e-series>					 
+				  </e-series>
+                </div>
+            </div>
+			<div id="Tooltip" style="display: none;">
+		<div id="icon">	
+			<div id="grain"></div>
+		</div>
+        <div id="value">
+            <div>
+				<div id="efpercentage">#point.x#</div>
+				<div id="ef">#point.y#</div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+ <style class="cssStyles">
+        .tooltipDivcontainer 
+		{
+            background-color:#C1272D !important;        
+            color: white;
+			width:100px;
+        }
+        #Tooltip >div:first-child 
+		{
+            float: left;
+        }
+        #Tooltip #value {
+            float: right;
+            height: 50px;
+            width: 50px;
+            background-color:#C1272D
+        }
+        #Tooltip #value >div 
+		{
+            margin: 3px 5px 5px 5px;
+            
+        }
+        #Tooltip #efpercentage
+		{
+            font-size: 12px;
+            font-family: segoe ui;
+            color:#E7C554;
+			font-weight: bold;
+        }
+         #Tooltip #ef 
+		{
+            font-size: 20px;
+            font-family: segoe ui;
+			font-weight: bold;
+             
+        }
+        #grain 
+		{
+            background-image: url("content/images/chart/grain.png");
+            height: 50px;
+            width: 50px;
+            background-repeat: no-repeat;
+        }
+ </style>
+
+

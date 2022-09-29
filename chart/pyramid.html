@@ -1,0 +1,24 @@
+<script src="scripts/ChartData.js"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="chartContainer" style="width: 100%" ej-chart e-commonseriesoptions-marker-datalabel-visible="true" 
+                    e-size="pyramidsize"
+				e-commonseriesoptions-marker-datalabel-shape="rectangle" e-commonseriesoptions-marker-datalabel-font-color='red'
+				e-commonseriesoptions-marker-datalabel-font-size="15px"
+				e-commonseriesoptions-marker-datalabel-font-fontweight="lighter" e-load=onchartload e-commonseriesoptions-marker-datalabel-textmappingname="text" e-title-text="Sales Distribution of Car by Region"
+                    e-legend="plegend"
+                    >
+                    <e-series>              
+                      <e-series e-name="Newyork"  e-type="pyramid" e-dataSource=dataSource e-xName="x" e-yName="y" e-labelposition="outside">					  
+					  </e-series>
+                    </e-series>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+

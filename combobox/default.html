@@ -1,0 +1,43 @@
+<div ng-controller="ComboBoxDefaultCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+			    <div class="frame">
+                <span>Select a car</span>
+                <div class="angularbind">
+                    <div id="control">
+                        <input id="combo-default" type="text" ej-combobox e-datasource="dataList" e-value="setValue" e-width="100%" />
+                    </div>
+                    <div id="binding">
+                        <input type="text"  name="ComboBox" class="input ejinputtext" ng-model="setValue" e-width="100%" />
+                    </div>
+                    <h6><span class="txt">Note:Two Way Angular Support</span></h6>
+                </div>
+				</div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css" class="cssStyles">
+        .angularbind > div {
+            margin-bottom: 15px;
+        }
+
+        #control {
+            margin-top: 10px;
+        }
+
+        .txt {
+            font-style: italic;
+            font-weight: normal;
+            margin-top: 5px;
+        }
+
+        .input {
+            height: 34px;
+            text-indent: 12px;
+            width: 99%;
+        }
+    </style>
+</div>
+
+

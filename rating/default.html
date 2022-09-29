@@ -1,0 +1,30 @@
+<div ng-controller="RatingCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="frame">
+                    <div class="angularbind">
+                        <div id="control">
+                            <input id="apiRating" type="text" class="rating" ej-rating e-value="ratingValue" e-precision='exact'>
+                        </div>
+                        <div id="bindng">
+                            <input id="numeric" class="input ejinputtext" name="rating" ej-numerictextbox e-decimalplaces="1" e-incrementstep="0.1" e-enablestrictmode="false" e-minvalue="0" e-maxvalue="5" e-width="150px" e-showspinbutton="false" e-value="ratingValue" />
+                        </div>
+						<h6><span style="font-style: italic; font-weight: normal; position: absolute;">Note:Two Way Angular Support</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style type="text/css">
+	.angularbind > div{
+		padding:10px;
+	}
+	.input {
+		width:100px;
+	}
+</style>
+

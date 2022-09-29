@@ -1,0 +1,29 @@
+﻿<div ng-controller="diagramCtrl">  
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <ej-diagram id="DiagramContent" e-width="100%" e-height="700px"
+                            e-defaultsettings-node="defaultSettings.node"
+                            e-defaultsettings-connector="defaultSettings.connector"
+                            e-pagesettings-scrolllimit="pageSettings.scrollLimit"
+                            e-nodes="nodes"
+                            e-connectors="connectors"
+                            e-locale="locale">
+                </ej-diagram>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Selection Culture
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" name="name" class="e-ejinputtext" value="" ej-dropdownlist e-datasource="localeText"
+                                   e-value="locale" e-selecteditemindex="0" e-width="100px" e-change="Change" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
