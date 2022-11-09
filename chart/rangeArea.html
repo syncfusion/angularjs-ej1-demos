@@ -1,0 +1,28 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load=load e-size-height="600px" e-primaryXAxis-title-text="Year" 
+                     e-primaryXAxis-axisLine-visible="false" e-primaryYAxis-title-text="Gold Price in Billion U.S Dollars" 
+                     e-primaryXAxis-majorGridLines-visible="false" e-primaryXAxis-majorTickLines-visible="false"  
+                     e-primaryYAxis-axisLine-visible="false" e-primaryYAxis-opacity="0.5" 
+                     e-primaryYAxis-majorGridLines-visible="true" e-commonSeriesOptions-type="rangearea" 
+                     e-commonSeriesOptions-enableAnimation="true" e-commonSeriesOptions-opacity="0.5" 
+                     e-isResponsive="true" e-zooming-enable="true" e-zooming-enableMouseWheel="true" 
+                     e-legend-visible="true" e-title-text="World Gold Price">
+				  <e-series>
+				     <e-series e-border-width="1" e-border-color='Indigo'
+                    e-fill="Indigo"
+					e-name='Gold Value'>
+					 </e-series>
+				  </e-series>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
