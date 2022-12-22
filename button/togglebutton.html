@@ -1,0 +1,61 @@
+<div ng-controller="ToggleButtonCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <table class="table-condensed f11 table-nowrap">
+                        <tr>
+                            <td>Normal</td>
+                            <td>
+                                <input type="checkbox" id="button11" ej-togglebutton e-showroundedcorner="true" e-size="normal" e-contenttype="imageonly" e-defaultprefixicon="e-icon e-mediaplay" e-activeprefixicon="e-icon e-mediapause" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mini</td>
+                            <td>
+                                <input type="checkbox" id="button21" ej-togglebutton e-showroundedcorner="true" e-size="mini" e-contenttype="textonly" e-defaulttext="Play" e-activetext="Pause" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Small</td>
+                            <td>
+                                <input type="checkbox" id="button31" ej-togglebutton e-showroundedcorner="true" e-size="small" e-contenttype="textonly" e-defaulttext="Play" e-activetext="Pause" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>
+                                <input type="checkbox" id="button41" ej-togglebutton e-showroundedcorner="true" e-size="medium" e-contenttype="textonly" e-defaulttext="Play" e-activetext="Pause" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Large</td>
+                            <td>
+                                <input type="checkbox" id="button51" ej-togglebutton e-showroundedcorner="true" e-size="large" e-contenttype="textandimage" e-defaulttext="Play" e-activetext="Pause" e-defaultprefixicon="e-icon e-mediaplay" e-activeprefixicon="e-icon e-mediapause" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css" class="cssStyles">
+    @media only screen and (min-width: 480px){
+		.control{
+            padding:0 30%;
+		}
+     }
+	
+	.table-nowrap td {
+	    white-space: nowrap;
+	    overflow: hidden;
+        text-overflow: ellipsis;
+	} 
+
+    td {
+        padding: 10px;
+    }
+</style>

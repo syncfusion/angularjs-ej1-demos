@@ -1,0 +1,28 @@
+
+<div ng-controller="RotatCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+		  <div class="rotatorApi">
+            <div class="cols-sample-area">
+                <div class="frame">
+					<div class="control">
+                         <ul id="sliderContent" ej-rotator e-datasource="dataList" e-slideWidth="100%" e-slideHeight="300px" e-isResponsive=true
+                           e-frameSpace="0px" e-displayItemsCount="1" e-navigateSteps="1" e-pagerPosition="pagerposition" e-orientation="orientation"
+                           e-showPager="true" e-enabled="true" e-showCaption="true" e-allowKeyboardNavigation="true" e-showPlayButton="true" e-animationType="animationtype"						   
+						 />
+					</div>
+                </div>
+			</div>
+		   </div>
+        </div>
+    </div>
+    <style type="text/css" class="cssStyles">
+        .frame {
+			width:600px;
+		}
+		#sliderContent  li img {
+            width: 100%;
+			height:300px;
+        }
+    </style>
+

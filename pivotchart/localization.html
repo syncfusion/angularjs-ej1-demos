@@ -1,0 +1,57 @@
+﻿
+<div ng-controller="PivotChartLlocalCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area">
+                <div class="control">
+                    <div>
+                        <div id="PivotChart" ej-pivotchart e-dataSource="dataSource" e-title-text="title" e-showtooltip="showTooltip" e-isResponsive ="isResponsive"
+                            e-animation="animation" e-locale="locale" e-commonseriesoptions-type="ctype" e-commonseriesoptions-tooltip-visible="showTooltip"
+                            e-size="size" e-primaryxaxis="primaryXAxis" e-primaryyaxis="primaryYAxis" e-legend="legend" e-load='loadTheme' e-zooming="zooming"
+                            style="height: 500px; width: 900px;"/>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div id="property-window" class="box wide" style="width:40%; margin-left: 20px">
+                    <div class="row">
+                        <div class="col-md-3">
+                            Select Type
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" name="name" class="e-ejinputtext" value="" ej-dropdownlist e-datasource="localeText"
+                                    e-value="locale" e-selecteditemindex="0" e-width="100px" e-change="onLocalChange" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .row {
+            display: inline-block;
+    }
+    .control
+    {
+        padding-left: 10px;
+    }
+    .row .cols-prop-area
+    {
+        min-height: 150px;
+        width: 29%;
+        float: right;
+    }
+    .cols-prop-area [class*="col-md-3"] {
+        min-height: 0px;
+    }
+    .propertiesdlg
+    {
+        min-height: 110px;
+    }
+    .e-ddl.e-widget.e-dropdownlist.e-js {
+        width: 112px!important;
+    }
+</style>

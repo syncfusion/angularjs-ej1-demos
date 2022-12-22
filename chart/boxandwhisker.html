@@ -1,0 +1,49 @@
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-isresponsive="true" 
+					 e-legend-visible="false" e-primaryxaxis-title-text="Department" 
+                     e-load=loadTheme e-size-height="600px"
+                     e-title-text="Employees age group in various departments" 
+                     e-primaryyaxis-title-text="Age" 
+                     e-commonseriesoptions-type="boxandwhisker"
+					 e-commonseriesoptions-boxplotmode="exclusive"
+					 e-commonseriesoptions-fill="#69D2E7" e-commonseriesoptions-outlier-shape="circle" 
+					 e-commonseriesoptions-outlier-size-height="6" e-commonseriesoptions-outlier-size-width="6" 
+                     e-commonseriesoptions-tooltip-visible="true" >
+                     <e-series>
+                        <e-series e-dataSource=dataSource e-xName="x" e-yName="y" >
+                        </e-series>                        
+                    </e-series>
+                </div>
+            </div>
+			<div class="panel-body">
+              <div id="property-window" class="box wide">			
+			      <div class="row" style="margin: 10px 0;">
+                        <div class="col-md-3">
+                            BoxPlot Mode
+                        </div>
+                        <div class="col-md-3">
+                            <div id="dropdown">
+                                <select id="boxmode" >
+                                    <option value="Exclusive">Exclusive</option>
+                                    <option value="Inclusive">Inclusive</option>
+									<option value="Normal">Normal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+					 <div class="row" style="margin: 10px 0;" > 
+						 <div class="col-md-3">
+                          Show Median
+                         </div>
+                        <div class="col-md-3">
+                          <input type="checkbox" id="Median" name="median" checked> <br/>       
+                        </div>                        
+					</div>
+		     </div>
+		    </div>
+          </div>
+    </div>
+</div>

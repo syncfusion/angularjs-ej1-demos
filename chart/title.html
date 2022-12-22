@@ -1,0 +1,101 @@
+<script src="scripts/ChartData.js"></script>
+<script src="scripts/onlinedata.js" type="text/javascript"></script>
+<div ng-controller="ChartCtrl">
+    <div class="content-container-fluid">
+        <div class="row">
+            <div class="cols-sample-area" align="center">
+                <div id="container" style="width: 100%" ej-chart e-load="loadTheme" e-size-height="600px" e-primaryXAxis-title-text="List of countries which are using solar power in the year 2014" e-primaryYAxis-title-text="Measurements of Solar power used in different countries in the year 2014" e-primaryXAxis-title-enableTrim="true" e-primaryXAxis-title-maximumTitleWidth="60" e-primaryYAxis-title-enabletrim="true" e-primaryYAxis-title-maximumTitleWidth="110" e-primaryYAxis-labelFormat="{value}GW" e-primaryYAxis-range-min="0" e-primaryYAxis-range-max="40" e-primaryYAxis-range-interval="5" e-commonSeriesOptions-tooltipe-visible="true" e-isResponsive="true" e-legend-visible="true" e-title-text="Top 10 countries using solar power">
+				 <e-series>
+				   <e-series e-name='Countries Using Solar Power' e-points="Points1" 
+					e-type='column'
+					e-enableAnimation="false"
+					e-tooltip-format="TooltipFormat">
+				   </e-series>
+				 </e-series>
+                </div>
+            </div>
+			 <div class="panel-body">
+                <div id="property-window" class="box wide">
+			      <div class="row">
+					 
+						<div class="col-md-3">
+                           Select Axis
+                        </div>								 
+                        <div class="col-md-3">
+                            <select name="axis" onchange="titlePadding()"  id="axis" >
+                               <option value="primaryXAxis">XAxis</option>
+                               <option value="primaryYAxis">YAxis</option>
+							</select>
+                        </div>
+					  </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Maximum Title Width
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" onchange="titlePadding()" id="xmaxTitleWidth" name="xmaxTitleWidth" style="width:104px" value="60"> <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Enable Trim
+                        </div>
+                        <div class="col-md-3">
+                            <select name="enabletrim" onchange="titlePadding()" id="enabletrim">
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Alignment
+                        </div>
+                        <div class="col-md-3">
+                            <select name="ytruncateaction" onchange="titlePadding()" id="alignment">
+                                <option value="Center">Center</option>
+                                <option value="Near">Near</option>
+                                <option value="Far">Far</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Position
+                        </div>
+                        <div class="col-md-3">
+                            <select name="ytruncateaction" onchange="titlePadding()" id="position">
+                                <option value="Outside">Outside</option>
+                                <option value="Inside">Inside</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Offset
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" id="offset" name="offset" onchange="titlePadding()" value="0" style="width:104px"> <br>
+
+                        </div>
+
+                    </div>
+						
+				</div>
+			</div>
+			<div id="Tooltip" style="display: none;">
+		<div id="icon">	
+			<div id="eficon"></div>
+	    </div>
+        <div id="value">
+            <div>
+				<label id="efpercentage">&nbsp;#point.y#%</label>
+                <label id="ef">Efficiency</label>
+            </div>
+        </div>
+</div>
+        </div>
+    </div>
+</div>
+
+
